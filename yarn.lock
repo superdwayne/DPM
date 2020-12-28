@@ -9052,6 +9052,11 @@ react-scroll-parallax@^2.3.4:
   dependencies:
     prop-types "^15.5.10"
 
+react-simple-image-slider@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/react-simple-image-slider/-/react-simple-image-slider-2.0.1.tgz#daeef189c1f7e5f79a38863fb292392f050d3a7b"
+  integrity sha512-qul6jPi2k5j//N/g5CnQJcVqrfIFERe5bUC1aFP4vG3lpxUsNU/PdpUfV2twskkcWwedQWEg3gUFpmtoJ9WDgQ==
+
 react@^17.0.1:
   version "17.0.1"
   resolved "https://registry.yarnpkg.com/react/-/react-17.0.1.tgz#6e0600416bd57574e3f86d92edba3d9008726127"
@@ -10434,6 +10439,11 @@ text-table@0.2.0, text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
+
+three@^0.124.0:
+  version "0.124.0"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.124.0.tgz#14ab1a26ba6c56e51190e1b55695cd3c1e69ea55"
+  integrity sha512-ROXp1Ly7YyF+jC910DQyAWj++Qlw2lQv0qwYLNQwdDbjk4bsOXAfGO92wYTMPNei1GMJUmCxSxc3MjGBTS09Rg==
 
 throat@^5.0.0:
   version "5.0.0"

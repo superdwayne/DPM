@@ -33,7 +33,7 @@ class website extends Component {
             <section className="three white">
               <section className="percen70">
                 <h2>The problem</h2>
-                <h3>1. We have observed that the push too isn’t meeting the demands
+                <h3>1. We have observed that  the push too isn’t meeting the demands
                 of more personalised and segmentation content for our user which
                 is causing the technology of our push campaign to be Stifled. 
                 The user interface of our current push tool solution is prone
@@ -74,7 +74,8 @@ class website extends Component {
                     <li>* No visual of message </li>
                     <li>* No error messaging feedback</li>
                     <img src="./images/white.png" alt=""  height="100px" />
-                    <h2> Wireframes - low fi</h2>
+                
+                <h2> Wireframes - low fi</h2>
                   <img src="./images/login.png" className="width25" alt="" />
                   <img src="./images/dashboard.png" className="width25" alt="" />
                   <img src="./images/campaign_main.png" className="width25" alt="" />
