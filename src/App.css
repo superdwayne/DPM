@@ -7,6 +7,7 @@ header {
 
 body {
   font-size: 12px;
+  background-color: #000;
 }
 
 .percen70 
@@ -141,4 +142,34 @@ right: 0;
 .width100
 {
   width: 100%
+}
+
+.width80
+{
+  width: 80%;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.overlay h1
+{
+  font-size: 80px !important;
+}
+
+.overlay h1, h2{
+  position: absolute;
+	top: 10px;
+	width: 100%;
+	text-align: center !important;
+	z-index: 100;
+  display:block;
+  color: #ffffff;
+  padding: 230pt 0px;
+  font-size: 50px;
+  margin: 0px auto;
+}
+
+.overlay  h2
+{
+  top: 100px !important;
 }

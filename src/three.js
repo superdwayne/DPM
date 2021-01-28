@@ -51,10 +51,6 @@ const cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
 //scene.add( mesh );
 
-
-
-
-
 //Setting position 
 camera.position.z = 5;
 cube.position.y += 0.5;

@@ -1,0 +1,13 @@
+.tree{
+    display: flex;
+}
+.intro {
+    background: #fff;
+    opacity: 0.7;
+    color: #000;
+    padding: 20px;
+    margin-bottom: 30px;
+    width: 90%;
+    margin: 0px auto    ;
+}
+
