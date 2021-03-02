@@ -6,7 +6,6 @@ import * as THREE from 'three';
 function Text() {
 
     const font = new THREE.FontLoader().parse(Basis);
-
     // configure font geometry
     const textOptions = {
         font,
