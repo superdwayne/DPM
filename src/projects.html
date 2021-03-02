@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Martel|Open+Sans:400&display=swap" rel="stylesheet">
+    <script type="module" src="./three.js"></script>
+
+    <meta charset="utf-8">
+    <title>D>P>M</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Open Sans';
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%
+        }
+
+        section {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 50pt;
+            font-family: 'Open Sans';
+            background-color: #000;
+            width: 100%;
+            text-align: center;
+        }
+
+        h2 {
+            align-self: center;
+            margin: 20px 20px;
+        }
+        .title{
+            color: #fff;
+            font-size: 30pt;
+            font-family: 'Open Sans';
+            background-color: #000;
+            width: 100%;
+            text-align: center;
+            margin: 0px;
+        }
+        img {
+            display: block; 
+            margin: 0px auto;
+        }
+        
+        div {flex: 50%; padding: 50px;}
+
+        .width50 { width: 50%; border: 1px solid #ccc;}
+
+        #video { max-width: 100%;}
+    </style>
+</head>
+
+<body>
+
+    <section id="section-projects">
+        <h1>Elixir</h1>
+    </section>
+
+    <section>
+        <h2>Problem:</h2>
+        <h2>We have observed that the push too isn’t meeting the demands
+            of more personalised and segmentation content for our user which
+            is causing the technology of our push campaign to be stifled.
+            The user interface of our current push tool solution is prone
+            to errors and quality control are issue as the interface is a Google sheet</h2>
+    </section>
+
+    <section>
+        <h2>Hypothesis</h2>
+        <h2>We believe that by introducing a lite CMS system that is powerful enough to handle the demand of proof
+            testing push campaigns alongside creating more segmented and personalised campaigns, for our internal teams
+            this will enhance the user experience and increase the likelihood to convert after opening a
+            push campaign alongside improving the confidence of the performance of a push campaign.</h2>
+    </section>
+
+    <section>
+        <h2>Research</h2>
+        <h2>User interviews and shadowing sessions were carried out in order to discover
+            and pain points and also to get a better understanding of what success look like</h2>
+        </section>
+
+
+        <section id="section-projects">
+            <h2 class="title">Current system</h2>
+        </section>
+
+        <img src="./images/currentsystem.png" alt=""  />
+
+        <section>
+            <div>
+                <h4>Pros</h4>
+                    <p>Overview of historal campaigns</p>
+                    <p>Multi user imput  </p>
+                    <p>Undo and historcial view from Google sheets </p>
+                </div>
+                <div>
+
+                    <h4>Cons</h4>
+                    <p>Too many data entry points</p>
+                    <p>No visual of message </p>
+                    <p>No error messaging feedback</p>
+                    <p>User error due to many users access to the Google sheet</p>
+                    <p>Loading time when searching for campaigns</p>
+                </div>
+        </section>
+
+     
+        <section id="section-projects">
+            <h2 class="title">Wireframes - Low fi</h2>
+        </section>
+
+        <section>
+            <img class="width50" src="./images/login.png" alt=""  />
+            <img class="width50" src="./images/dashboard.png" alt=""  />
+        </section>
+
+        <section>
+            <img class="width50" src="./images/campaign_lowfi.png" alt=""  />
+            <img class="width50" src="./images/campaign_creation.png" alt=""  />
+        </section>
+
+        <section id="section-projects">
+            <h2 class="title">Wireframes - High fi</h2>
+        </section>
+
+        <section>
+            <img class="width50" src="./images/login-hifi.png" alt=""  />
+            <img class="width50" src="./images/dashboard-hifi.png" alt=""  />
+        </section>
+
+
+        <section>
+            <video id="video" autoplay>
+                <source src="./images/v1.mov" ></source>
+                
+            </video>
+        </section>
+
+
+    <section id="work">
+        <h2>Projects</h2>
+        <h2>Wireframes</h2>
+        <h2>Interacive email templates</h2>
+    </section>
+
+    <script src="https://unpkg.com/three@0.119.0/build/three.module.js"></script>
+
+</body>
+
+</html>

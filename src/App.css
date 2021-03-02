@@ -1,12 +1,40 @@
 
 @import url('https://fonts.googleapis.com/css?family=Martel|Open+Sans:400&display=swap');
 
+.yanaapp {
+  padding-bottom: 30px;
+}
+
+.productdesign{
+  text-decoration: underline;
+}
+
+.awssld__wrapper{
+  width: 80% !important;
+  margin: 0px auto;
+}
+
+.intro a {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.intro li {
+  text-align: left;
+  line-height: 10px;
+  font-weight: 900;
+}
+
 header {
   padding: 40px;
 }
 
 body {
   font-size: 12px;
+  background-color: #000;
+  font-family: 'Open Sans';
 }
 
 .percen70 
@@ -141,4 +169,18 @@ right: 0;
 .width100
 {
   width: 100%
+}
+
+.width80
+{
+  width: 80%;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.width87
+{
+  width: 87%;
+  margin: auto;
+  margin-bottom: 30px;
 }

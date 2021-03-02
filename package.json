@@ -7,12 +7,21 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "react": "^17.0.1",
+    "react-awesome-slider": "^4.1.0",
     "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
     "react-scroll-parallax": "^2.3.4",
+    "react-three-fiber": "^5.3.14",
+    "three": "^0.124.0",
+    "three-obj-mtl-loader": "^1.0.3",
+    "three-orbitcontrols": "^2.110.3",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "dev_server": " cd api && nodemon index.js",
+    "dev_client": "yarn start",
+    "dpm": " concurrently \"yarn run dev_server\" \"yarn run dev_client\"",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -35,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0"
   }
 }
