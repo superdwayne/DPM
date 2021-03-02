@@ -1,3 +1,7 @@
+.nav  {
+    top: 100px !important;
+}
+
 .hide
 {
     display: none;
@@ -25,8 +29,8 @@ ul {
 }
 
 nav{
-    width: 200px;
-    margin: 0px auto;
+    width: 270px;
+    margin: 40px auto;
     background: #fff;
     opacity: 0.7;
 }

@@ -1,13 +1,13 @@
 const express = require('express')
 const app = express()
 const cors = require('cors')
-const port = 8008
+const port = 8002
 
  
 const shapes = { 
   "shapes": {
-    "circle": Math.floor((Math.random() * 100) + 1),
-    "square": Math.floor((Math.random() * 100) + 1),
+    "circle": 'dodecahedronBufferGeometry',
+    "square": 'tetrahedronGeometry',
     "oval": Math.floor((Math.random() * 100) + 1)
     },
   }
@@ -16,7 +16,7 @@ app.use(cors())
 
 app.get('/api/index', (req, res) => {
  res.json(shapes)
- //console.log(res)
+ //console.log(req)
 })
 
  

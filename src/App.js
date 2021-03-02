@@ -1,24 +1,30 @@
 import './App.css';
-import React, { Component } from "react";
+import React, { useRef, useState , useEffect } from 'react'
+import { extend, Canvas, useFrame, applyProps } from 'react-three-fiber'
 import Menu from './Components/menu';
+import Intro from './Components/intro';
+import Effect from './Components/Effect';
 import Request from './api/requests';
-import * as THREE from "three";
-class App extends Component {
-
-  state = {
-    page: window.location.pathname 
-}
+import * as THREE from 'three';
 
 
+function KeyLight({ brightness, color }) {
+    return (
+      <rectAreaLight
+        width={3}
+        height={3}
+        color={color}
+        intensity={brightness}
+        position={[-2, 0, 5]}
+        lookAt={[0, 0, 0]}
+        penumbra={1}
+        castShadow
+      />
+    );
+  }
 
-  componentDidMount() {
+  function Home() {
 
-    const handleOnClick = () => {
-      this.setState( { pages:  window.location.pathname })
-      
-  };
-
-handleOnClick()
     const params = {
       method: 'GET',
       body: JSON.stringify(),
@@ -26,86 +32,87 @@ handleOnClick()
         'Content-Type': 'application/json',
       },
     };
-
-    Request(`http://localhost:8008/api/index`, params, (response) => {
-        console.log(response)
-        this.setState({ ranNumb: response });
+  
+    Request(`http://localhost:8002/api/index`, params, (response) => {
+        console.log(response.shapes.circle)
+       //  this.setState({ ranNumb: response });
       
-    });
- 
-    this.setState({ currentpage: window.location.pathname });
-   
-    const width = this.mount.clientWidth;
-    const height = this.mount.clientHeight;
-    this.scene = new THREE.Scene();
-    //Add Renderer
-    this.renderer = new THREE.WebGLRenderer({ antialias: true });
-    this.renderer.setClearColor("#000");
-    this.renderer.setSize(width, height);
-    this.mount.appendChild(this.renderer.domElement);
+      });
 
-    //add Camera
-    this.camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
-    this.camera.position.z = 5;
+    const ref = useRef()
 
-    //
-    const shape = new THREE.Shape();
-    shape.moveTo(0, 0); shape.lineTo(12, 8); shape.lineTo(12, 8);
-    shape.lineTo(12, 0);shape.lineTo(0, 0);
-
-    const extrudeSettings = {
-      steps: 2,
-      depth: 16,
-      bevelEnabled: true,
-      bevelThickness: 1,
-      bevelSize: 1,
-      bevelOffset: 0,
-      bevelSegments: 1
-    };
-
-    const geometrymesh = new THREE.ExtrudeGeometry(shape, extrudeSettings);
-    const materialmesh = new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true });
-
-    const square = this.mesh = new THREE.Mesh(geometrymesh, materialmesh);
-    //console.log(square)    
-    this.scene.add(square);
-
-    this.renderScene();
-    this.animate();
-  }
-
-  animate = () => {
-    
-    if (this.mesh)
-    this.mesh.rotation.y += 0.01;
-    this.mesh.rotation.z += 0.01;
-    this.mesh.rotation.x += 0.03;
-    this.mesh.scale.y += 0.08;
-    this.renderScene();
-    this.frameId = window.requestAnimationFrame(this.animate);
-  };
-  renderScene = () => {
-    if (this.renderer) this.renderer.render(this.scene, this.camera);
-  };
-  render() {
-       
+    useFrame(() => (ref.current.rotation.x += 0.02, ref.current.rotation.y += 0.01 
+       // console.log(ref.current)  
+        ))
+      
+      
     return (
-      <div> 
-
-        <div className={ this.props.handleOnClick ==="/ani" ? 'hide' : 'explore' } id="explore"
-          style={{ width: window.innerWidth, height: window.innerHeight }}
-          ref={ mount => { this.mount = mount } }
-        />
-        <section className="overlay">
-          <h1>Dwayne Paisley-Marshall</h1>
-          <h2>Creative Front end developer</h2>
-          <h2><Menu /></h2>
-        </section>
-        
-      </div>
-
+        <mesh ref={ref} userData={{ test: 'copy' }} position={[0, 0, 0]} >
+          <boxBufferGeometry attach="geometry" args={[9,10,1]}/>
+          <meshNormalMaterial attach="material" wireframe={true} />
+        </mesh>
     );
   }
-}
 
-export default App;
+
+  function Sphere() {
+
+
+    const ref = useRef()
+
+    useFrame(() => (ref.current.rotation.x += 0.03, ref.current.rotation.y += 0.01 ,
+        ref.current.rotation.z += 0.01, ref.current.scale.y = 0.28  
+          
+        ))
+        
+    return (
+      
+      <mesh ref={ref} userData={{ test: "hello" }} position={[0, 0, 0]} >
+        <boxBufferGeometry attach="geometry" args={[1,1,1]}/>
+        <meshNormalMaterial attach="material" wireframe={true} />
+      </mesh>
+    );
+  }
+
+  function Circle() {
+
+    const ref = useRef()
+
+    // eslint-disable-next-line no-sequences
+    useFrame(() => (ref.current.rotation.x += 0.03, ref.current.rotation.y += 0.01 ,
+        ref.current.rotation.z += 0.01, ref.current.scale.y = 0.18  
+        
+        ))
+        
+    return (
+      
+      <mesh ref={ref}  userData={{ test: "hello" }} position={[0, 0, 0]} >
+        <boxBufferGeometry attach="geometry" args={[50, 100, 1]} />
+        <meshNormalMaterial attach="material" wireframe={true} />
+      </mesh>
+    );
+  }
+ 
+
+function Playground() {
+ 
+    return (
+      <>
+      <Canvas 
+       className={'main'}
+        userData={'dwayne'}
+        camera={{ fov: 5, position: [0, 0, 30] }} 
+        style={{ width: window.innerWidth, height: window.innerHeight }}>
+       <Home /> 
+       
+      </Canvas>
+      <Intro />
+
+      {/* <Effect /> */}
+      
+      </>
+    );
+  }
+    
+
+export default Playground;

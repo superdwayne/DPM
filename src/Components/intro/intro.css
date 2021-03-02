@@ -1,0 +1,24 @@
+.overlay h1
+{
+  font-size: 80px !important;
+  text-align: center;
+}
+
+.overlay{
+  position: absolute;
+	top: 10px;
+	width: 100%;
+	text-align: center !important;
+	z-index: 100;
+  display:block;
+  color: #ffffff;
+  padding: 130pt 0px;
+  
+  margin: 0px auto;
+}
+
+.overlay  h2
+{
+  top: 100px !important;
+  text-align: center;
+}

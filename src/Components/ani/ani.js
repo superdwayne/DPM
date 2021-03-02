@@ -1,77 +1,49 @@
-import React, { Component } from "react";
+import React from "react";
+import Basis from '../tree/Open_Sans_Bold.json'
+import { Canvas } from 'react-three-fiber'
+import * as THREE from 'three';
 
-import * as THREE from "three";
+function Text() {
 
+    const font = new THREE.FontLoader().parse(Basis);
 
-class ani extends Component {
+    // configure font geometry
+    const textOptions = {
+        font,
+        size: 1.7,
+        height: 0.1
+    };
 
-    componentDidMount() {
-      const width = this.mount.clientWidth;
-      const height = this.mount.clientHeight;
-      this.scene = new THREE.Scene();
-      //Add Renderer
-      this.renderer = new THREE.WebGLRenderer({ antialias: true });
-      this.renderer.setClearColor("#000");
-      this.renderer.setSize(width, height);
-      this.mount.appendChild(this.renderer.domElement);
-  
-      //add Camera
-      this.camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
-      this.camera.position.z = 5;
-        
-        const camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 500 );
-        camera.position.set( 0, 0, 100 );
-        camera.lookAt( 0, 0, 0 );
-        
-        const material = new THREE.LineBasicMaterial( { color: 0x0000ff } );
+   
 
-        const points = [];
-        points.push( new THREE.Vector3( - 10, 0, 0 ) );
-        points.push( new THREE.Vector3( 0, 10, 0 ) );
-        points.push( new THREE.Vector3( 10, 0, 0 ) );
-        points.push( new THREE.Vector3( 30, 0, 0 ) );
-        //console.log(points)
+    return (
 
-        const geometry = new THREE.BufferGeometry().setFromPoints( points );
-        const line = new THREE.Line( geometry, material );
-
-        const circlegeometry = new THREE.CircleGeometry( 5, 32 );
-        const circlematerial = new THREE.MeshBasicMaterial( { color: 0xffffff, wireframe: true } );
-         this.circle = new THREE.Mesh( circlegeometry, circlematerial );
-
-        // this.scene.add( line,circle );
-        this.scene.add(this.circle);
-
-        this.animate();
-        this.renderScene();
-        }
-
-        animate = () => {
-        
-            if (this.circle)
-            this.circle.rotation.y += 0.01;
-            this.circle.rotation.z += 0.01;
-            this.circle.scale.y += 0.18;
-            //console.log(this.circle)
-           
-            this.renderScene();
-            this.frameId = window.requestAnimationFrame(this.animate);
-          };
+        <mesh  position={[-10, -1, 5]} >
+            <textBufferGeometry attach="geometry" args={['Yana application ', textOptions]} />
+            <meshNormalMaterial attach="material" wireframe={true} />
+        </mesh>
+    );
+}
 
 
-          renderScene = () => {
-            if (this.renderer) this.renderer.render(this.scene, this.camera);
-          };
+function ani() {
+    return (
 
-    render() {
-        return (
+        <>
             
-            <div
-          style={{ width: window.innerWidth, height: window.innerHeight }}
-          ref={mount => { this.mount = mount }}
-        />
-        )
-    }
+            <section className="intro">
+                <h3>With the birth of our daughter I decided to build a booking application so people could meet her, virtually</h3>
+                <h3>I used node.JS as the backend and mongoose and the database connector to mongo DB.</h3>
+                <h3> Once a booking is made the information is sent to the back end and retrieved and displayed in the front end so that everyone can see what times have been booked.</h3>
+                <a href="https://meet-yana.herokuapp.com/">Launch Application</a>
+            </section>
+                <div className="yanaapp">
+                <Canvas pixelRatio={window.devicePixelRatio} camera={{ fov: 6, position: [0, 0, 30] }} >
+                    <Text />
+                </Canvas>
+            </div>
+        </>
+    )
 }
 
 export default ani;
