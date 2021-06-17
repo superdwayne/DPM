@@ -29,7 +29,7 @@ export default function Menu() {
                             <Link to="/tree" data-page="/tree"  >Interactive emails</Link>
                         </li>
                         <li className="explore" >
-                            <Link to="/slider" data-page="/slider" >Product design</Link>
+                            <Link to="/playground" data-page="/playground" >Experiments </Link>
                         </li>
                     </ul>
                 </nav>

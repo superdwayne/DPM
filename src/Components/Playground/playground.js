@@ -1,8 +1,16 @@
 import React, { useRef, useState } from 'react'
-import { extend, Canvas, useFrame } from 'react-three-fiber'
+import { extend, Canvas, useFrame, useLoader } from 'react-three-fiber'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import Menu from '../menu';
+import asset from './assets/trainer/1.gltf'
 import Intro from '../intro';
 import * as THREE from 'three';
+
+
+function Asset() {
+  const gltf = useLoader(GLTFLoader, asset)
+  return <primitive object={gltf.scene} position={[0, 0, 0]} />
+}
 
 
 function KeyLight({ brightness, color }) {
@@ -68,27 +76,9 @@ function KeyLight({ brightness, color }) {
     );
   }
 
-  function Circle() {
 
-    const ref = useRef()
 
-    // eslint-disable-next-line no-sequences
-    useFrame(() => (ref.current.rotation.x += 0.03, ref.current.rotation.y += 0.01 ,
-        ref.current.rotation.z += 0.01, ref.current.scale.y = 0.18  
-        
-        ))
-        
-    return (
-      
-      <mesh ref={ref}  userData={{ test: "hello" }} position={[0, 0, 0]} >
-        <boxBufferGeometry attach="geometry" args={[50, 100, 1]} />
-        <meshNormalMaterial attach="material" wireframe={true} />
-      </mesh>
-    );
-  }
- 
-
-function Playground(props) {
+function Playgroundtest() {
     return (
       <>
       <Canvas 
@@ -98,19 +88,15 @@ function Playground(props) {
         style={{ width: window.innerWidth, height: window.innerHeight }}>
       
         
-       {/* <Sphere /> */}
-       <Home /> 
-        {/* <KeyLight brightness={5.6} color="#fff" /> */}
+       <Asset /> 
+       
+        <KeyLight brightness={5.6} color="#fff" />
       {/* <Circle /> */}
       </Canvas>
-      <section className="overlay-main">
-          <h1>Dwayne Paisley-Marshall</h1>
-          <h2>Creative Front end developer</h2>
-          {/* <h2><Menu /></h2> */}
-        </section>
+     
       </>
     );
   }
     
 
-export default Playground;
+export default Playgroundtest;

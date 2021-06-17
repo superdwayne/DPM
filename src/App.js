@@ -1,12 +1,19 @@
 import './App.css';
 import React, { useRef, useState , useEffect } from 'react'
-import { extend, Canvas, useFrame, applyProps } from 'react-three-fiber'
+import { extend, Canvas, useFrame, useLoader } from 'react-three-fiber'
 import Menu from './Components/menu';
 import Intro from './Components/intro';
-import Effect from './Components/Effect';
 import Request from './api/requests';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+import Trainer from './assets/trainer/1.gltf'
+
 import * as THREE from 'three';
 
+
+function Asset() {
+  const gltf = useLoader(GLTFLoader, Trainer)
+  return <primitive object={gltf.scene} position={[0, 0, 0]} />
+}
 
 function KeyLight({ brightness, color }) {
     return (
@@ -104,7 +111,7 @@ function Playground() {
         camera={{ fov: 5, position: [0, 0, 30] }} 
         style={{ width: window.innerWidth, height: window.innerHeight }}>
        <Home /> 
-       
+       <Asset />
       </Canvas>
       <Intro />
 
