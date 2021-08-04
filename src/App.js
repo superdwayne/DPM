@@ -46,7 +46,7 @@ function Playground() {
         
         camera={{ fov: 5, position: [0, 0, 30] }} 
         style={{ width: window.innerWidth, height: window.innerHeight }}>
-       <Home /> 
+       
       </Canvas>
       <Intro />      
       </>
