@@ -61,7 +61,7 @@ function dpm() {
         <h1 className="white">Hello</h1>
         <h2 className="white">There you have it you've see my experiments, I have around 10 years+ experience doing this type of stuff</h2>
         {/* <h2 className="white">I've also made a Interactive <span onClick={Interactive}>Emails</span> </h2> */}
-        <h2 className="white">I'm always open for a collobration so if you like what you've seen let me know</h2>
+        <h2 className="white">I'm always open for a collaboration so if you like what you've seen let me know</h2>
        </section> 
 
        {/* <section className="emails" ref={emails}>
