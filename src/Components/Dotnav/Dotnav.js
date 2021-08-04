@@ -1,8 +1,6 @@
 import React from "react";
 
 import './Dotnav.css'
-
-
 const Dotnav = ({ onClickfirst, onClicksecond, onClickthird, onClicktforth }) => {
 
   return (
