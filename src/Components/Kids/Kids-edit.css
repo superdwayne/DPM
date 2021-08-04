@@ -1,0 +1,33 @@
+.Video-container {
+    flex: 1;
+    flex-direction: column;
+}
+
+.Flex-box {
+    display: flex;
+}
+
+.close-content {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+}
+
+.Content
+{
+    -webkit-transition: all 1s ease;  
+  -moz-transition: all 1s ease;  
+  -o-transition: all 1s ease;  
+  -ms-transition: all 1s ease;  
+  transition: all 1s ease;
+  
+}
+
+
+@media (max-width:1100px),
+(max-device-width:1100px) {
+
+    .Video-container {
+        display: flow-root;
+    }
+}
