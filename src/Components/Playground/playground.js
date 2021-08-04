@@ -2,13 +2,12 @@ import React, { useRef, useState } from 'react'
 import { extend, Canvas, useFrame, useLoader } from 'react-three-fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import Menu from '../menu';
-import asset from './assets/trainer/1.gltf'
 import Intro from '../intro';
 import * as THREE from 'three';
 
 
 function Asset() {
-  const gltf = useLoader(GLTFLoader, asset)
+  const gltf = useLoader(GLTFLoader, 'http://dwaynep-marshall.co.uk/1.gltf')
   return <primitive object={gltf.scene} position={[0, 0, 0]} />
 }
 

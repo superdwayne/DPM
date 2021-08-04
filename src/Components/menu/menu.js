@@ -6,7 +6,6 @@ import {
     Link,
 } from "react-router-dom";
 // import Website from '../website';
-import Slider from '../slider';
 import Tree from '../tree';
 import Ani from '../ani';
 import './menu.css';
@@ -35,9 +34,9 @@ export default function Menu() {
                 </nav>
 
                 <Switch>
-                    <Route path="/slider">
+                    {/* <Route path="/slider">
                         <Slider />
-                    </Route>
+                    </Route> */}
                     <Route path="/ani">
                         <Ani name="ani" />
                     </Route>
