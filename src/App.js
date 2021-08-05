@@ -67,9 +67,9 @@ function dpm() {
 
        <div className="mobwork">
        <h1 className="white">Elixir (CRM tool)</h1>
-        <ReactPlayer loop={true} muted={true} playing={true} width="100%" height="100%" url='http://dwaynep-marshall.co.uk/v1.mov' /> 
+        <ReactPlayer controls={true} loop={true} muted={true} playing={true} width="100%" height="100%" url='http://dwaynep-marshall.co.uk/v1.mov' /> 
         <h1 className="white">Interactive emails</h1>
-        <ReactPlayer loop={true} muted={true} playing={true} width="100%" height="100%" url='http://dwaynep-marshall.co.uk/Interative-email.mov' /> 
+        <ReactPlayer controls={true}  loop={true} muted={true} playing={true} width="100%" height="100%" url='http://dwaynep-marshall.co.uk/Interative-email.mov' /> 
        </div>
 
        
