@@ -4,7 +4,7 @@ import './Dotnav.css'
 const Dotnav = ({ onClickfirst, onClicksecond, onClickthird, onClicktforth }) => {
 
   return (
-   <section className="Dotnav">
+   <section className="Dotnav mobile-shift" >
    <nav>
        <ul>
            <li onClick={onClickfirst}>3D</li>

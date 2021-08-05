@@ -110,7 +110,7 @@ function Kids() {
 
   return (
 
-<section className="main">
+<section className="mobile-shift" >
   <section className="Flex-box">
 
       <Canvas className="Video-container" pixelRatio={window.devicePixelRatio} style={{ backgroundColor: "#ccc",  height: "120vh", width: "120vw" }}>

@@ -2,7 +2,7 @@ const express = require('express')
 const path = require('path');
 const app = express()
 const cors = require('cors')
-const port = process.env.PORT || 8002
+const port = process.env.PORT || 8001
 
  
 const shapes = { 

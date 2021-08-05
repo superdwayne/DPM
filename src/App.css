@@ -15,6 +15,8 @@ body {
 
 
 
+
+
 .white {
   color: #fff;
 }
@@ -61,3 +63,24 @@ h4 {
 .dpm {
   padding: 50px;
 }
+
+.mobwork {
+  display: none;
+}
+
+.mobwork h1 {
+  padding-left: 50px;
+}
+
+@media (max-width:600px),
+(max-device-width:600px) {
+
+  .mobwork {
+    display: block;
+  }
+
+  .mobile-shift {
+    display: none;
+  }
+}
+

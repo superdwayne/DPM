@@ -4,6 +4,7 @@ import Intro from './Components/intro';
 import Dotnav from './Components/Dotnav';
 import Video from './Components/Kids';
 import Threedee from './Components/Threedee';
+import ReactPlayer from 'react-player'
 
 function Playground() {
 
@@ -59,14 +60,19 @@ function dpm() {
       
        <section className="dpm" ref={whoisdpm} >
         <h1 className="white">Hello</h1>
-        <h2 className="white">There you have it you've see my experiments, I have around 10 years+ experience doing this type of stuff</h2>
-        {/* <h2 className="white">I've also made a Interactive <span onClick={Interactive}>Emails</span> </h2> */}
-        <h2 className="white">I'm always open for a collaboration so if you like what you've seen let me know</h2>
+        <h2 className="mobwork white">Check out my UX/UI work below </h2>
+        <h2 className="white mobile-shift">There you have it you've see my experiments, I have around 10 years+ experience doing this type of stuff</h2>
+        <h2 className="white mobile-shift">I'm always open for a collaboration so if you like what you've seen let me know</h2>
        </section> 
 
-       {/* <section className="emails" ref={emails}>
+       <div className="mobwork">
+       <h1 className="white">Elixir (CRM tool)</h1>
+        <ReactPlayer loop={true} muted={true} playing={true} width="100%" height="100%" url='http://dwaynep-marshall.co.uk/v1.mov' /> 
+        <h1 className="white">Interactive emails</h1>
         <ReactPlayer loop={true} muted={true} playing={true} width="100%" height="100%" url='http://dwaynep-marshall.co.uk/Interative-email.mov' /> 
-       </section>  */}
+       </div>
+
+       
       </>
     );
   }
