@@ -1,0 +1,44 @@
+.tree {
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.interactive h3 {
+    text-align: center;
+}
+
+.tree h3 {
+    text-align: center;
+}
+
+.width100 {
+    width: 100% !important;
+}
+
+.interactive {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width:600px),
+  (max-device-width:600px) {
+  
+    .width50{
+        width: 100%;
+        margin: 0px auto;
+    }
+
+    .tree {
+        display: block;
+    }
+  }
+  
+
+  video 
+  {
+      height: 100vh;
+      border: 0px ;
+  }

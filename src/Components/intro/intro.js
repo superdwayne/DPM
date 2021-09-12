@@ -1,15 +1,19 @@
 
 import './intro.css';
 
+import React from 'react';
+import Pagelinks from '../Pagelinks';
 
-function intro () {
+function Intro () {
         return (
-            <section className="overlay">
-                <h1>Dwayne Paisley-Marshall</h1>
-                <h2>Creative <s>Technologist</s> Genuis</h2>
-                <img className="avatar" src="https://cdn-static.farfetch-contents.com/Content/UP/EXPERIENCE/Playground/DPM.png" alt="DPM" />
+            <section className="intro twinkling">
+              <section className="intro-copy">
+                  <h1>Dwayne Paisley-Marshall</h1>
+                  <h2>Creative Technologist</h2>
+                  <Pagelinks />
+              </section>  
             </section>
         )
 }
 
-export default intro;
+export default Intro;

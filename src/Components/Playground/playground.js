@@ -1,16 +1,35 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, Suspense } from 'react'
+import Loader from '../Loader';
 import { extend, Canvas, useFrame, useLoader } from 'react-three-fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import Menu from '../menu';
+import Close from '../Close'
 import Intro from '../intro';
 import * as THREE from 'three';
 
 
-function Asset() {
-  const gltf = useLoader(GLTFLoader, 'http://dwaynep-marshall.co.uk/1.gltf')
-  return <primitive object={gltf.scene} position={[0, 0, 0]} />
-}
 
+
+function Trainer() {
+  const gltf1 = useLoader(GLTFLoader, 'https://farfetch-cors.herokuapp.com/http://dwaynep-marshall.co.uk/1.gltf')
+  const gltf2 = useLoader(GLTFLoader, 'https://farfetch-cors.herokuapp.com/http://dwaynep-marshall.co.uk/2.gltf')
+  const gltf3 = useLoader(GLTFLoader, 'https://farfetch-cors.herokuapp.com/http://dwaynep-marshall.co.uk/3.gltf')
+  const gltf4 = useLoader(GLTFLoader, 'https://farfetch-cors.herokuapp.com/http://dwaynep-marshall.co.uk/4.gltf')
+  const gltf5 = useLoader(GLTFLoader, 'https://farfetch-cors.herokuapp.com/http://dwaynep-marshall.co.uk/5.gltf')
+  const gltf6 = useLoader(GLTFLoader, 'https://farfetch-cors.herokuapp.com/http://dwaynep-marshall.co.uk/6.gltf')
+  const gltf7 = useLoader(GLTFLoader, 'https://farfetch-cors.herokuapp.com/http://dwaynep-marshall.co.uk/7.gltf')
+  return (
+    <>
+      <primitive object={gltf1.scene} scale={0.2} position={0} />
+      <primitive object={gltf2.scene} scale={0.2} position={0} />
+      <primitive object={gltf3.scene} scale={0.2} position={0} />
+      <primitive object={gltf4.scene} scale={0.2} position={0} />
+      <primitive object={gltf5.scene} scale={0.2} position={[0.5, -0.8, 0]} />
+      <primitive object={gltf6.scene} scale={0.2} position={[0.5, -0.7, 0]} />
+      <primitive object={gltf7.scene} scale={0.2} position={0} />
+      </>
+    
+    );
+  }
 
 function KeyLight({ brightness, color }) {
     return (
@@ -74,23 +93,38 @@ function KeyLight({ brightness, color }) {
       </mesh>
     );
   }
+function Box() {
+    const myMesh = React.useRef()
+
+    useFrame(() => {
+      myMesh.current.rotation.y += 0.01
+    })
+
+    return (
+      <mesh ref={myMesh}  scale={[4, 4, 4]} wireframe="true">
+        <boxBufferGeometry attach="geometry"  args={[0.90, 0.90, 0.90]} />
+        <meshStandardMaterial attach="material"  wireframe={true} color={"#fff"} />
+      </mesh>
+      
+    )
+  }
 
 
+function Playground() {
 
-function Playgroundtest() {
     return (
       <>
+      <Close />
       <Canvas 
-        
-        userData={'dwayne'}
         camera={{ fov: 5, position: [0, 0, 30] }} 
         style={{ width: window.innerWidth, height: window.innerHeight }}>
-      
-        
-       <Asset /> 
-       
+       <Suspense fallback={<Loader />}>
+        <Box/>
+        <ambientLight args={[0xffffff]} intensity={0.97}  />
+        <Trainer />
+     </Suspense>  
         <KeyLight brightness={5.6} color="#fff" />
-      {/* <Circle /> */}
+      <Sphere />
       </Canvas>
      
       </>
@@ -98,4 +132,4 @@ function Playgroundtest() {
   }
     
 
-export default Playgroundtest;
+export default Playground;

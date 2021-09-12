@@ -1,56 +1,77 @@
-import React from "react";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-} from "react-router-dom";
-// import Website from '../website';
-import Tree from '../tree';
-import Ani from '../ani';
+import React, { useRef, useEffect, useState, useHistory} from 'react'
+import { Route} from "react-router-dom";
+// import Website from '../Websites';
+import Applications from '../Applications';
+import Interactiveemails from '../interactiveemails';
+import Playground from '../Playground';
+import Pagelinks from '../Pagelinks';
+import Website from '../../Pages/Websites';
+
 import './menu.css';
 
 
 export default function Menu() { 
-   
-    return (
-        <Router>
-            <div className="nav">
-                <nav>
-                    <ul>
-                        <li className="hide">
-                            <Link to="/" data-page="/" >Home</Link>
-                        </li>
-                        <li className="explore">
-                            <Link to="/ani" data-page="/ani">Applications</Link>
-                        </li>
-                        <li className="explore" >
-                            <Link to="/tree" data-page="/tree"  >Interactive emails</Link>
-                        </li>
-                        <li className="explore" >
-                            <Link to="/playground" data-page="/playground" >Experiments </Link>
-                        </li>
-                    </ul>
-                </nav>
 
-                <Switch>
-                    {/* <Route path="/slider">
-                        <Slider />
-                    </Route> */}
-                    <Route path="/ani">
-                        <Ani name="ani" />
-                    </Route>
-                    <Route path="/tree">
-                        <Tree name="tree" />
-                    </Route>
-                    {/* <Route path="/playground" >
-                        <Playground name="playground" />
-                    </Route> */}
-                    <Route path="/">
-                        {/* <Home /> */}
-                    </Route>
-                </Switch>
-            </div>
-        </Router>
+    return (
+        <section>
+            <Route path="/websites" component={website} />
+            <Route path="/applications" component={Apps} />
+            <Route path="/interactiveemails" component={emails} />
+            <Route path="/playground" component={play}  />
+            <Route path="/" exact component={Home}  />
+            <Pagelinks />
+        </section>   
+
     )
 }
+
+
+const Home = (props) => {
+    console.log(props.location.pathname);
+    const Path  = props.location.pathname
+    return (
+      <section className= { Path === "/" ? "intro twinkling" : null }>
+          <section className="intro-copy">
+                  <h1>Dwayne Paisley-Marshall</h1>
+                  <h2>Creative Technologist</h2>
+              </section> 
+      </section>
+    );
+  };
+    
+
+  const Apps = () => {
+  
+    return (
+      <div>
+        <Applications/>
+      </div>
+    );
+  };
+
+  const website = () => {
+  
+    return (
+      <div>
+        <Website />
+      </div>
+    );
+  };
+
+  const emails = () => {
+  
+    return (
+      <div>
+        <Interactiveemails/>
+      </div>
+    );
+  };
+
+  const play = () => {
+  
+    return (
+      <div>
+        <Playground />
+      </div>
+    );
+  };
