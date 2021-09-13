@@ -23,12 +23,12 @@ function ani() {
 
                         <section className="project-info">
                                 <h3>Thinking Strategy & Approach</h3>
-                                <h4>I used nodeJS to create an end point, this end point would post data to Mongo DB (via Mongoose) upon submission</h4>
+                                <h4>I decided to use Mongo (via mongoose) to store the entries in a database! Upon each sumbission a custome endpoint would send the data to Mongo</h4>
                         </section>
                     
                         <section className="project-info">
                             <h3>Result & Final Experience</h3>
-                            <h4><a href="https://meet-yana.herokuapp.com/">Meet Yana</a> </h4>
+                            <h4> Here is the final application,  <a href="https://meet-yana.herokuapp.com/">Meet Yana</a> </h4>
                         </section>
                 </section> 
       </section>

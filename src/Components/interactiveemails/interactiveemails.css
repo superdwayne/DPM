@@ -5,6 +5,16 @@
     justify-content: space-around;
 }
 
+.c-harWIp{
+    width: 40px !important;
+    height: 40px !important;
+    background: #000 !important;
+}
+
+.c-dyuglr {
+    width: 95% !important;
+}
+
 .interactive h3 {
     text-align: center;
 }
@@ -18,9 +28,9 @@
 }
 
 .interactive {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
 }
 
 @media (max-width:600px),

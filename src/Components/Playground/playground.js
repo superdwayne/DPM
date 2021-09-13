@@ -1,12 +1,40 @@
-import React, { useRef, Suspense } from 'react'
+import React , { Suspense, useRef, useEffect, useState  }  from "react";
+import { Canvas,
+  useLoader,
+  useFrame,
+  extend,
+  useThree, } from '@react-three/fiber'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import Loader from '../Loader';
-import { extend, Canvas, useFrame, useLoader } from 'react-three-fiber'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import Close from '../Close'
-import Intro from '../intro';
-import * as THREE from 'three';
+import Close from '../Close'  
 
 
+extend({ OrbitControls });  
+
+
+
+const CameraControls = () => {
+  const {
+    camera,
+    gl: { domElement },
+  } = useThree();
+  // Ref to the controls, so that we can update them on every frame using useFrame
+  const controls = useRef();
+  useFrame((state) => controls.current.update());
+  return (
+    <orbitControls
+      ref={controls}
+      args={[camera, domElement]}
+      enableZoom={false}
+      position={[0.5, -0.7, 0]}
+      // maxAzimuthAngle={Math.PI / 4}
+      // maxPolarAngle={Math.PI}
+      // minAzimuthAngle={-Math.PI / 4}
+      // minPolarAngle={0}
+    />
+  );
+};
 
 
 function Trainer() {
@@ -31,69 +59,7 @@ function Trainer() {
     );
   }
 
-function KeyLight({ brightness, color }) {
-    return (
-      <rectAreaLight
-        width={3}
-        height={3}
-        color={color}
-        intensity={brightness}
-        position={[-2, 0, 5]}
-        lookAt={[0, 0, 0]}
-        penumbra={1}
-        castShadow
-      />
-    );
-  }
-
- 
-
-
-
-  function Home(_props) {
-
-    const copy = 'hello'
-
-    const ref = useRef()
-
-    useFrame(() => (ref.current.rotation.x += 0.02, ref.current.rotation.y += 0.01 ,
-        ref.current.rotation.z += 0.01, ref.current.scale.y = 0.38  
-        //console.log(ref.current.userData)  
-        ))
-      
-
-    return (
-
-        <mesh ref={ref} userData={{ test: copy }} position={[0, 0, 0]} >
-        <Intro  render={props => (
-  <h1>Hello {props.target}</h1>
-)} />
-          <boxBufferGeometry attach="geometry" args={[9,10,1]}/>
-          <meshNormalMaterial attach="material" wireframe={true} />
-        </mesh>
-    );
-  }
-
-
-  function Sphere() {
-
-
-    const ref = useRef()
-
-    useFrame(() => (ref.current.rotation.x += 0.03, ref.current.rotation.y += 0.01 ,
-        ref.current.rotation.z += 0.01, ref.current.scale.y = 0.28  
-          
-        ))
-        
-    return (
-      
-      <mesh ref={ref} userData={{ test: "hello" }} position={[0, 0, 0]} >
-        <boxBufferGeometry attach="geometry" args={[1,1,1]}/>
-        <meshNormalMaterial attach="material" wireframe={true} />
-      </mesh>
-    );
-  }
-function Box() {
+  function Box() {
     const myMesh = React.useRef()
 
     useFrame(() => {
@@ -109,27 +75,161 @@ function Box() {
     )
   }
 
+  const FakeSphereControls = () => {
+    const {
+      camera,
+      gl: { domElement },
+    } = useThree();
+    // Ref to the controls, so that we can update them on every frame using useFrame
+    const controls = useRef();
+    useFrame((state) => controls.current.update());
+    return (
+      <orbitControls
+        ref={controls}
+        args={[camera, domElement]}
+        enableZoom={false}
+        position={[0.5, -0.7, 4]}
+        maxAzimuthAngle={Math.PI / 4}
+        maxPolarAngle={Math.PI}
+        minAzimuthAngle={-Math.PI / 4}
+        minPolarAngle={0}
+      />
+    );
+  };
 
-function Playground() {
+  const FakeSphere = () => {
+    const [playing, setPlaying] = useState(false);
+    const [playing2, setPlaying2] = useState(false);
+  
+    const [video2] = useState(() => {
+      const vid2 = document.createElement("video");
+      vid2.src = "https://cdn-static.farfetch-contents.com/Content/UP/EXPERIENCE/Playground/FARFETCH_1.mp4";
+      vid2.crossOrigin = "Anonymous";
+      vid2.loop = false;
+      vid2.autoplay = false;
+      vid2.playsInline = true;
+      vid2.controls = true;
+      return vid2;
+    });
+
+    const [video] = useState(() => {
+      const vid = document.createElement("video");
+      vid.src = "https://cdn-static.farfetch-contents.com/Content/UP/EXPERIENCE/Playground/FARFETCH.mp4";
+      vid.crossOrigin = "Anonymous";
+      vid.loop = false;
+      vid.autoplay = false;
+      vid.playsInline = true;
+      vid.controls = true;
+      return vid;
+    });
+
+     
+
+     useEffect(() => {
+      console.log("Inside Video 2" );
+      if (playing2)
+      video2.play()
+      else
+      video2.pause()
+      
+    },[playing2, video2]);
+    
+    useEffect(() => {
+        console.log("Inside Video 1" );
+        if (playing)
+        video.play()
+        else
+        video.pause()
+        
+      },[playing, video]);
+    // useEffect(() => {
+    //     video.load()
+    // })
+    const myMesh = React.useRef()
+    // useFrame(() => {// myMesh.current.rotation.y += 0.01})
+
 
     return (
-      <>
-      <Close />
-      <Canvas 
-        camera={{ fov: 5, position: [0, 0, 30] }} 
-        style={{ width: window.innerWidth, height: window.innerHeight }}>
-       <Suspense fallback={<Loader />}>
+      <group>
+      <mesh scale={[4, 4, 4]} position={[0,0.5,0]} >
+        <sphereBufferGeometry args={[0.7, 30, 30]} attach="geometry" />
+        <meshStandardMaterial attach="material" transparent={true}  wireframe={true} color={"#000"} />
+      </mesh>
+      <mesh ref={myMesh} position={[0.7,0.7,0.7]} scale={[2, 2 ,2]}  onPointerEnter={(e) => setPlaying(true)}  onPointerLeave={(e) => setPlaying(false)}>
+        
+         <boxBufferGeometry  />
+         <meshBasicMaterial>
+            <videoTexture attach="map" args={[video]} />
+        </meshBasicMaterial>
+      </mesh>
+      <mesh ref={myMesh} position={[-1,1,2]} scale={[1, 1 ,1]}  onPointerEnter={(e) => setPlaying2(true)}  onPointerLeave={(e) => setPlaying2(false)}>
+      <boxBufferGeometry  />
+         <meshBasicMaterial>
+            <videoTexture attach="map" args={[video2]} />
+        </meshBasicMaterial>
+      </mesh>
+      </group>
+    );
+   }
+
+export default function Threedee() { 
+
+    return (
+       
+    <section >
+    <Close />
+    <Canvas style={{ backgroundColor: "#000000" , height: "100vh", width: "100vw" }}>
+    <CameraControls />
+  
+    <Suspense fallback={<Loader />}>
         <Box/>
         <ambientLight args={[0xffffff]} intensity={0.97}  />
         <Trainer />
      </Suspense>  
-        <KeyLight brightness={5.6} color="#fff" />
-      <Sphere />
-      </Canvas>
-     
-      </>
-    );
-  }
-    
+    </Canvas>
 
-export default Playground;
+      <section className="container">
+              <section className="project-info">
+                  <h3>Problem/Challange</h3>
+                  <h4>How might we utlise 3D technologies to highlight the need of sustainability</h4>
+              </section>
+
+              <section className="project-info">
+                      <h3>Thinking Strategy & Approach</h3>
+                      <h4>I decided to dissect a trainer which would reveal the different layers, I dissected the trainer in Blender and exported them as GTLF files.  </h4>
+              </section>
+          
+              <section className="project-info">
+                  <h3>Result & Final Experience</h3>
+                  <h4>If you pan the camera you'll see the different layers of the trainer, once all the layers are aligned the trainer looks whole. </h4>
+              </section>
+
+          </section> 
+
+      <Canvas className="Video-container" pixelRatio={window.devicePixelRatio} style={{ backgroundColor: "#ccc",  height: "120vh", width: "120vw" }}>
+      <FakeSphereControls  />
+        <FakeSphere />
+      </Canvas>
+
+      <section className="container">
+              <section className="project-info">
+                  <h3>Problem/Challange</h3>
+                  <h4>How might we utlise 3D technologies to enhance a video viewing experience?</h4>
+              </section>
+
+              <section className="project-info">
+                      <h3>Thinking Strategy & Approach</h3>
+                      <h4>Why should video be static? I decided to take a globe and use it's 360 degree rotation to allow a user to view the video from whichever angle they decide. </h4>
+              </section>
+          
+              <section className="project-info">
+                  <h3>Result & Final Experience</h3>
+                  <h4>Hover over the boxes to play the video</h4>
+              </section>
+
+          </section> 
+
+    </section>
+   
+    )
+}

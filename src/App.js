@@ -2,7 +2,7 @@ import './App.css';
 import React, { useRef, useEffect, useState} from 'react'
 import Video from './Components/Kids';
 import Threedee from './Components/Threedee';
-import { useMediaQuery } from 'react-responsive'
+
 
 import {
   BrowserRouter as Router,
@@ -15,27 +15,6 @@ import Website from './Components/Websites';
 import Applications from './Components/Applications';
 import Interactive from './Components/interactiveemails';
 import Playground from './Components/Playground';
-
-
-
-// const MediaQuery = () => {
-//   const isDesktopOrLaptop = useMediaQuery({
-//     query: '(min-width: 1224px)'
-//   })
-//   const isBigScreen = useMediaQuery({ query: '(min-width: 1824px)' })
-//   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
-//   const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
-//   const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
-
-//   return <div>
-//     <h1>Device Test!</h1>
-//     {isDesktopOrLaptop && <p>You are a desktop or laptop</p>}
-//     {isBigScreen && <p>You  have a huge screen</p>}
-//     {isTabletOrMobile && <p>You are a tablet or mobile phone</p>}
-//     <p>Your are in {isPortrait ? 'portrait' : 'landscape'} orientation</p>
-//     {isRetina && <p>You are retina</p>}
-//   </div>
-// }
 
 const customStyles = {
   content: {
@@ -105,6 +84,7 @@ export default function App() {
                   <h2>Creative Technologist</h2>
               </section>  
               <Pagelinks />
+              <Modalfunction /> 
             </section>
           </Route>
           <Route path="/websites">
@@ -120,8 +100,9 @@ export default function App() {
             <Playground />
           </Route>
         </Switch>
-        <Modalfunction />   
-        </Router>  
+          
+        </Router> 
+        
       </>
     );
   }

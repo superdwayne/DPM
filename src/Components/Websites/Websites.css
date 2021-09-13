@@ -24,6 +24,7 @@ video
 
 .elixir h2, h3, h4 , h5, h6 {
     padding: 20px ;
+    margin: 0px;
 }
 
 
@@ -98,6 +99,28 @@ video
   
     .oldsystem{
         width: 100%;
+    }
+
+    .container {
+      display: block;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 150px;
+    }
+
+    .project-info {
+      padding-top: 0px; 
+    flex: 0 1 32%;
+    height: auto; 
+    margin-bottom: 2%;
+    }
+    
+    .project-info h3 {
+      text-decoration: underline;
+    }
+
+    iframe {
+      width: 100%;
     }
   }
   
