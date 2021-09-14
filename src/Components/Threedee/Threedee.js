@@ -78,7 +78,7 @@ export default function Threedee() {
 
     return (
        
-    <section  className="mobile-shift">
+    <section className="flex">
     
     <Canvas style={{ backgroundColor: "#000000" , height: "100vh", width: "100vw" }}>
     <CameraControls />

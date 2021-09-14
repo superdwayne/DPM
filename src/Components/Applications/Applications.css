@@ -1,0 +1,13 @@
+.yana {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+}
+
+header {
+    width: 100%;
+}
+
+.project-info a {
+    color: #000 !important;
+}

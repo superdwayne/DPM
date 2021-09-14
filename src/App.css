@@ -1,21 +1,202 @@
 
-@import url('https://fonts.googleapis.com/css?family=Martel|Open+Sans:400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo&family=Montserrat&display=swap');
 
 .section {
   height: 100%;
 }
 
+small {
+  padding-right: 26px;
+}
+.metaverse {
+  display: flex;
+  align-items: center;
+}
+
+.about {
+  padding: 20px;
+}
 
 
-body {
-  font-size: 12px;
-  background-color: #000;
-  font-family: 'Open Sans';
+.flex {
+  display: flex;
+}
+.about h1 {
+  font-size: 1.17em;
+  line-height: 50px;
+}
+
+.about a {
+  color: #000 !important
+}
+
+
+.twinkling {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  display:block;
+}
+
+
+.twinkling{
+  background:transparent url(http://dwaynep-marshall.co.uk/stars.jpg) repeat top center;
+  z-index:-999;
+  padding: 25px;
+
+  -moz-animation:move-twink-back 200s linear infinite;
+  -ms-animation:move-twink-back 200s linear infinite;
+  -o-animation:move-twink-back 200s linear infinite;
+  -webkit-animation:move-twink-back 200s linear infinite;
+  animation:move-twink-back 200s linear infinite;
+}
+
+@keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+
+.fixedDPM {
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  display: block;
+  margin: 50px auto;
+
+}
+
+.fixedDPM:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.fixedDPM:active {
+  color: #000
+}
+
+.fixedDPM:active:after {
+  background: transparent;
+}
+
+.fixedDPM:hover:before {
+  opacity: 1;
+}
+
+.fixedDPM:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+a:link {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:active {
+  color: #000000 !important;
+  text-decoration: none;
+}
+
+.Websites:hover {
+  color: #ff7300;
+  text-decoration: none;
+}
+
+.Applications:hover{
+  color: #7a00ff;
 }
 
 
 
 
+.dim
+{
+  opacity: 0.4;
+}
+
+body {
+  font-size: 12px;
+  background-color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav-home {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.centered-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centered-title h2 
+{
+  font-family: 'Cardo';
+  font-size: 80px;
+  color: #fff;
+}
+
+
+.intro h1 {
+  font-family: 'Montserrat';
+  font-size: 30px !important;
+  margin: 0px;
+  color: #fff;
+  text-align: center;
+ 
+}
 
 .white {
   color: #fff;
@@ -23,41 +204,49 @@ body {
 
 li{
   font-size: 18px;
-  font-family: 'Open Sans';
+  font-family: 'Montserrat';
   padding: 10px;
 }
 
 h1 {
   text-align: left;
-  font-family: 'Open Sans';
+  font-family: 'Montserrat';
   font-size: 60px;
   font-weight: 900;
   line-height: 70px;
-  padding: 10px;
+}
+
+.intronav {
+  font-family: 'Cardo' !important;
+  font-size: 25px !important;
+  padding-right: 10px;
+  margin-bottom: 0px;
 }
 
 h2 {
-  text-align: left;
-  font-family: 'Open Sans';
-  font-size: 50px;
+  text-align: center;
+  font-family: 'Cardo';
+  font-size: 100px;
   font-weight: 900;
+  color: #fff;
+  margin: 0;
 
 }
 
 h3 {
   text-align: left;
-  font-family: 'Open Sans';
+  font-family: 'Montserrat';
   font-size: 20px;
   font-weight: 900;
   line-height: 20px;
+  color: #000;
 }
 
 h4 {
   text-align: left;
-  font-family: 'Open Sans';
+  font-family: 'Montserrat';
   font-size: 20px;
   font-weight: 900;
-  line-height: 20px;
 }
 
 .dpm {
@@ -82,5 +271,28 @@ h4 {
   .mobile-shift {
     display: none;
   }
+
+  .nav-home {
+    display: block;
+  }
+
+  h2 {
+    font-size: 77px;
+  }
+
+  .metaverse{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .flex {
+    display: block;
+  }
+
+  .about {
+    display: none;
+  }
+  
 }
 
