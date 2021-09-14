@@ -5,6 +5,9 @@
   height: 100%;
 }
 
+small {
+  padding-right: 26px;
+}
 .metaverse {
   display: flex;
   align-items: center;
@@ -217,6 +220,7 @@ h1 {
   font-family: 'Cardo' !important;
   font-size: 25px !important;
   padding-right: 10px;
+  margin-bottom: 0px;
 }
 
 h2 {
@@ -267,5 +271,28 @@ h4 {
   .mobile-shift {
     display: none;
   }
+
+  .nav-home {
+    display: block;
+  }
+
+  h2 {
+    font-size: 77px;
+  }
+
+  .metaverse{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .flex {
+    display: block;
+  }
+
+  .about {
+    display: none;
+  }
+  
 }
 

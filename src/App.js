@@ -1,12 +1,7 @@
 import './App.css';
-import React, { useRef, useEffect, useState} from 'react'
-import Video from './Components/Kids';
-import Threedee from './Components/Threedee';
-
-
+import React from 'react'
 import {
-  BrowserRouter as Router,
-  Link, Switch, Route,
+  BrowserRouter as Router, Switch, Route,
 } from "react-router-dom";
 
 import Modal from 'react-modal';

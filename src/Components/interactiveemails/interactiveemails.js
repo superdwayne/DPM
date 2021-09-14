@@ -39,11 +39,11 @@ function tree() {
              
                     <section className="tree">
                         <div>
-                                <iframe src="https://player.vimeo.com/video/599418568" title="Fallback" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                                <iframe src="https://player.vimeo.com/video/599418568" title="Fallback" width="640" height="564" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
                         </div>
 
                         <div>
-                            <iframe  src="https://player.vimeo.com/video/599419446" title="interactive" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                            <iframe  src="https://player.vimeo.com/video/599419446" title="interactive" width="640" height="564" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
                         </div>
                     </section>
                
@@ -55,8 +55,8 @@ function tree() {
             <section className="interactive">
             <ComparisonSlider
       defaultValue={28}
-      itemOne={<iframe src="https://player.vimeo.com/video/603378423?autoplay=1&loop=10&autopause=0" title="Fallback" width="640" height="564" frameborder="0" allow="autoplay; " allowfullscreen></iframe>}
-      itemTwo={  <iframe  src="https://player.vimeo.com/video/603378493?autoplay=1&loop=10&autopause=0" title="Interactive" width="640" height="564" frameborder="0" allow="autoplay; " allowfullscreen></iframe>}
+      itemOne={<iframe src="https://player.vimeo.com/video/603378423?autoplay=1&loop=10&autopause=0" title="Fallback" width="640" height="564" frameBorder="0" allow="autoplay; " allowFullScreen></iframe>}
+      itemTwo={  <iframe  src="https://player.vimeo.com/video/603378493?autoplay=1&loop=10&autopause=0" title="Interactive" width="640" height="564" frameBorder="0" allow="autoplay; " allowFullScreen></iframe>}
       aspectRatio={1 / 1}
       orientation="horizontal"
     
