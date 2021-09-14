@@ -272,6 +272,14 @@ h4 {
 @media (max-width:600px),
 (max-device-width:600px) {
 
+  .centered-title h2 {
+    font-size: 40px;
+  }
+
+  .intro h1 {
+    font-size: 25px;
+  }
+
   .mobwork {
     display: block;
   }
