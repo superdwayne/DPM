@@ -22,12 +22,12 @@ const Elixir = () => {
 
           <section className="project-info">
                   <h3>Thinking Strategy & Approach</h3>
-                  <h4>A traditional UX/UI double diamond approach.</h4>
+                  <h4>A traditional UX/UI double diamond approach, which utlised NodeJS as the go between (MongoDB)</h4>
           </section>
         
           <section className="project-info">
                 <h3>Result & Final Experience</h3>
-                <h4>We created a React powered system which allowed users to build campaigns outside of Responsys, this approach allowed users to see excatly what they were buliding (including all variants of a campaign)  </h4>
+                <h4>We created a React powered headless CMS system that allowed users to build campaigns outside of a CRM tool, this approach allowed users to see visually excatly what they were buliding (including all variants of a campaign)  </h4>
           </section>
     </section>    
 

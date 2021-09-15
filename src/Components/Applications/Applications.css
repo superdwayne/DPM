@@ -4,6 +4,16 @@
     display: block;
 }
 
+.container-app {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+.underlined {
+    text-decoration: underline !important;
+}
+
 header {
     width: 100%;
 }

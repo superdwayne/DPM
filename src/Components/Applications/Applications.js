@@ -5,7 +5,7 @@ import './Applications.css'
 
 function ani() {
     return (         
-            <section className="container">
+            <section className="container-app">
   
                 <Close />
    
@@ -28,7 +28,7 @@ function ani() {
                     
                         <section className="project-info">
                             <h3>Result & Final Experience</h3>
-                            <h4> Here is the final application,  <a href="https://meet-yana.herokuapp.com/">Meet Yana</a> </h4>
+                            <h4> Book a slot <a className="underlined" href="https://meet-yana.herokuapp.com/"> here </a> </h4>
                         </section>
                 </section> 
       </section>

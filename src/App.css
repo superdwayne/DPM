@@ -5,13 +5,18 @@
   height: 100%;
 }
 
+.intro-copy {
+  margin-top: 150px;
+}
+
 small {
   padding-right: 26px;
 }
 .metaverse {
-  display: flex;
+  display:inline-grid;
   align-items: center;
 }
+
 
 .about {
   padding: 20px;
@@ -269,6 +274,11 @@ h4 {
   padding-left: 50px;
 }
 
+.email {
+  color: #000 !important;
+  text-decoration: underline;
+}
+
 @media (max-width:600px),
 (max-device-width:600px) {
 
@@ -310,5 +320,9 @@ h4 {
     display: none;
   }
   
+  .intro-copy {
+    margin-top: 0px !important;
+  }
+
 }
 
