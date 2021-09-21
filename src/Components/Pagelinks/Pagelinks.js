@@ -1,9 +1,12 @@
 import React from 'react'
 import { Route, Link} from "react-router-dom";
-import Applications from '../Applications';
-import Interactiveemails from '../interactiveemails';
-import Playground from '../Playground';
-import Website from '../../Pages/Websites';
+import loadable from '@loadable/component'
+
+const Applications = loadable(() => import('../Applications'))
+const Playground = loadable(() => import('../Playground'))
+const Interactiveemails = loadable(() => import('../interactiveemails'))
+const Website = loadable(() => import('../../Pages/Websites'))
+
 
 export default function Pagelinks() { 
 
