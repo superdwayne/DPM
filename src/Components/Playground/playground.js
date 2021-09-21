@@ -9,7 +9,6 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import Loader from '../Loader';
 import Close from '../Close'  
 
-
 extend({ OrbitControls });  
 
 
@@ -123,28 +122,36 @@ function Trainer() {
       return vid;
     });
 
-     
-
+    
      useEffect(() => {
       console.log("Inside Video 2" );
       if (playing2)
       video2.play()
       else
       video2.pause()
+
       
-    },[playing2, video2]);
+    },[playing2 , video2]);
     
     useEffect(() => {
-        console.log("Inside Video 1" );
-        if (playing)
-        video.play()
-        else
-        video.pause()
-        
-      },[playing, video]);
-    // useEffect(() => {
-    //     video.load()
-    // })
+ 
+
+      console.log("Inside Video 1" );
+      if (playing)
+      video.play()
+      else
+      video.pause()
+      
+    },[ video,  playing]);
+    
+
+   
+    useEffect(() => {
+      return () => {
+        console.log("cleaned up");
+      };
+    }, []);
+
     const myMesh = React.useRef()
     // useFrame(() => {// myMesh.current.rotation.y += 0.01})
 
@@ -180,6 +187,7 @@ export default function Threedee() {
     <Close />
     <Canvas style={{ backgroundColor: "#000000" , height: "100vh", width: "100vw" }}>
     <CameraControls />
+    
   
     <Suspense fallback={<Loader />}>
         <Box/>
@@ -208,7 +216,9 @@ export default function Threedee() {
 
       <Canvas className="Video-container" pixelRatio={window.devicePixelRatio} style={{ backgroundColor: "#ccc",  height: "120vh", width: "120vw" }}>
       <FakeSphereControls  />
+      <Suspense fallback={<Loader />}>
         <FakeSphere />
+        </Suspense>
       </Canvas>
 
       <section className="container">
