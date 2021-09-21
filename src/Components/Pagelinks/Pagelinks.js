@@ -13,7 +13,7 @@ export default function Pagelinks() {
     <Route path="/websites" >
         <Website />
     </Route>
-    <Route path="/applications" component={Apps} />
+    <Route path="/applications" component={Applications} />
     <Route path="/interactiveemails" component={Interactiveemails} />
     <Route path="/playground" component={Playground}  />
        
@@ -31,13 +31,3 @@ export default function Pagelinks() {
    
     )
 }
-
-
-const Apps = () => {
-  
-    return (
-      <div>
-        <Applications/>
-      </div>
-    );
-  };

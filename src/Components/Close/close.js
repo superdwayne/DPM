@@ -9,8 +9,8 @@ const Close = () => {
 const scroll = useScollPosition();
 const page = window.location.pathname
 
-console.log(Mobile)
-console.log(scroll + page)
+// console.log(Mobile)
+// console.log(scroll + page)
     return (
 
 <Link to="/" data-page="/" >
