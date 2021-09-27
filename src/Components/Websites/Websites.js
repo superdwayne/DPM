@@ -17,7 +17,7 @@ const Elixir = () => {
     <section className="container">
           <section className="project-info">
                 <h3>Problem/Challange</h3>
-                <h4>We believe that with our current push tool isn’t scalable enough to allow for true customer-centricity.</h4>
+                <h4>We believe that our current push tool isn’t scalable enough to allow for true customer-centricity.</h4>
           </section>
 
           <section className="project-info">
