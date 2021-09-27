@@ -23,7 +23,7 @@ function ani() {
  
                         <section className="project-info">
                                 <h3>Thinking Strategy & Approach</h3>
-                                <h4>I needed to set up something quickly so I decided to use Mongo (via mongoose) as the databse where the entries would be stored, the information was sent via a nodeJS end point </h4>
+                                <h4>I needed to set up something quickly so I decided to use Mongo (via mongoose) as the databse where the entries would be stored, and the information was sent via a nodeJS end point </h4>
                         </section>
                     
                         <section className="project-info">
