@@ -95,10 +95,8 @@ export default function App() {
           <Route path="/playground">
             <Playground />
           </Route>
-        </Switch>
-          
+        </Switch>         
         </Router> 
-        
       </>
     );
   }
