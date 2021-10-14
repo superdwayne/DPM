@@ -39,7 +39,7 @@ function Modalfunction(){
 
   return (
     <div>
-      <button className="fixedDPM" onClick={openModal}>Let's get personal</button>
+      <button className="fixedDPM" onClick={openModal}>Contact me</button>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
