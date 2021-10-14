@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useScollPosition } from '../Close/scrollhook';
 import { useMediaQuery } from 'react-responsive'
+import React from 'react'
 
 const Close = () => {
 
