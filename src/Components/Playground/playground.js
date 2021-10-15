@@ -37,10 +37,10 @@ const CameraControls = () => {
 
 
 function Trainer() {
-  const gltf1 = useLoader(GLTFLoader, 'https://farfetch-cors.herokuapp.com/http://dwaynep-marshall.co.uk/full2.gltf')
+  const Trainerfull = useLoader(GLTFLoader, 'https://farfetch-cors.herokuapp.com/http://dwaynep-marshall.co.uk/full2.gltf')
   return (
     <>
-      <primitive object={gltf1.scene} scale={0.2} position={0} />
+      <primitive object={Trainerfull.scene} scale={0.2} position={0} />
       </>
     
     );
