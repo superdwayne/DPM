@@ -26,7 +26,7 @@ export default function Pagelinks() {
             <p className="intronav">Application ~</p></Link> 
             <Link to="/interactiveemails" data-page="/interactiveemails" >
             <p className="intronav">Interactive emails ~</p></Link> 
-            <Link to="/playground" data-page="/playground" >
+            <Link to="/playground" className="mobile-shift" data-page="/playground" >
             <p className="intronav">Playground</p><small>*loading times vary</small> </Link>                
         </section>
     </nav>     
