@@ -1,0 +1,40 @@
+.projects-dpm
+{
+    color: #000000 !important;
+    font-size: 91px;
+    width: 380px;
+    margin: 30px;
+}
+
+.projects {
+ 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   
+}
+
+.item h1 {
+    text-align: center;
+}
+
+.item .bottom p {
+    font-weight: bold;
+    margin: 10px;
+    padding-top: 20px;
+}
+
+.item {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+} 
+
+@media (max-width:600px),
+(max-device-width:600px) {
+
+  .projects {
+    display: block !important
+  }
+
+}
