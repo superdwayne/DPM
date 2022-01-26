@@ -4,12 +4,12 @@ import {
   extend,
 
 } from '@react-three/fiber'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
 import History from '../Hooks/history'
 
 
-extend({ OrbitControls });
+// extend({ OrbitControls });
 
 // const CameraControls = () => {
 //   const {
