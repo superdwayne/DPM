@@ -182,4 +182,4 @@ export default function Model({ ...props }) {
   )
 }
 
-useGLTF.preload('https://www.dwaynep-marshall.co.uk/DPM-X.glb')
+useGLTF.preload('https://cdn-static.farfetch-contents.com/Content/UP/EXPERIENCE/Metaverse/DPM-X.glb')
