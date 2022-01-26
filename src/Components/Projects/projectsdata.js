@@ -6,7 +6,7 @@ import Websites from "../Websites";
 import Metaverse from "../Metaverse"
 import Avatars from "../Avatars"
 
-export default  [
+const Data  = [
     {
 
         name: "Meta",
@@ -63,3 +63,4 @@ export default  [
     }
     
 ]
+export default Data;
