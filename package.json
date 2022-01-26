@@ -4,7 +4,9 @@
   "private": true,
   "dependencies": {
     "@loadable/component": "^5.15.0",
+    "@react-three/drei": "^8.3.1",
     "@react-three/fiber": "^7.0.6",
+    "@react-three/xr": "^3.2.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -17,6 +19,7 @@
     "react-responsive": "^9.0.0-beta.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.4",
+    "react-scroll-into-view": "^1.10.1",
     "react-three-fiber": "^5.3.14",
     "react-webcam": "^5.2.4",
     "three": "^0.131.2",

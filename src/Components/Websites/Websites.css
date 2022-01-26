@@ -1,6 +1,6 @@
 header {
     position: relative;
-    background-color: #000;
+
 }
 
 iframe {
@@ -31,8 +31,8 @@ video
 .project-info {
    
   padding-top: 20px;
-  flex: 0 32%;
-    height: 100px;
+  flex: 0 50%;
+    
     margin-bottom: 2%; /* (100-32*3)/2 */
 
 }
@@ -85,7 +85,6 @@ video
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 150px;
   }
   
   .item {

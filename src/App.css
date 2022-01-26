@@ -1,5 +1,30 @@
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Cardo&family=Montserrat&display=swap');
+h1 {
+  font-size: 91px;
+  color: #fff;
+}
+
+.projects-dpm {
+  width: 380px;
+  color: #000;;
+}
+
+
+.item {
+  flex: 0 32%;
+  height: 300px !important;
+  margin-bottom: 2%; /* (100-32*3)/2 */
+  background-color: #ccc;
+}
+
+html {
+  background-color: #000;
+}
+
+
 
 .section {
   height: 100%;
@@ -144,27 +169,18 @@ small {
   100% { background-position: 0 0; }
 }
 a:link {
-  color: #fff !important;
+  color: #000000 !important;
   text-decoration: none;
 }
 
 a:visited {
-  color: #fff;
+  color: #000000;
   text-decoration: none;
 }
 
 a:active {
   color: #000000 !important;
   text-decoration: none;
-}
-
-.Websites:hover {
-  color: #ff7300;
-  text-decoration: none;
-}
-
-.Applications:hover{
-  color: #7a00ff;
 }
 
 
@@ -178,14 +194,10 @@ a:active {
 body {
   font-size: 12px;
   background-color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.nav-home {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-}
+
 
 .centered-title {
   position: absolute;
@@ -202,14 +214,7 @@ body {
 }
 
 
-.intro h1 {
-  font-family: 'Montserrat';
-  font-size: 30px !important;
-  margin: 0px;
-  color: #fff;
-  text-align: center;
- 
-}
+
 
 .white {
   color: #fff;
@@ -217,49 +222,43 @@ body {
 
 li{
   font-size: 18px;
-  font-family: 'Montserrat';
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   padding: 10px;
 }
 
-h1 {
-  text-align: left;
-  font-family: 'Montserrat';
-  font-size: 60px;
-  font-weight: 900;
-  line-height: 70px;
-}
 
 .intronav {
-  font-family: 'Cardo' !important;
   font-size: 25px !important;
   padding-right: 10px;
   margin-bottom: 0px;
 }
 
 h2 {
-  text-align: center;
-  font-family: 'Cardo';
+  
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 100px;
   font-weight: 900;
-  color: #fff;
+  color: #000;
   margin: 0;
 
 }
 
 h3 {
   text-align: left;
-  font-family: 'Montserrat';
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 20px;
   font-weight: 900;
   line-height: 20px;
   color: #000;
 }
-
+.hide {
+  display: none !important;
+}
 h4 {
   text-align: left;
-  font-family: 'Montserrat';
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 20px;
-  font-weight: 900;
+  font-weight: normal;
 }
 
 .dpm {
@@ -270,10 +269,6 @@ h4 {
   display: none;
 }
 
-.mobwork h1 {
-  padding-left: 50px;
-}
-
 .email {
   color: #000 !important;
   text-decoration: underline;
@@ -282,47 +277,20 @@ h4 {
 @media (max-width:600px),
 (max-device-width:600px) {
 
-  .centered-title h2 {
-    font-size: 40px;
+  .intro
+  {
+    display: block !important;
   }
 
-  .intro h1 {
-    font-size: 25px !important;
-  }
-
-  .mobwork {
-    display: block;
-  }
-
-  .mobile-shift {
-    display: none;
-  }
-
-  .nav-home {
-    display: block;
-  }
-
-  h2 {
-    font-size: 50px;
-  }
-
-  .metaverse{
-    display: block;
-    margin: 0 auto;
+  .projects-dpm {
     text-align: center;
+    width: auto !important;
   }
 
-  .flex {
-    display: block;
-  }
-
-  .about {
-    display: none;
+  .avatar-DPM {
+    width: 100% !important;
   }
   
-  .intro-copy {
-    margin-top: 0px !important;
-  }
-
+  
 }
 
