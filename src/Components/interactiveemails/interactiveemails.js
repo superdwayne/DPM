@@ -41,9 +41,7 @@ function tree() {
        
         
 </section> 
-<History 
-
-/>
+<History />
 </section>
 
             

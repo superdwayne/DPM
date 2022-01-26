@@ -181,4 +181,4 @@ export default function Model({ ...props }) {
   )
 }
 
-useGLTF.preload('../DPM-X.glb')
+useGLTF.preload('http://www.dwaynep-marshall.co.uk/DPM-S.glb')
