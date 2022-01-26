@@ -33,7 +33,7 @@ const pathname = useContext(ThemeContext)
         </section>
     </nav> 
     
-    <section className={ pathname === '/about' ? null : 'intro' } style={{ display: pathname === '/applications'  || pathname === '/metaverse' || pathname === '/interactiveemails' || pathname === '/websites' || pathname === '/playground'  || pathname === '/avatars' || pathname === '/about' || pathname === '/contact'   ? "none" : "flex" } }>
+    <section className={ pathname === '/applications'  || pathname === '/metaverse' || pathname === '/interactiveemails' || pathname === '/websites' || pathname === '/playground'  || pathname === '/avatars' || pathname === '/about' || pathname === '/contact' ? null : 'intro' } style={{ display: pathname === '/applications'  || pathname === '/metaverse' || pathname === '/interactiveemails' || pathname === '/websites' || pathname === '/playground'  || pathname === '/avatars' || pathname === '/about' || pathname === '/contact'   ? "none" : "flex" } }>
          <h1 className="projects-dpm"> Dwayne Paisley-Marshall</h1>
          <h1 className="projects-dpm">Creative Techno<br/>logist</h1> 
          <h1 className="projects-dpm">{svg}</h1>

@@ -19,7 +19,7 @@ function Avatars(props) {
                         
                                 <h3>Technology</h3>
                                 <h4>When you create an avatar on RPM, you have the option to download it as a GLTF, which is great, however, the Avatar is lifeless (so to speak)</h4>
-                                 <img src={dpm} alt="" /> 
+                                 <img src={dpm} className='avatar-DPM' alt="" /> 
                                  <h4>There is a animation library called https://www.mixamo.com/#/ which gives you the ability to add animation to FBX and GLB files. One an animation has been added you'll end up with something like this</h4>      
 
                                  <iframe src="https://player.vimeo.com/video/663497063?h=d3d8ea124a&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="1004" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="dpm-moving"></iframe>

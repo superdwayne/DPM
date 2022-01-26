@@ -30,9 +30,10 @@ function about() {
                     <section className="project-info">
                             <h1 className="abouth1">Hi there, I'm Dwayne Paisley-Marshall</h1>
                             <p>One of the most intersting things you'll find about me, is my 
-                            ability to creatively write code, alongside my passion for users.</p>
-                            <p>My skillset is vast spanning from back-end to front end, from React/VR applications right the way to interactive HTML emails.</p>
-                            <p>I'm currently obsesssed with 3D and VR I have a fun playground where you can see some of my exploits. </p>
+                            is my ability to create beautiful experiences from a single concept.</p>
+                            <p>I enjoy employing the use of "smoke and mirrors" I create things where a user persives something is happening which is different to their normal Web 2.0 experience </p>
+                            <p>My skillset is vast expanding I pick up new technologies and skills really fast, current my stack is React/VR/AR/XR Node etc//</p>
+                            <p>I'm currently obsesssed with 3D and VR. </p>
                         </section>
 
                         <section className="project-info mob">

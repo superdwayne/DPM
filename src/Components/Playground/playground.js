@@ -150,7 +150,13 @@ export default function Threedee() {
           <h3>Project overview</h3>
           <h4>Here are a few POC'S these experments are here to showcase what 
           is possible with technology.</h4>
-          <svg shape-rendering="crispEdges" height="100%" width="100%" viewBox="0 0 37 37">
+
+          <iframe src="https://player.vimeo.com/video/670128012?h=0330efa6c7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="720" height="554" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="3D trainer"></iframe>
+
+          <iframe src="https://player.vimeo.com/video/670127441?h=de7110a54d&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="720" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="3D Video - AR"></iframe>
+          
+          
+          {/* <svg shape-rendering="crispEdges" height="100%" width="100%" viewBox="0 0 37 37">
     <path fill="#FFFFFF" d="M0,0 h37v37H0z"></path>
     <path fill="#000000" d="M0,0h7v1H0zM8 0h1v1H8zM10 0h1v1H10zM12 
     0h2v1H12zM15 0h1v1H15zM18 0h6v1H18zM25 0h1v1H25zM30,0 h7v1H30zM0 
@@ -194,9 +200,13 @@ export default function Threedee() {
               19h1v1H11zM13 19h2v1H13zM16 19h2v1H16zM19 19h1v1H19zM22 19h2v1H22zM28 19h1v1H28zM31 19h3v1H31zM35 19h1v1H35zM0 20h2v1H0zM4 20h4v1H4zM9 20h2v1H9zM13 20h3v1H13zM17 20h1v1H17zM21 20h4v1H21zM26 20h1v1H26zM28 20h2v1H28zM31 20h2v1H31zM35 20h1v1H35zM7 21h1v1H7zM17 21h1v1H17zM19 21h2v1H19zM22 21h4v1H22zM28 21h1v1H28zM31 21h1v1H31zM33 21h1v1H33zM35 21h1v1H35zM1 22h1v1H1zM3 22h1v1H3zM5 22h3v1H5zM10 22h1v1H10zM14 22h1v1H14zM16 
               22h3v1H16zM22 22h3v1H22zM26 22h1v1H26zM28 22h1v1H28zM30 22h1v1H30zM33 22h2v1H33zM2 23h4v1H2zM7 23h2v1H7zM11 23h4v1H11zM18 23h3v1H18zM25 23h1v1H25zM29 23h2v1H29zM32 23h3v1H32zM4 24h3v1H4zM8 24h4v1H8zM15 24h1v1H15zM17 24h2v1H17zM25 24h3v1H25zM30 
               24h1v1H30zM32,24 h5v1H32zM1 25h1v1H1zM3 25h3v1H3zM7 25h1v1H7zM11 25h1v1H11zM13 25h1v1H13zM15 25h5v1H15zM22 25h1v1H22zM24 25h11v1H24zM36,25 h1v1H36zM1 26h6v1H1zM8 26h1v1H8zM10 26h1v1H10zM12 26h1v1H12zM14 26h1v1H14zM19 26h1v1H19zM22 26h1v1H22zM24 26h2v1H24zM28 26h3v1H28zM33 26h1v1H33zM35 26h1v1H35zM0 27h1v1H0zM2 27h2v1H2zM7 27h2v1H7zM12 27h2v1H12zM15 27h2v1H15zM20 27h3v1H20zM24 27h1v1H24zM26 27h1v1H26zM29 27h1v1H29zM36,27 h1v1H36zM2 28h2v1H2zM6 28h1v1H6zM9 28h3v1H9zM15 28h1v1H15zM20 28h2v1H20zM25 28h1v1H25zM28 28h5v1H28zM34,28 h3v1H34zM8 29h1v1H8zM10 29h1v1H10zM12 29h2v1H12zM15 29h1v1H15zM20 29h1v1H20zM23 29h3v1H23zM28 29h1v1H28zM32 29h3v1H32zM36,29 h1v1H36zM0 30h7v1H0zM9 30h1v1H9zM11 30h2v1H11zM15 30h3v1H15zM20 30h3v1H20zM26 30h1v1H26zM28 30h1v1H28zM30 30h1v1H30zM32 30h2v1H32zM35,30 h2v1H35zM0 31h1v1H0zM6 31h1v1H6zM9 31h1v1H9zM12 31h1v1H12zM16 31h2v1H16zM20 31h1v1H20zM27 31h2v1H27zM32 31h2v1H32zM35,31 h2v1H35zM0 32h1v1H0zM2 32h3v1H2zM6 32h1v1H6zM9 32h5v1H9zM16 32h3v1H16zM21 32h2v1H21zM28 32h5v1H28zM35 32h1v1H35zM0 33h1v1H0zM2 33h3v1H2zM6 33h1v1H6zM8 33h2v1H8zM12 33h3v1H12zM16 33h1v1H16zM19 33h3v1H19zM23 33h1v1H23zM25 33h1v1H25zM29 33h2v1H29zM32 33h1v1H32zM35,33 h2v1H35zM0 34h1v1H0zM2 34h3v1H2zM6 34h1v1H6zM8 34h6v1H8zM17 34h2v1H17zM20 34h4v1H20zM27 34h7v1H27zM0 35h1v1H0zM6 35h1v1H6zM8 35h1v1H8zM16 35h1v1H16zM19 35h1v1H19zM22 35h1v1H22zM24 35h3v1H24zM29 35h1v1H29zM32 35h3v1H32zM0 36h7v1H0zM8 36h1v1H8zM10 36h1v1H10zM12 36h1v1H12zM14 36h1v1H14zM17 36h1v1H17zM19 36h1v1H19zM22 36h1v1H22zM25 36h2v1H25zM29 36h2v1H29zM34,36 h3v1H34z"></path>
-</svg>
+</svg> */}
+
+          <iframe src="https://player.vimeo.com/video/670000140?h=044b0c5854&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="720" height="381" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Immersive web 3.0"></iframe>
 
           <iframe src="https://player.vimeo.com/video/663497017?h=6ed15c7d69&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="720" height="720" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen title="Ready player me in VR"></iframe>
+
+          <iframe src="https://player.vimeo.com/video/669994332?h=a158d858c8&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="720" height="594" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="3D world"></iframe>
 
           {/* <Canvas className="Video-container" pixelRatio={window.devicePixelRatio} style={{ backgroundColor: "#ccc", height: "50vh", width: "50vw" }}>
             <FakeSphereControls />
