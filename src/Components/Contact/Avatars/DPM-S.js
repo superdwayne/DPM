@@ -182,4 +182,4 @@ export default function Model({ ...props }) {
   )
 }
 
-useGLTF.preload('../DPM-S.glb')
+useGLTF.preload('https://d1a370nemizbjq.cloudfront.net/a3866e93-c4ec-4e32-be42-b4fdd0e83651.glb')
