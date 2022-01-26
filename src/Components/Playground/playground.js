@@ -151,7 +151,7 @@ export default function Threedee() {
           <h4>Here are a few POC'S these experments are here to showcase what 
           is possible with technology.</h4>
 
-          <iframe src="https://player.vimeo.com/video/670128012?h=0330efa6c7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="720" height="554" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="3D trainer"></iframe>
+          <iframe src="https://player.vimeo.com/video/670128012?h=0330efa6c7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&muted=1" width="720" height="554" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="3D trainer"></iframe>
 
           <iframe src="https://player.vimeo.com/video/670127441?h=de7110a54d&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="720" height="720" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="3D Video - AR"></iframe>
           
