@@ -281,6 +281,10 @@ h4 {
     word-break: break-word !important;
   }
 
+  svg {
+    display: none !important;
+  }
+
   .intro
   {
     display: block !important;
@@ -289,6 +293,7 @@ h4 {
   .projects-dpm {
     text-align: center;
     width: auto !important;
+    font-size: 70px !important;
   }
 
   .avatar-DPM {
