@@ -11,7 +11,7 @@ import Website  from '../Websites'
 import Metaverse  from '../Metaverse'
 import Avatars  from '../Avatars'
 import About  from '../About'
-import Contact from '../Contact'
+
 import { ThemeContext } from '../../App';
 
 export default function Pagelinks() { 
@@ -41,7 +41,6 @@ const pathname = useContext(ThemeContext)
         
             <Route path="/websites"  component={Website} /> 
             <Route path="/about"  component={About} /> 
-            <Route path="/contact" component={Contact} />
             <Route path="/metaverse" component={Metaverse} />
             <Route path="/applications" component={Applications} />
             <Route path="/interactiveemails" component={Interactiveemails} />
