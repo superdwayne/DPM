@@ -2,7 +2,7 @@ import React, {useContext} from 'react'
 import { Route, Link} from "react-router-dom";
 import './page.css';
 import svg from './qr'
-import loadable from '@loadable/component'
+import React, { lazy } from 'react';
 
 // import Applications from '../Applications'
 // import Playground  from '../Playground'
@@ -13,15 +13,13 @@ import loadable from '@loadable/component'
 
 import { ThemeContext } from '../../App';
 
-const Avatars = loadable(() => import('../Avatars'))
-const Metaverse = loadable(() => import('../Metaverse'))
-const Websites = loadable(() => import('../Websites'))
-const Interactiveemails = loadable(() => import('../interactiveemails'))
-const Applications = loadable(() => import('../Applications'))
-const Playground = loadable(() => import('../Playground'))
-const About = loadable(() => import('../About'))
-
-
+const Avatars = lazy(() => import('../Avatars'))
+const Metaverse = lazy(() => import('../Metaverse'))
+const Websites = lazy(() => import('../Websites'))
+const Interactiveemails = lazy(() => import('../interactiveemails'))
+const Applications = lazy(() => import('../Applications'))
+const Playground = lazy(() => import('../Playground'))
+const About = lazy(() => import('../About'))
 
 
 export default function Pagelinks() { 
