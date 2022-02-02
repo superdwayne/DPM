@@ -1,14 +1,13 @@
+const CompressionPlugin = require("compression-webpack-plugin");
+
 module.exports = {
-    //...
-    module: {
-      rules: [
-        //...
-        {
-          test: /zcv\.wasm$/,
-          type: "javascript/auto",
-          loader: "file-loader"
-        }
-        //...
-      ]
-    }
-  };
+  plugins: [
+    new CompressionPlugin({ 
+      asset: "[path].gz[query]",
+      algorithm: "gzip",
+      test: /\.js$|\.css$|\.html$/,
+      threshold: 10240,
+      minRatio: 0.8
+    })
+  ]
+};
