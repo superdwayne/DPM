@@ -2,17 +2,27 @@ import React, {useContext} from 'react'
 import { Route, Link} from "react-router-dom";
 import './page.css';
 import svg from './qr'
+import loadable from '@loadable/component'
 
-
-import Applications from '../Applications'
-import Playground  from '../Playground'
-import Interactiveemails from '../interactiveemails'
-import Website  from '../Websites'
-import Metaverse  from '../Metaverse'
-import Avatars  from '../Avatars'
-import About  from '../About'
+// import Applications from '../Applications'
+// import Playground  from '../Playground'
+// import Interactiveemails from '../interactiveemails'
+// import Website  from '../Websites'
+// import Metaverse  from '../Metaverse'
+// import Avatars  from '../Avatars'
 
 import { ThemeContext } from '../../App';
+
+const Avatars = loadable(() => import('../Avatars'))
+const Metaverse = loadable(() => import('../Metaverse'))
+const Websites = loadable(() => import('../Websites'))
+const Interactiveemails = loadable(() => import('../interactiveemails'))
+const Applications = loadable(() => import('../Applications'))
+const Playground = loadable(() => import('../Playground'))
+const About = loadable(() => import('../About'))
+
+
+
 
 export default function Pagelinks() { 
 //    const pathname = useTheme()
@@ -39,7 +49,7 @@ const pathname = useContext(ThemeContext)
          <h1 className="projects-dpm">{svg}</h1>
    </section>     
         
-            <Route path="/websites"  component={Website} /> 
+            <Route path="/websites"  component={Websites} /> 
             <Route path="/about"  component={About} /> 
             <Route path="/metaverse" component={Metaverse} />
             <Route path="/applications" component={Applications} />
