@@ -1,8 +1,7 @@
-import React, {useContext} from 'react'
+import React, {useContext, lazy} from 'react'
 import { Route, Link} from "react-router-dom";
 import './page.css';
 import svg from './qr'
-import React, { lazy } from 'react';
 
 // import Applications from '../Applications'
 // import Playground  from '../Playground'
