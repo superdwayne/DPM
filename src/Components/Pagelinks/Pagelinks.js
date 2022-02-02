@@ -1,4 +1,4 @@
-import React, {useContext, lazy} from 'react'
+import React, {useContext, lazy, Suspense} from 'react'
 import { Route, Link} from "react-router-dom";
 import './page.css';
 import svg from './qr'
@@ -20,6 +20,7 @@ const Applications = lazy(() => import('../Applications'))
 const Playground = lazy(() => import('../Playground'))
 const About = lazy(() => import('../About'))
 
+const renderLoader = () => <p>Loading</p>;
 
 export default function Pagelinks() { 
 //    const pathname = useTheme()
@@ -46,6 +47,7 @@ const pathname = useContext(ThemeContext)
          <h1 className="projects-dpm">{svg}</h1>
    </section>     
         
+   <Suspense fallback={renderLoader()}>
             <Route path="/websites"  component={Websites} /> 
             <Route path="/about"  component={About} /> 
             <Route path="/metaverse" component={Metaverse} />
@@ -53,7 +55,7 @@ const pathname = useContext(ThemeContext)
             <Route path="/interactiveemails" component={Interactiveemails} />
             <Route path="/avatars" component={Avatars}  /> 
             <Route path="/playground" component={Playground}  /> 
-            
+       </Suspense> 
     </>
    
     )
