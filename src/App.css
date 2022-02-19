@@ -2,6 +2,22 @@ body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+.elixir h2, h3, h4, h5, h6
+{
+  padding: 20px;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project-info {
+  flex: 0 1 50%;
+    margin-bottom: 2%;
+    padding-top: 20px;
+}
+
 .cen {
   display: flex;
   margin: 0px auto;
