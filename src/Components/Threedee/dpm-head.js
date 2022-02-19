@@ -17,7 +17,7 @@ useEffect(() => {
     group.current.scale.z = 5
     
      },[]); 
-     console.log(leftEye)
+
     
   return (
     <>
