@@ -85,5 +85,3 @@ useEffect(() => {
       </>
   )
 }
-
-useGLTF.preload('https://cdn-static.farfetch-contents.com/Content/UP/EXPERIENCE/Metaverse/dpm-head.glb')
