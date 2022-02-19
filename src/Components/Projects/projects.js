@@ -1,7 +1,7 @@
 
 import './projects.css';
 import React, {useContext} from 'react';
-import {Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import projectsdata from './projectsdata';
 import { ThemeContext } from '../../App';
 
@@ -13,13 +13,10 @@ export default function Projects () {
             return (
                 <>
                     <Link key={i} style={{backgroundImage: `linear-gradient(to right, ${projectsdata[i].firstBackground}, ${projectsdata[i].secondBackground})`}}
-                    className={pathname === '/applications' || pathname === '/metaverse' || pathname === '/interactiveemails' || pathname === '/websites' || pathname === '/playground'  || pathname === '/avatars' || pathname === '/about'  || pathname === '/contact' ? "hide" : "item" } 
+                    className={pathname === '/threedee' || pathname === '/applications' || pathname === '/metaverse' || pathname === '/snap' || pathname === '/playground'  || pathname === '/avatars' || pathname === '/about'  || pathname === '/contact' ? "hide" : "item" } 
                     to={projectsdata[i].pathname}>
                         <section key={i} >
                             <h1>{projectsdata[i].name}</h1>
-                            {/* <section className="bottom">
-                                <p>{projectsdata[i].title}</p>
-                            </section> */}
                         </section>
                     </Link>
                     

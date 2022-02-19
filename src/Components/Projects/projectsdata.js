@@ -1,10 +1,12 @@
 import React from 'react';
 import Applications from "../Applications";
-import Interactiveemails from "../interactiveemails";
+import Snap from "../Snap";
 import Playground from "../Playground";
 import Websites from "../Websites";
 import Metaverse from "../Metaverse"
 import Avatars from "../Avatars"
+import Threedee from "../Threedee"
+
 
 const Data  = [
     {
@@ -45,19 +47,19 @@ const Data  = [
     },
     {
 
-        name: "Elixir",
-        title: "React based CRM appication",
-        component: <Websites/>,
-        pathname: "/websites",
+        name: "3D",
+        title: "React based 3D appication",
+        component: <Threedee/>,
+        pathname: "/threedee",
         firstBackground: '#E6DADA',
         secondBackground: '#274046'
     },
     {
 
-        name: "HTML",
+        name: "Snap",
         title: "Interactive emails",
-        component: <Interactiveemails/>,
-        pathname: "/interactiveemails",
+        component: <Snap/>,
+        pathname: "/snap",
         firstBackground: '#274046',
         secondBackground: '#E6DADA'
     }

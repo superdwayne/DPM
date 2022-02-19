@@ -1,12 +1,30 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef,  } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
+import getMouseDegrees from '../../Hooks/utils';
+import * as THREE from "three";
+import {useFrame, useThree } from '@react-three/fiber'
+
+function moveJoint(mouse, joint, degreeLimit = 40) {
+  let degrees = getMouseDegrees(mouse.x, mouse.y, degreeLimit)
+  joint.rotation.xD = THREE.MathUtils.lerp(joint.rotation.xD || 0, degrees.y, 0.1)
+  joint.rotation.yD = THREE.MathUtils.lerp(joint.rotation.yD || 0, degrees.x, 0.1)
+  joint.rotation.x = THREE.Math.degToRad(joint.rotation.xD)
+  joint.rotation.y = THREE.Math.degToRad(joint.rotation.yD)
+}
+
 
 export default function Model({ ...props }) {
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('https://cdn-static.farfetch-contents.com/Content/UP/EXPERIENCE/Metaverse/DPM-X.glb')
+  const { nodes, materials, animations } = useGLTF('https://cdn-static.farfetch-contents.com/Content/UP/EXPERIENCE/Metaverse/DPM-X-Move.glb')
   const { actions } = useAnimations(animations, group)
 
  
+  const { size } = useThree()
+  useFrame((state, delta) => {
+   const mouse = { x: size.width / 2 + (state.mouse.x * size.width) / 2, y: size.height / 2 + (-state.mouse.y * size.height) / 2 }
+    moveJoint(mouse, nodes.Head )
+  })
+
   useEffect(() => {
     actions.CHILL.play()
     console.log(group.current.scale.x)
@@ -21,6 +39,7 @@ export default function Model({ ...props }) {
   return (
     
     <group ref={group} {...props} dispose={null}>
+
       <group position={[-1.68, 0.02, 0.07]}>
         <group position={[0, 1.02, 0.01]} rotation={[0.03, 0, 0]}>
           <group position={[0, 0.1, 0]} rotation={[-0.14, 0, 0]}>
@@ -114,7 +133,8 @@ export default function Model({ ...props }) {
           </group>
         </group>
       </group>
-      <primitive object={nodes.Hips} />
+      <primitive object={nodes["Hips"]}  />
+      {/* <primitive position={[-0,1.5,-0.1]}  object={nodes.Head}  /> */}
       <skinnedMesh
         geometry={nodes.Wolf3D_Facewear001.geometry}
         material={materials.Wolf3D_Facewear}
@@ -181,4 +201,3 @@ export default function Model({ ...props }) {
   )
 }
 
-useGLTF.preload('https://cdn-static.farfetch-contents.com/Content/UP/EXPERIENCE/Metaverse/DPM-X.glb')

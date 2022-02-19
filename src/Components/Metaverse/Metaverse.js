@@ -31,10 +31,7 @@ function Metaverse() {
                        
                         
                 </section> 
-                <History
-                 firstnextStory={'http://dwaynep-marshall.co.uk/yana.png'}
-                 secondnextStory={'https://images.unsplash.com/photo-1619472376731-3ca648a34b69?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1856&q=80'}
-                 />
+                <History />
       </section>
 
     )

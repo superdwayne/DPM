@@ -29,18 +29,16 @@ function about() {
                     <section className="container">
                     <section className="project-info">
                             <h1 className="abouth1">Hi there, I'm Dwayne Paisley-Marshall</h1>
-                            <p>One of the most intersting things you'll find about me, is my 
-                            is my ability to create beautiful experiences from a single concept.</p>
-                            <p>I enjoy employing the use of "smoke and mirrors" I create things where a user persives something is happening which is different to their normal Web 2.0 experience </p>
-                            <p>My skillset is vast expanding I pick up new technologies and skills really fast, current my stack is React/VR/AR/XR Node etc//</p>
-                            <p>I'm currently obsesssed with 3D and VR. </p>
+                            <p>Constructivism is my learning style, I learn by doing.</p>
+                            <p>Current stack: React/VR/AR/XR , Node.js, Blender/Snap/Spark, HTML/CSS, Javascript</p>
+                            <p>Always open for collobrations </p>
                         </section>
 
                         <section className="project-info mob">
                       
                            <Canvas>   
                            <ambientLight />
-                           <spotLight intensity={20}  />     
+                           <spotLight intensity={3} position={[20,20,20]}  />     
                                 <Suspense fallback={null}>
                                     <Controls />
                                         <DPMX />

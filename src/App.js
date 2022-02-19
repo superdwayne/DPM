@@ -2,14 +2,12 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-
-
 //CSS
 import './App.css';
 import './fonts.css';
 
 
-//Hooks
+
 // import { ThemeProvider } from "./Components/Hooks/ThemeContext";
 
 //Components
@@ -22,7 +20,6 @@ export const ThemeContext = React.createContext()
 export default function App() {
   
   const [pathname, setPathname] = useState(true);
-  
   const location = useLocation();
  
   useEffect(() => {  setPathname(location.pathname)  }, [location]);

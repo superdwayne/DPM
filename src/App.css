@@ -2,6 +2,11 @@ body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+.cen {
+  display: flex;
+  margin: 0px auto;
+}
+
 h1 {
   font-size: 91px;
   color: #fff;

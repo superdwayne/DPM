@@ -8,12 +8,12 @@ function HistoryNav (){
   
       const history = useHistory();
 
-      const interactive = () => {
+      const threedee = () => {
         window.scrollTo({
           top: 0,
           behavior: "smooth"
         });
-        history.push('/interactiveemails');
+        history.push('/threedee');
       }
 
       const applications = () => {
@@ -24,12 +24,12 @@ function HistoryNav (){
         history.push('/applications');
       }
     
-      const websites = () => {
+      const snap = () => {
         window.scrollTo({
           top: 0,
           behavior: "smooth"
         });
-        history.push('/websites');
+        history.push('/snap');
       }
 
       const playground = () => {
@@ -65,21 +65,21 @@ function HistoryNav (){
             link: metaverse
         },
         {
-            img: 'https://tinyurl.com/y2jdxymd',
+            img: 'https://tinyurl.com/y772mhxv',
             link: playground
         },
         {
-            img: 'https://tinyurl.com/y6eh42p2',
-            link: websites
-        },
-        {
-            img: 'https://tinyurl.com/y3f7rbmh',
-            link: interactive
+            img: 'https://tinyurl.com/ybujj4jg',
+            link: snap
         },
         {
             img: 'https://tinyurl.com/y49t2gxa',
             link: avatars
-        }
+        },
+        {
+          img: 'https://tinyurl.com/y7nfgov2',
+          link: threedee  
+      }
    ]
 
    const amount = 4
@@ -102,15 +102,13 @@ while (randomnumbers.size < amount) {
 ans = [...randomnumbers];
   
 // Printing the array
-console.log(ans[0])
+// console.log(ans[0])
 
 const nextprojectLoop = Object.keys(nextProjects).slice(0,2).map((title, i) => {
 
-//TODO fix duplicate array issue
-
     return (
         <>
-            <img key={i} src={nextProjects[ans[i]].img} onClick={nextProjects[ans[i]].link} alt="Websites" /> 
+            <img key={i} src={nextProjects[ans[i]].img} onClick={nextProjects[ans[i]].link} alt="" /> 
         </>
     )
 })
