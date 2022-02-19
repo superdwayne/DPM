@@ -28,7 +28,7 @@ function about() {
             <section className="container-app">
                     <section className="container">
                     <section className="project-info">
-                            <h1 className="abouth1">Hi there, I'm Dwayne Paisley-Marshall</h1>
+                            <h1 className="abouth1">Hi there, I'm DPM</h1>
                             <p>Constructivism is my learning style, I learn by doing.</p>
                             <p>Current stack: React/VR/AR/XR , Node.js, Blender/Snap/Spark, HTML/CSS, Javascript</p>
                             <p>Always open for collobrations </p>
