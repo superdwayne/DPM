@@ -2,11 +2,9 @@ import React from 'react';
 import Applications from "../Applications";
 import Snap from "../Snap";
 import Playground from "../Playground";
-import Websites from "../Websites";
 import Metaverse from "../Metaverse"
 import Avatars from "../Avatars"
 import Threedee from "../Threedee"
-
 
 const Data  = [
     {
