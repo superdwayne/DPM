@@ -324,7 +324,14 @@ h4 {
   .avatar-DPM {
     width: 100% !important;
   }
+
+  .container {
+    display: block !important;
+  }
   
+  iframe {
+    width: 100% !important;
+  }
   
 }
 
