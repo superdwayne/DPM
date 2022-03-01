@@ -19,7 +19,7 @@ function Snap() {
 
                             <h3>Output</h3>
                            
-                            <img className="cen" src="https://snapcodes.storage.googleapis.com/png/7b56dca9-1e44-3dd6-9e34-bd3351808c73_320_0c7baeb3-b604-4700-993e-7636743d578e.png" alt="Snap code" />
+                            <img className="cen" src="https://snapcodes.storage.googleapis.com/png/4f8826de-44f6-3cf0-807e-598040f07194_320_fd15bf39-e452-44b0-8d0f-a1ee9d2ba566.png" alt="Snap code" />
                         
                         </section>
                        
