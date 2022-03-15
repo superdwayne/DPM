@@ -36,7 +36,7 @@ const Data  = [
     },
     {
 
-        name: "Yana",
+        name: "AR",
         title: "React booking application",
         component: <Applications/>,
         pathname: "/applications",
@@ -54,7 +54,7 @@ const Data  = [
     },
     {
 
-        name: "Snap",
+        name: "Filters",
         title: "Interactive emails",
         component: <Snap/>,
         pathname: "/snap",

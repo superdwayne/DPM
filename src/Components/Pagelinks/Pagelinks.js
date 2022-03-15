@@ -26,7 +26,11 @@ const pathname = useContext(ThemeContext)
         { pathname === '/threedee' ||  pathname === "/applications" || pathname === "/metaverse" || pathname === '/snap' || pathname === '/playground' || pathname === '/avatars' || pathname === '/about'  || pathname === "/contact"  ? <Link className="dpm-link" data-page="/" to="/" >
             <p className="intronav">DPM </p></Link>  : null }
             <Link className="Websites" data-page="/about" to="/about" >
-            <p className="intronav">About </p></Link> 
+            <p className="intronav">About &gt; </p></Link>
+            <a className="Websites"  rel="noreferrer" target="_blank" href="https://medium.com/@DPM.XYZ" >
+            <p className="intronav">Publications </p></a> 
+
+           
         </section>
     </nav> 
     

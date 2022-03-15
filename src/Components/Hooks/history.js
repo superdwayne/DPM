@@ -57,7 +57,7 @@ function HistoryNav (){
 
       const nextProjects = [
         {
-            img: 'https://tinyurl.com/y57d5sqz',
+            img: 'https://tinyurl.com/yd6ezobw',
             link: applications
         },
         {
