@@ -29,8 +29,7 @@ This plugin allows you to have a local server running, this is what I used when 
                             
                             <h3>Output</h3>
                             <h4>
-                                <img src="https://miro.medium.com/max/900/0*MX5kRSBdz1WEIxli" alt="QR code window" />
-                                <img src="https://miro.medium.com/max/1024/0*FU3fzocx3qevOmEN" alt="AR Marker" />
+                                <img src="https://api.qrcode-monkey.com/tmp/38df55142ee52d017ffc9e0a35d752dc.svg?1647433885447" alt="QR code window" />
                              </h4>    
      
                         </section>
