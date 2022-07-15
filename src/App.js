@@ -15,10 +15,10 @@ function Loader() {
     <>
   
   <Html wrapperClass center> 
-  <header className="dpm">
-   <h1 style={{opacity: `${progress / 200}`, color: '#fff', fontSize: '150px', fontWeight: 'bolder'}}>DPM IS  {Math.ceil(progress)} % {active ? null : 'loading'} A CREATIVE TECHNOLOGIST</h1>
-  </header> 
-  
+    <header className="dpm">
+    <h1 style={{opacity: `${progress / 200}`, color: '#fff', fontSize: '150px', fontWeight: 'bolder'}}>DPM IS  {Math.ceil(progress)} % {active ? null : 'loading'} A CREATIVE TECHNOLOGIST</h1>
+    </header> 
+    
   </Html>
   </>
   )
