@@ -1,8 +1,6 @@
 import React, { Suspense, useRef, useState, useEffect  } from "react"
 import { Canvas } from "@react-three/fiber"
 import { useProgress, Html, Environment } from "@react-three/drei"
-import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
-
  
 import Overlay from "./overlay"
 import './App.css'
