@@ -19,7 +19,7 @@ const Overlay = forwardRef(({ caption, scroll }, ref) => (
         <h2>I'm Dwayne Paisley-Marshall.</h2>
         <p>Please make yourself comfortable as you explore my curated work collection.</p>
         <p>In a rush? Check out my <a href="https://linktr.ee/dpm1987">linktree </a></p>
-        <p>I'm a dreamer and a realists, I curate experiences and I push boundaries, I'm always thinking, always learning and always up for a challange.</p>
+        <p>I'm a dreamer and a realist, I curate experiences and I push boundaries, I'm always thinking, always learning and always up for a challange.</p>
         <p>Check out my digital fashion collection  <a href="https://dpm-fashion.vercel.app/"> here </a>  </p>
       </div>
     </div>
