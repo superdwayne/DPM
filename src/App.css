@@ -1,5 +1,12 @@
 @import url("https://rsms.me/inter/inter.css");
 
+.highlight {
+  opacity: 1 !important;
+} 
+
+.intro {
+  width: 100%;
+}
 
 a { color: darkgoldenrod; font-weight: bold; }
 
@@ -224,7 +231,8 @@ footer {
   }
 
   .dpm > h1 {
-    font-size: 65px !important;
+    font-size: 45px !important;
+    word-wrap: normal;
     width: 100%;
   }
 }

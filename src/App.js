@@ -1,7 +1,7 @@
 import React, { Suspense, useRef, useState, useEffect  } from "react"
 import { Canvas } from "@react-three/fiber"
 import { useProgress, Html, Environment } from "@react-three/drei"
-
+import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
 
  
 import Overlay from "./overlay"
@@ -13,13 +13,16 @@ function Loader() {
   
   return (
     <>
+   
   
   <Html wrapperClass center> 
-    <header className="dpm">
-    <h1 style={{opacity: `${progress / 200}`, color: '#fff', fontSize: '150px', fontWeight: 'bolder'}}>DPM IS  {Math.ceil(progress)} % {active ? null : 'loading'} A CREATIVE TECHNOLOGIST</h1>
-    </header> 
-    
+    <section className="intro">
+      <header className="dpm">
+      <h1 style={{opacity: `${progress / 200}`, color: '#fff', fontSize: '150px', fontWeight: 'bolder'}}><span className='highlight'>DPM</span> IS {Math.ceil(progress)} % {active ? null : 'loading'} A <span className='highlight'>CREATIVE</span> TECHNOLOGIST</h1>
+      </header> 
+    </section>
   </Html>
+ 
   </>
   )
 }
