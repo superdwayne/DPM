@@ -35,16 +35,19 @@ export default function App() {
 
   return (
     <>
-    
+   
       <Canvas style={{backgroundColor: "black" , display: "block" , height: "100vh", width: "100vw"}}
         shadows
         onCreated={(state) => state.events.connect(overlay.current)}
         raycaster={{ computeOffsets: ({ clientX, clientY }) => ({ offsetX: clientX, offsetY: clientY }) }}>
         <ambientLight intensity={1} />
        
+       
+
        <Suspense fallback={<Loader />}>
 
           <Avatar scroll={scroll} />
+         
           <Environment preset="city" />
         </Suspense>
        

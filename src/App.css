@@ -4,6 +4,10 @@
   opacity: 1 !important;
 } 
 
+
+.mob {
+  display: none;
+}
 .intro {
   width: 100%;
 }
@@ -234,5 +238,13 @@ footer {
     font-size: 45px !important;
     word-wrap: normal;
     width: 100%;
+  }
+}
+
+
+@media only screen and (max-width: 600px) { 
+
+  .mob {
+    display: block;
   }
 }
