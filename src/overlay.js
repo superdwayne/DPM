@@ -10,7 +10,7 @@ const Overlay = forwardRef(({ caption, scroll }, ref) => (
     className="scroll">
     <div style={{ height: "100vh" }}>
       <div className="dot">
-        <h1 className="mob">You may begin scrolling</h1>
+        {/* <h1 className="mob">You may begin scrolling now</h1> */}
     </div>
     </div>
     <div style={{ height: "300vh" }}>

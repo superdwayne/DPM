@@ -5,7 +5,7 @@ import { useProgress, Html, Environment } from "@react-three/drei"
 import Overlay from "./overlay"
 import './App.css'
 
-function Loader() {
+function Loader(props) {
   const { active, progress, errors, item, loaded, total } = useProgress()
   console.log(progress + 'Progress loaded')
   
@@ -25,7 +25,8 @@ function Loader() {
   )
 }
 
-export default function App() {
+export default function App(props) {
+  const progress = props.progress
   const overlay = useRef()
   const caption = useRef()
   const scroll = useRef(0)
@@ -54,7 +55,7 @@ export default function App() {
         
       </Canvas>
      
-      <Overlay ref={overlay} caption={caption} scroll={scroll} />
+      <Overlay progress={progress} ref={overlay} caption={caption} scroll={scroll} />
      
     </>
   )
