@@ -26,7 +26,7 @@ export default function Model({ scroll, ...props }) {
     actions["CAMERA"].time = THREE.MathUtils.lerp(actions["CAMERA"].time, actions["CAMERA"].getClip().duration * scroll.current, 0.05)
     group.current.children[0].children.forEach((child, index) => {
       // child.material.color.lerp(color.set(hovered === child.name ? "tomato" : "#202020").convertSRGBToLinear(), hovered ? 0.1 : 0.05)
-      const et = state.clock.elapsedTime
+      // const et = state.clock.elapsedTime
       //Floating effect
       // child.position.y = Math.sin((et + index * 2000) / 2) * 1
       // child.rotation.x = Math.sin((et + index * 2000) / 3) / 10

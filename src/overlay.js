@@ -98,7 +98,7 @@ const Overlay = forwardRef(({ active,  caption, scroll }, ref) => (
     <div style={{ height: "200vh" }}>
       <div className="dot" id="left"  >
         <p>Spatial / Awareness  </p>
-        <h2>Want to join me in the metavsese?</h2>
+        <h2>Want to join me in the metaverse?</h2>
         <p>Come and Join me in my <a href="https://spatial.io/s/DPMs-Digital-Place-62c7ff3e2897ef00011f084b?share=3582572487467949506"> digital gallery</a> </p>
       </div>
     </div>
