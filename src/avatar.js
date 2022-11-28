@@ -1,10 +1,8 @@
 
 import * as THREE from "three"
-import React, { useEffect, useRef, useState } from "react"
+import React, { useEffect, useRef } from "react"
 import { useGLTF, useAnimations, PerspectiveCamera } from "@react-three/drei"
 import { useFrame } from "@react-three/fiber"
-
-const color = new THREE.Color()
 
 export default function Model({ scroll, ...props }) {
   const group = useRef()
@@ -17,8 +15,6 @@ export default function Model({ scroll, ...props }) {
 
   const { nodes, materials, animations } = useGLTF("./DPM-CT.gltf")
   const { actions } = useAnimations(animations, group)
-  const [hovered, set] = useState()
-  const extras = { receiveShadow: true, castShadow: true, "material-envMapIntensity": 0.2 }
   useEffect(() => void (actions["CAMERA"].play().paused = true), [])
 
   console.log(actions)
