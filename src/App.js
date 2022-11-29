@@ -15,7 +15,7 @@ function Loader(props) {
   <Html wrapperClass center> 
     <section className="intro">
       <header className="dpm">
-      <h1 style={{opacity: `${progress / 200}`, color: '#fff', fontSize: '150px', fontWeight: 'bolder'}}><span className='highlight'>DPM</span> IS {Math.ceil(progress)} % {active ? null : ''} A <span className='highlight'> LEAD CREATIVE</span> TECHNOLOGIST</h1>
+      <h1 style={{opacity: `${progress / 200}`, color: '#fff', fontSize: '150px', fontWeight: 'bolder'}}><span className='highlight'>DPM</span> IS {Math.ceil(progress)} % {active ? null : ''} A <span className='highlight'> CREATIVE</span> TECHNOLOGIST</h1>
       </header>
       
     </section>
