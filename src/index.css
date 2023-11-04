@@ -7,6 +7,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: "soria";
+  src: local("soria"),
+   url("./fonts/Casta-Thin.otf") format("truetype");
+  font-weight: normal;
+ 
+ }
+ 
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
