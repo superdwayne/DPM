@@ -1,0 +1,11 @@
+{
+    "gzip": false,
+    "useRapier": false,
+    "license": null,
+    "generator": "Needle Engine for Blender 0.32.1",
+    "meta": {
+        "title": "dpm",
+        "description": "Built with Needle Engine for Blender",
+        "image": "include/poster.webp"
+    }
+}
