@@ -6,7 +6,10 @@ import reportWebVitals from './reportWebVitals';
 import './fonts/soria-font.ttf';
 
 import { BrowserRouter} from "react-router-dom";
+import ReactGA from 'react-ga';
 
+const TRACKING_ID = "UA-102019824-1"; 
+ReactGA.initialize(TRACKING_ID);
 
 
 ReactDOM.render(
