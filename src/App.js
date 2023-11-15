@@ -30,6 +30,24 @@ title="Dwayne Paisley-Marshall"
       key: uuidv4(),
       content: (
         <Card
+          title="Reviving NDSM Street Art through AR and Gaussian Splatting"
+          caseStudy="The core objective of this initiative is to capture and immortalize the ever-evolving street art of Stichting NDSM-werf. This project harnesses the cutting-edge techniques of Gaussian splatting and augmented reality to delve into the dynamic world of urban artistry. Leveraging the advanced tools of Luma AI for initial splat creation, PlayCanvas for refinement, Hugging Face for file hosting, and 8th Wall for an augmented reality experience, we aim to unfold the layered history of NDSM's street murals."
+          copy=""
+          example=""
+          mediaTypeImage="image"
+          mediaSrcImage="https://res.cloudinary.com/dx2xhaeds/image/upload/v1700062811/NDSM_xgmcnu.png"
+          mediaTypeVideo="video"
+          mediaSrcVideo="https://res.cloudinary.com/dx2xhaeds/video/upload/v1700061767/Splat_attack_i17ypt.mp4"
+          posterSrc="https://res.cloudinary.com/dx2xhaeds/image/upload/v1700062811/NDSM_xgmcnu.png"
+          technology="8th wall, Luma.ai, hugging face"
+          client="NSDM"
+        />
+      ),
+    },
+    {
+      key: uuidv4(),
+      content: (
+        <Card
           title="Luxury kidswear report"
           caseStudy="The primary aim of this project is to understand the influence of social media-driven phenomena, specifically Mini-me fashion and Kidfluencer culture, on the luxury kidswear market. Utilizing data analytics capabilities of FARFETCH, a leading global platform for luxury fashion, the project seeks to dissect consumer and industry involvement in these trends. By doing so, we aim to provide actionable insights that can guide both consumers and brands in navigating this rapidly evolving market landscape."
           copy=""
@@ -44,6 +62,7 @@ title="Dwayne Paisley-Marshall"
         />
       ),
     },
+   
     {
       key: uuidv4(),
       content: (
