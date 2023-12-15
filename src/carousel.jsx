@@ -1,8 +1,9 @@
 import Carousel from "react-spring-3d-carousel";
+import { withRouter } from 'react-router-dom';
 import { useState, useEffect, useRef } from "react";
 import { config } from "react-spring";
 
-export default function Carroussel(props) {
+function Carroussel(props) {
   const { onChangeIndex, className } = props;
   const carouselRef = useRef(null);
   const [startX, setStartX] = useState(0);
@@ -103,3 +104,5 @@ export default function Carroussel(props) {
     </div>
   );
 }
+
+export default withRouter(Carroussel);
