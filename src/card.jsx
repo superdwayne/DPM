@@ -1,9 +1,10 @@
 import Styles from "./card.module.css";
 import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
+import { Link } from 'react-router-dom';
 
 
-function Card({ mediaSrcImage, mediaSrcVideo, mediaTypeVideo, mediaTypeImage, posterSrc, title, copy, caseStudy, technology, client, example }) {
+function Card({ url, mediaSrcImage, mediaSrcVideo, mediaTypeVideo, mediaTypeImage, posterSrc, title, copy, caseStudy, technology, client, example }) {
   const [show, setShown] = useState(false);
 
   const props3 = useSpring({
@@ -28,6 +29,7 @@ function Card({ mediaSrcImage, mediaSrcVideo, mediaTypeVideo, mediaTypeImage, po
   };
 
   return (
+    <Link to={url}>
     <animated.div
       className={Styles.card}
       style={props3}
@@ -39,6 +41,7 @@ function Card({ mediaSrcImage, mediaSrcVideo, mediaTypeVideo, mediaTypeImage, po
       <small>{copy}</small>
      
     </animated.div>
+    </Link>
   );
 }
 
