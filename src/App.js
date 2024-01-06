@@ -446,7 +446,7 @@ By deploying augmented reality, the garden of the summer venue became an interac
           <h1>OPEN TO WORK</h1>
           <h1>FROM JAN 2024</h1>
         </section>
-        <section className="middle"><h1 className="soria">LET'S START A PROJECT <br /> <a className="soria" href="mailto:ddpmarshall@gmail.com">ddpmarshall@gmail.com</a></h1>
+        <section className="middle"><h1 className="soria">LET'S START A PROJECT <br /> <a className="soria" href="mailto:hello@dwaynep-marshall.co.uk">hello@dwaynep-marshall.co.uk</a></h1>
 
           </section>
         <section className="bottom">
