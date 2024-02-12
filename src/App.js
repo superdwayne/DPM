@@ -325,7 +325,7 @@ By deploying augmented reality, the garden of the summer venue became an interac
 
 
       <header onMouseMove={handleMouseMove}>
-        <h1 className="Baskervville center">Paisley-Marshall<p className="animate-pulse mobile" onClick={scrollToAppDiv}>↓</p> </h1>
+        <h1 className="Baskervville center">Freelance Creative Technologist<p className="animate-pulse mobile" onClick={scrollToAppDiv}>↓</p> </h1>
         
         {!isMobile &&
         positions.map((position, index) => (
