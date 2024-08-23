@@ -38,6 +38,63 @@ title="Dwayne Paisley-Marshall"
       key: uuidv4(),
       content: (
         <Card
+        url="/dreammachine"
+          title="AI video Generation "
+          caseStudy="Using tools like the Luma Dream Machine, we unlock new creative opportunities for brands to engage, inspire, and stand out. By blending brand identity with innovative storytelling, we craft compelling narratives that resonate deeply with audiences, driving both connection and growth. "
+          copy=""
+          example=""
+          mediaTypeImage="image"
+          mediaSrcImage="https://storage.cdn-luma.com/dream_machine/76065bfe-1e95-48fb-9650-8bc6628a5950/video_0_thumb.jpg"
+          mediaTypeVideo="video"
+          mediaSrcVideo="https://storage.cdn-luma.com/dream_machine/76065bfe-1e95-48fb-9650-8bc6628a5950/watermarked_video03a178f35ca8948c898f64b9ae01e3653.mp4"
+          posterSrc="https://storage.cdn-luma.com/dream_machine/76065bfe-1e95-48fb-9650-8bc6628a5950/video_0_thumb.jpg"
+          technology="Comfy UI"
+          client=""
+        />
+      ),
+    },
+    {
+      key: uuidv4(),
+      content: (
+        <Card
+        url="/fastfashion"
+          title="Fast Fashion Redefined "
+          caseStudy="Embark on a journey into the future of luxury fashion with Vestiaire Collective as we unveil our groundbreaking AI-enhanced presentation project. This initiative is dedicated to transforming how we experience pre-owned luxury items, employing advanced artificial intelligence to ensure each piece not only meets but exceeds the luxurious look and feel of a brand-new product."
+          copy=""
+          example=""
+          mediaTypeImage="image"
+          mediaSrcImage="https://huggingface.co/datasets/DPM1987/images/resolve/main/18.png"
+          mediaTypeVideo="video"
+          mediaSrcVideo="https://huggingface.co/datasets/DPM1987/images/resolve/main/video%20(8).mp4"
+          posterSrc="https://huggingface.co/datasets/DPM1987/images/resolve/main/17.png"
+          technology="Comfy UI"
+          client=""
+        />
+      ),
+    },
+    {
+      key: uuidv4(),
+      content: (
+        <Card
+        url="/farfetch"
+          title="Luxury kidswear report"
+          caseStudy="The primary aim of this project is to understand the influence of social media-driven phenomena, specifically Mini-me fashion and Kidfluencer culture, on the luxury kidswear market. Utilizing data analytics capabilities of FARFETCH, a leading global platform for luxury fashion, the project seeks to dissect consumer and industry involvement in these trends. By doing so, we aim to provide actionable insights that can guide both consumers and brands in navigating this rapidly evolving market landscape."
+          copy=""
+          example="https://stories.farfetch.com/luxurykidswearreport2021/"
+          mediaTypeImage="image"
+          mediaSrcImage="./CT/15.jpeg"
+          mediaTypeVideo="video"
+          mediaSrcVideo=" https://res.cloudinary.com/dx2xhaeds/video/upload/v1698157012/Kidsreport_yyx0q5.mov"
+          posterSrc="https://pbs.twimg.com/media/FActEzjWYAEijbS?format=jpg&name=medium"
+          technology="React, React springs"
+          client="Farfetch"
+        />
+      ),
+    },
+    {
+      key: uuidv4(),
+      content: (
+        <Card
         url="/NDSM"
           title="Reviving NDSM Street Art through AR and Gaussian Splatting"
           caseStudy="The core objective of this initiative is to capture and immortalize the ever-evolving street art of Stichting NDSM-werf. This project harnesses the cutting-edge techniques of Gaussian splatting and augmented reality to delve into the dynamic world of urban artistry. Leveraging the advanced tools of Luma AI for initial splat creation, PlayCanvas for refinement, Hugging Face for file hosting, and 8th Wall for an augmented reality experience, we aim to unfold the layered history of NDSM's street murals."
@@ -53,24 +110,7 @@ title="Dwayne Paisley-Marshall"
         />
       ),
     },
-    {
-      key: uuidv4(),
-      content: (
-        <Card
-          title="Luxury kidswear report"
-          caseStudy="The primary aim of this project is to understand the influence of social media-driven phenomena, specifically Mini-me fashion and Kidfluencer culture, on the luxury kidswear market. Utilizing data analytics capabilities of FARFETCH, a leading global platform for luxury fashion, the project seeks to dissect consumer and industry involvement in these trends. By doing so, we aim to provide actionable insights that can guide both consumers and brands in navigating this rapidly evolving market landscape."
-          copy=""
-          example="https://stories.farfetch.com/luxurykidswearreport2021/"
-          mediaTypeImage="image"
-          mediaSrcImage="./CT/15.jpeg"
-          mediaTypeVideo="video"
-          mediaSrcVideo=" https://res.cloudinary.com/dx2xhaeds/video/upload/v1698157012/Kidsreport_yyx0q5.mov"
-          posterSrc="https://pbs.twimg.com/media/FActEzjWYAEijbS?format=jpg&name=medium"
-          technology="React, React springs"
-          client="Farfetch"
-        />
-      ),
-    },
+ 
    
     {
       key: uuidv4(),
@@ -325,8 +365,10 @@ By deploying augmented reality, the garden of the summer venue became an interac
 
 
       <header onMouseMove={handleMouseMove}>
-        <h1 className="Baskervville center">Freelance Creative Technologist<p className="animate-pulse mobile" onClick={scrollToAppDiv}>↓</p> </h1>
-        
+        <h1 className="Baskervville center">Freelance Creative Technologist<p className="animate-pulse mobile" onClick={scrollToAppDiv}>↓</p> 
+
+        </h1>
+        <small> Brands I've worked with: <br />Lego, Gucci, Farfetch Coca-Cola, Alexander McQueen, Birkenstock, and Burberry</small>
         {!isMobile &&
         positions.map((position, index) => (
           <img
@@ -445,7 +487,7 @@ By deploying augmented reality, the garden of the summer venue became an interac
           <h1>AVAILABLE FOR WORK</h1>
           <h1>LET'S START A PROJECT</h1>
         </section>
-        <section className="middle"><h1 className="soria"> <a className="soria" href="mailto:hello@dwaynep-marshall.co.uk">hello@dwaynep-marshall.co.uk</a></h1>
+        <section className="middle"><h1 className="soria"> <a className="soria" href="mailto:ddpmarshall@gmail.com">hello@dwaynep-marshall.co.uk</a></h1>
 
           </section>
         <section className="bottom">
@@ -467,7 +509,7 @@ By deploying augmented reality, the garden of the summer venue became an interac
             GITHUB
           </a>
         </small>
-        <h1 className="mobile"> SENIOR CREATIVE TECHNOLOGIST </h1>
+        <h1 className="mobile"> FREELANCE CREATIVE TECHNOLOGIST </h1>
         </section>
         
       </footer>
