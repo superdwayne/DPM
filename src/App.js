@@ -368,7 +368,7 @@ By deploying augmented reality, the garden of the summer venue became an interac
         <h1 className="Baskervville center">Freelance Creative Technologist<p className="animate-pulse mobile" onClick={scrollToAppDiv}>↓</p> 
 
         </h1>
-        <small> Brands I've worked with: <br />Lego, Gucci, Farfetch Coca-Cola, Alexander McQueen, Birkenstock, and Burberry</small>
+        <small> Brands I've worked with: <br />Lego, Gucci, Farfetch, Coca-Cola, Alexander McQueen, Birkenstock, and Burberry</small>
         {!isMobile &&
         positions.map((position, index) => (
           <img
