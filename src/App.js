@@ -34,6 +34,62 @@ title="Dwayne Paisley-Marshall"
         />
       ),
     },
+   
+    {
+      key: uuidv4(),
+      content: (
+        <Card
+        url="/burgerking"
+          title="Retrieval-Augmented Generation"
+          caseStudy="Using a framework like RAG (Retrieval-Augmented Generation), we combine the precision of traditional information retrieval systems with the creative potential of large language models. This allows us to craft highly relevant, on-brand content—whether it's copy, assets, or concepts—tailored to your company’s guidelines. By leveraging this approach, we streamline content creation while ensuring consistency and originality. I built this example using Laminar (YC S24) and React, showcasing how the blend of retrieval systems and AI can enhance your brand's creative output efficiently."
+          copy=""
+          example=""
+          mediaTypeImage="image"
+          mediaSrcImage="https://www.logo-designer.co/storage/2021/01/2021-burger-king-new-logo-design.png"
+          mediaTypeVideo="video"
+          mediaSrcVideo="https://dms.licdn.com/playlist/vid/v2/D4E05AQGMh6RREfiDIg/mp4-720p-30fp-crf28/mp4-720p-30fp-crf28/0/1723642979926?e=2147483647&v=beta&t=MT1vltF7GIJcamcuI9QnCtMUzMdhiBsJIfMHJLu0OU8"
+          posterSrc="https://www.logo-designer.co/storage/2021/01/2021-burger-king-new-logo-design.png"
+          technology="API, AI"
+          client="NA"
+        />
+      ),
+    },
+    {
+      key: uuidv4(),
+      content: (
+        <Card
+        url="/projectionmapping"
+          title="3D Projection mapping"
+          caseStudy="Using tools like web-based RF3 projection mapping, we unlock new avenues for digital artistry and immersive experiences. By projecting dynamic visuals onto any surface through a browser interface, we open up opportunities for creators to engage audiences in innovative ways. This fusion of art and technology enables brands, artists, and events to transform ordinary spaces into extraordinary visual experiences. We aim to push the boundaries of storytelling, offering a modern, scalable solution that captivates and inspires in both public and private spaces."
+          copy=""
+          example="https://projection.vercel.app/"
+          mediaTypeImage="image"
+          mediaSrcImage="https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/78476aff-03dc-4af4-95ff-0c5350796b2b/W+NIKE+DUNK+HIGH.png"
+          mediaTypeVideo="video"
+          mediaSrcVideo="https://dms.licdn.com/playlist/vid/v2/D4E05AQEkQtCqMbsaLg/mp4-720p-30fp-crf28/mp4-720p-30fp-crf28/0/1724323104041?e=2147483647&v=beta&t=dXxNhJjj__jULec80ZvEQBbupIvAQ91KBmtWDkLdv0M"
+          posterSrc="https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/78476aff-03dc-4af4-95ff-0c5350796b2b/W+NIKE+DUNK+HIGH.png"
+          technology="React three fiber, blender"
+          client="NA"
+        />
+      ),
+    },
+    {
+      key: uuidv4(),
+      content: (
+        <Card
+        url="/threeshells"
+          title="Three.js shells"
+          caseStudy="I just reimagined the classic shell game with a modern spin! Using Three.js for smooth, immersive 3D visuals, I added a nostalgic, retro design to capture the feel of vintage arcade games. To elevate the experience, I incorporated generative audio from Suno, creating dynamic sound effects that evolve as you play. This combination of cutting-edge 3D technology and evolving audio brings a fresh, engaging twist to a timeless game, making it both familiar and exciting for new players"
+          copy=""
+          example="https://threeshells.vercel.app/"
+          mediaTypeImage="image"
+          mediaSrcImage="https://img.freepik.com/premium-vector/3d-digital-white-grid-black-room-space-with-one-point-perspective_314759-755.jpg"
+          posterSrc="https://img.freepik.com/premium-vector/3d-digital-white-grid-black-room-space-with-one-point-perspective_314759-755.jpg"
+          technology="API, AI"
+          client="NA"
+        />
+      ),
+    },
     {
       key: uuidv4(),
       content: (
