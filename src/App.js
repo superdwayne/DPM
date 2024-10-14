@@ -34,6 +34,26 @@ title="Dwayne Paisley-Marshall"
         />
       ),
     },
+
+    {
+      key: uuidv4(),
+      content: (
+        <Card
+        url="/cheersback"
+          title="Cheers back App"
+          caseStudy="The idea came from a lighthearted moment when I realized I kept forgetting to return the favor after my friend treated me the last few times. So, I created a solution that could be practical for similar situations, but with a humorous twist. The app allows users to log friends they owe a round to, and when the next meet-up is scheduled, a reminder pops up to ensure no more forgotten promises."
+          copy=""
+          example=""
+          mediaTypeImage="image"
+          mediaSrcImage="./images/AppIcon.png"
+          mediaTypeVideo="video"
+          mediaSrcVideo="https://dms.licdn.com/playlist/vid/v2/D4E05AQGYCrzlWqFJ4Q/mp4-640p-30fp-crf28/mp4-640p-30fp-crf28/0/1728637392968?e=2147483647&v=beta&t=VAIHaEUVypMU7DV_aRHKGsIJCR_nr_Cr2JJZKuSl9KE"
+          posterSrc="https://www.logo-designer.co/storage/2021/01/2021-burger-king-new-logo-design.png"
+          technology="iOS, swift"
+          client="NA"
+        />
+      ),
+    },
    
     {
       key: uuidv4(),
