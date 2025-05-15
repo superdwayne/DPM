@@ -473,7 +473,7 @@ Synth immediately begins working across multiple layers:`,
     heroPoster: 'https://straatmuseum.com/storage/artists/Guido%20de%20Boer%20Straat%20Museum%20Amsterdam.jpg',
     heroBg: '#ffffff', // Changed background color
  
-    
+     
     contentSections: [
       {
         type: 'text',
