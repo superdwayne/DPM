@@ -3,7 +3,8 @@
   "framework": "vite",
   "public": true,
   "cleanUrls": true,
-  "buildCommand": "bash ./build.sh",
+  
+  "buildCommand": "git lfs version && git lfs ls-files && git lfs pull && bash ./build.sh",
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
   ],
