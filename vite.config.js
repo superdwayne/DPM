@@ -7,6 +7,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist',
+
     emptyOutDir: true,
     rollupOptions: {
       input: {
@@ -23,5 +24,11 @@ export default defineConfig({
     port: 3000,
     strictPort: true,
     host: true
+
+    assetsDir: 'assets',
+  },
+  // Ensure SPA routing works properly
+  server: {
+    historyApiFallback: true,
   }
 })

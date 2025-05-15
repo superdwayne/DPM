@@ -1,4 +1,5 @@
 {
+
   "framework": "vite",
   "buildCommand": "yarn build",
   "installCommand": "yarn install --ignore-engines",
@@ -7,3 +8,20 @@
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
+
+    "installCommand": "yarn install --ignore-engines",
+    "builds": [
+      {
+        "src": "package.json",
+        "use": "@vercel/node",
+        "config": {
+          "nodeVersion": "20.x"
+        }
+      }
+    ],
+    "routes": [
+      { "handle": "filesystem" },
+      { "src": "/(.*)", "dest": "/index.html" }
+    ]
+  }
+
