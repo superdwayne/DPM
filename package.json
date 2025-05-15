@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "postbuild": "node copy-videos.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
