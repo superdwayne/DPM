@@ -4,7 +4,7 @@
   "public": true,
   "cleanUrls": true,
   
-  "buildCommand": "git lfs pull && bash ./build.sh",
+  "buildCommand": "bash ./build.sh",
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
   ],
