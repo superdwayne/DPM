@@ -1,0 +1,920 @@
+/* Add smooth scrolling to the entire document (if not already defined) */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.enhanced-project-detail {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hero Section */
+.hero-section {
+  width: 100%;
+  height: 95vh; /* Taller hero section */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0;
+  transition: transform 0.1s ease-out;
+  margin:  0px auto;
+}
+
+.hero-content img,
+.hero-content video {
+  max-width: 100vw !important;
+  max-height: 90%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.scroll-indicator:hover {
+  opacity: 1;
+}
+
+.scroll-indicator-text {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.scroll-indicator-arrow {
+  width: 30px;
+  height: 30px;
+  border-left: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  40% {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+  60% {
+    transform: translateY(-5px) rotate(-45deg);
+  }
+}
+
+/* Project Introduction */
+.project-intro {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.project-title {
+  font-size: 4vw; /* Dynamic large title */
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 40px;
+  font-family: 'Avenir Black', 'Avenir', Helvetica, Arial, sans-serif;
+}
+
+.project-subtitle {
+  font-size: 1.8rem;
+  font-weight: 400;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: #555;
+}
+
+/* Media Gallery */
+.media-gallery {
+  padding: 6rem 3rem; /* Increased padding */
+  background-color: #f8f8f8;
+}
+
+.gallery-title {
+  text-align: center;
+  font-size: 3.5rem; /* Increased from 3rem */
+  margin-bottom: 3.5rem; /* Increased margin */
+  font-weight: bold;
+  color: #2c2c2c;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.gallery-title:after {
+  content: '';
+  display: block;
+  width: 80px; /* Increased from 60px */
+  height: 5px; /* Increased from 4px */
+  background-color: #FFC54F;
+  margin: 20px auto 0; /* Increased margin */
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 350px; /* Increased from 300px */
+  gap: 30px; /* Increased from 20px */
+  max-width: 1600px; /* Increased from 1400px */
+  margin: 0 auto;
+}
+
+/* Create a more dynamic layout with varied sizes */
+.gallery-item:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.gallery-item:nth-child(4) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.gallery-item:nth-child(6) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px; /* Increased from 8px */
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-10px); /* Increased lift effect */
+}
+
+.gallery-item img,
+.gallery-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+  image-rendering: high-quality;
+  will-change: transform;
+  transform-origin: center;
+}
+
+.gallery-item:hover img,
+.gallery-item:hover video {
+  transform: scale(1.05);
+  image-rendering: high-quality;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+/* Parallax Sections */
+.parallax-section {
+  position: relative;
+  min-height: 75vh; /* Increased from 70vh */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+}
+
+.parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+/* Parallax Content Outer - Container for both text and visual elements */
+.parallax-content-outer {
+  max-width: 1400px; /* Increased from 1200px */
+  width: 100%;
+  padding: 3rem; /* Increased from 2rem */
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Text content area */
+.parallax-content-inner {
+  max-width: 60%;
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.8s ease-out;
+}
+
+.parallax-content-inner.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Visual Element (Lego Character) */
+.parallax-visual-element {
+  width: 35%;
+  height: auto;
+  opacity: 0;
+  transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 1s ease-out;
+}
+
+.parallax-visual-element.left {
+  transform: translateX(-100px);
+}
+
+.parallax-visual-element.right {
+  transform: translateX(100px);
+}
+
+.parallax-visual-element.is-visible.left,
+.parallax-visual-element.is-visible.right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.parallax-character {
+  width: 100%;
+  height: auto;
+  max-height: 450px; /* Increased from 400px */
+  object-fit: contain;
+}
+
+.parallax-content-inner h2 {
+  font-size: 3.8rem; /* Increased from previous size */
+  margin-bottom: 1.5rem; /* Increased margin */
+  font-weight: bold;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.parallax-content-inner p {
+  font-size: 1.4rem; /* Increased from previous size */
+  line-height: 1.7; /* Increased line height */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.project-content {
+  width: 100%;
+  max-width: 1600px; /* Increased from previous */
+  margin: 0 auto;
+}
+
+.project-section {
+  margin: 0;
+  padding: 100px 40px; /* Increased padding */
+  position: relative;
+}
+
+.layout-split {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 120px 80px; /* Increased padding */
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.section-title-wrapper {
+  flex: 0 0 30%; /* Increased from 25% */
+  padding-right: 60px; /* Increased padding */
+}
+
+
+
+.section-title {
+  font-size: 3.5rem; /* Increased size */
+  font-weight: bold;
+  margin: 0;
+  position: relative;
+  display: block;
+  color: #000;
+  letter-spacing: -0.5px;
+  position: sticky;
+  top: 100px;
+}
+
+.section-text {
+  font-size: 1.3rem; /* Increased size */
+  line-height: 1.7; /* Increased line height */
+  color: #333;
+  font-weight: normal;
+  margin: 0;
+  letter-spacing: 0;
+}
+
+/* Brand Section */
+.brand-section {
+  background-color: #000;
+  color: white;
+  padding: 3rem 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.brand-section img {
+  max-height: 80vh;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.brand-section .qr-code {
+  width: 100px;
+  height: 100px;
+}
+
+/* Logo Sizing and Positioning System */
+.brand-section .logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.brand-section .logo {
+  object-fit: contain;
+  image-rendering: high-quality;
+  transition: transform 0.3s ease;
+}
+
+/* Logo size variations */
+.brand-section .logo.size-small {
+  max-width: 150px;
+  max-height: 80px;
+}
+
+.brand-section .logo.size-medium {
+  max-width: 250px;
+  max-height: 120px;
+}
+
+.brand-section .logo.size-large {
+  max-width: 350px;
+  max-height: 180px;
+}
+
+.brand-section .logo.size-xlarge {
+  max-width: 450px;
+  max-height: 220px;
+}
+
+.brand-section .logo.size-full {
+  max-width: 100%;
+  max-height: 60vh;
+}
+
+/* Maintain aspect ratio classes */
+.brand-section .logo.wide {
+  width: 100%;
+  height: auto;
+}
+
+.brand-section .logo.tall {
+  width: auto;
+  height: 100%;
+}
+
+/* Position variants */
+.brand-section .logo-container.left {
+  justify-content: flex-start;
+}
+
+.brand-section .logo-container.right {
+  justify-content: flex-end;
+}
+
+/* Hero Logo Overlay */
+.hero-section .logo-overlay {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  z-index: 10;
+  max-width: 180px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.hero-section .logo-overlay.top-right {
+  top: 30px;
+  right: 30px;
+  bottom: auto;
+}
+
+.hero-section .logo-overlay.top-left {
+  top: 30px;
+  left: 30px;
+  right: auto;
+  bottom: auto;
+}
+
+.hero-section .logo-overlay.bottom-left {
+  bottom: 30px;
+  left: 30px;
+  right: auto;
+}
+
+.hero-section .logo-overlay img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  image-rendering: high-quality;
+}
+
+/* Logo in Parallax Sections */
+.parallax-section .logo-container {
+  position: absolute;
+  z-index: 5;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.parallax-section .logo-container.top-right {
+  top: 30px;
+  right: 30px;
+}
+
+.parallax-section .logo-container.top-left {
+  top: 30px;
+  left: 30px;
+}
+
+.parallax-section .logo-container.bottom-right {
+  bottom: 30px;
+  right: 30px;
+}
+
+.parallax-section .logo-container.bottom-left {
+  bottom: 30px;
+  left: 30px;
+}
+
+.parallax-section .logo-container .logo {
+  max-width: 150px;
+  max-height: 80px;
+  object-fit: contain;
+  image-rendering: high-quality;
+}
+
+/* Quote Section */
+.project-quote {
+  background-color: #000;
+  color: white;
+  padding: 3rem 1.5rem;
+  margin: 0;
+}
+
+.project-quote blockquote {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  max-width: 80%;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+/* Tech Icons */
+.tech-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background-color: #000;
+  padding: 3rem 0;
+}
+
+.tech-icons img {
+  height: 60px;
+  width: auto;
+}
+
+/* More Projects */
+.more-projects {
+  margin: 0;
+  padding: 3rem 0;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+.more-projects h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  display: block;
+  font-weight: normal;
+  color: #555;
+}
+
+.project-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.related-project-link-wrapper {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: #000;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+.related-project-link-wrapper:last-child {
+  border-bottom: none;
+}
+
+.related-project-link-wrapper:hover {
+  background-color: #e8e8e8;
+}
+
+.related-project-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.related-project-title {
+  font-family: 'Avenir Black', 'Avenir', Helvetica, Arial, sans-serif;
+  font-weight: 900;
+  font-size: 4rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .gallery-item:nth-child(1),
+  .gallery-item:nth-child(6) {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 250px;
+  }
+  
+  .gallery-item:nth-child(4) {
+    grid-row: span 1;
+  }
+  
+  .media-gallery {
+    padding: 2rem 1rem;
+  }
+
+  .hero-section {
+    height: 80vh;
+  }
+
+  .parallax-content-outer {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .parallax-content-inner {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  .parallax-visual-element {
+    width: 70%;
+  }
+  
+  .parallax-character {
+    max-height: 300px;
+  }
+
+  .parallax-content-inner h2 {
+    font-size: 2.5rem;
+  }
+
+  .parallax-content-inner p {
+    font-size: 1.2rem;
+  }
+
+  .parallax-section {
+    min-height: 50vh;
+  }
+
+  .related-project-title {
+    font-size: 2.5rem;
+  }
+
+  .layout-split {
+    flex-direction: column;
+  }
+
+  .section-title-wrapper {
+    flex: 0 0 100%;
+    padding-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .gallery-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .brand-section .logo.size-small {
+    max-width: 100px;
+    max-height: 60px;
+  }
+  
+  .brand-section .logo.size-medium {
+    max-width: 180px;
+    max-height: 90px;
+  }
+  
+  .brand-section .logo.size-large {
+    max-width: 240px;
+    max-height: 120px;
+  }
+  
+  .brand-section .logo.size-xlarge {
+    max-width: 300px;
+    max-height: 150px;
+  }
+  
+  .hero-section .logo-overlay,
+  .hero-section .logo-overlay.top-right,
+  .hero-section .logo-overlay.top-left,
+  .hero-section .logo-overlay.bottom-left {
+    max-width: 120px;
+    padding: 10px;
+    bottom: 15px;
+    right: 15px;
+    top: auto;
+    left: auto;
+  }
+  
+  .parallax-section .logo-container {
+    padding: 10px;
+  }
+  
+  .parallax-section .logo-container .logo {
+    max-width: 100px;
+    max-height: 50px;
+  }
+}
+
+/* Animation Classes */
+.parallax-element {
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+}
+
+/* Performance Optimizations */
+.parallax-bg {
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Media Group Styles - Distributed throughout the page */
+.media-group {
+  padding: 3rem 2rem;
+}
+
+.media-group-top {
+  background-color: #f8f8f8;
+}
+
+.media-group-middle {
+  background-color: #f0f0f0;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.media-group-bottom {
+  background-color: #f5f5f5;
+}
+
+.gallery-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  font-weight: bold;
+  color: #2c2c2c;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.gallery-title:after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #FFC54F; /* Lego yellow color */
+  margin: 15px auto 0;
+}
+
+/* Full-width Parallax Section */
+.full-width-parallax {
+  position: relative;
+  height: 80vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem 0;
+}
+
+.parallax-bg-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%; /* Taller than container for parallax effect */
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; /* Key for parallax effect */
+  z-index: -1;
+  transform: translateY(-10%); /* Initial offset */
+  transition: transform 0.1s linear;
+}
+
+.parallax-content-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 3rem;
+  text-align: center;
+  max-width: 80%;
+  border-radius: 4px;
+}
+
+.parallax-content-overlay h2 {
+  color: white;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+/* JS will add transform to this element on scroll */
+.full-width-parallax.is-scrolling .parallax-bg-full {
+  transform: translateY(calc(-10% + var(--scroll-offset, 0px)));
+}
+
+/* Gallery Grid Styles */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 300px;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Create a more dynamic layout with varied sizes */
+.media-group-top .gallery-item:first-child {
+  grid-column: span 2;
+}
+
+.media-group-middle .gallery-item:nth-child(2) {
+  grid-column: span 2;
+}
+
+.media-group-bottom .gallery-item:last-child {
+  grid-column: span 2;
+}
+
+/* Rest of gallery item styles */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-item img,
+.gallery-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+  image-rendering: high-quality;
+  will-change: transform;
+  transform-origin: center;
+}
+
+.gallery-item:hover img,
+.gallery-item:hover video {
+  transform: scale(1.05);
+  image-rendering: high-quality;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .gallery-item:nth-child(1),
+  .gallery-item:nth-child(6) {
+    grid-column: span 1;
+  }
+  
+  .parallax-content-overlay h2 {
+    font-size: 3rem;
+  }
+  
+  .full-width-parallax {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 250px;
+  }
+  
+  .gallery-item:nth-child(4) {
+    grid-row: span 1;
+  }
+  
+  .media-group {
+    padding: 2rem 1rem;
+  }
+  
+  .gallery-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .parallax-content-overlay {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+  
+  .parallax-content-overlay h2 {
+    font-size: 2rem;
+  }
+} 

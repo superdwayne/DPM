@@ -1,0 +1,80 @@
+/* Navbar container styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f8f8f8; /* Light grey background like the reference */
+  position: relative;
+  border-bottom: none; /* Remove bottom border */
+}
+
+/* Left and Right navigation links */
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 1.5rem;
+  flex: 1; /* Allow sections to take space */
+}
+
+.nav-left {
+  justify-content: flex-start;
+}
+
+.nav-right {
+  justify-content: flex-end;
+}
+
+.nav-left a,
+.nav-right a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.nav-left a:hover,
+.nav-right a:hover {
+  color: #888;
+}
+
+/* Centered Brand styling */
+.navbar-brand-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar-logo {
+  height: 70px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+/* Remove old nav list styling */
+.navbar-nav {
+  display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+
+  .nav-left,
+  .nav-right {
+    gap: 1rem;
+  }
+
+  .nav-left a,
+  .nav-right a {
+    font-size: 0.85rem;
+  }
+
+  .navbar-logo {
+    font-size: 1.6rem;
+  }
+} 

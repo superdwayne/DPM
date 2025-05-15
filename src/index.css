@@ -1,5 +1,10 @@
+/* Import Avenir Black if using a font service */
+@import url('https://fonts.cdnfonts.com/css/avenir');
+
+/* Base styles */
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -7,24 +12,75 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@font-face {
-  font-family: "soria";
-  src: local("soria"),
-   url("./fonts/Casta-Thin.otf") format("truetype");
-  font-weight: normal;
- 
- }
+/* Title font class */
+.title-font {
+  font-family: 'Avenir Black', 'Avenir', Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
 
- @font-face {
-  font-family: "Baskervville";
-  src: local("Baskervville"),
-   url("./fonts/Baskervville-Regular.ttf") format("truetype");
-  font-weight: normal;
- 
- }
- 
+/* Apply to all headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Avenir Black', 'Avenir', Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e9e9e9;
+  min-height: 100vh;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
 }

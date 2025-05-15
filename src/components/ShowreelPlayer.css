@@ -1,0 +1,174 @@
+.showreel-container {
+  width: 100%;
+  position: relative;
+  margin: 5vh auto;
+  max-width: 1600px;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+  transform-origin: center center;
+  z-index: 1;
+}
+
+.showreel-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #000;
+  aspect-ratio: 16 / 9;
+}
+
+.showreel-wrapper.hover {
+  transform: translateY(-5px);
+}
+
+.showreel-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+}
+
+.showreel-title-container {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  color: white;
+  z-index: 2;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.showreel-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.showreel-info {
+  font-size: 0.85rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  margin-top: 5px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.showreel-wrapper.hover .showreel-info {
+  opacity: 0.8;
+  transform: translateY(0);
+}
+
+.play-button-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+  z-index: 1;
+}
+
+.play-button-overlay:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.play-button {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  color: #000;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  margin-bottom: 16px;
+}
+
+.play-button svg {
+  width: 40px;
+  height: 40px;
+  margin-left: 4px; /* Slight offset for visual balance of the play icon */
+}
+
+.play-button-overlay:hover .play-button {
+  transform: scale(1.1);
+  background-color: #fff;
+}
+
+.play-text {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.play-button-overlay:hover .play-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .play-button {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .play-button svg {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .play-text {
+    font-size: 1rem;
+  }
+  
+  .showreel-title {
+    font-size: 1.2rem;
+  }
+  
+  .showreel-title-container {
+    bottom: 16px;
+    left: 16px;
+  }
+  
+  .showreel-info {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .play-button {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .play-button svg {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .showreel-title {
+    font-size: 1rem;
+  }
+  
+  .showreel-info {
+    display: none;
+  }
+} 

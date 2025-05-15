@@ -1,0 +1,137 @@
+.scroll-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.scroll-section.horizontal .images-container {
+  display: flex;
+  flex-wrap: nowrap;
+  will-change: transform;
+}
+
+.scroll-section.vertical .images-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-wrapper {
+  flex-shrink: 0;
+}
+
+/* Horizontal layout */
+.scroll-section.horizontal .image-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5vw;
+}
+
+/* Vertical layout */
+.scroll-section.vertical .image-wrapper {
+  width: 100%;
+  margin-bottom: 10vh;
+  display: flex;
+  justify-content: center;
+}
+
+.image-wrapper img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Layout variations */
+.scroll-section.2x2 .images-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2vw;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .scroll-section.2x2 .images-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+.scroll-section {
+  width: 100%;
+  overflow: hidden;
+}
+
+.scroll-container {
+  will-change: transform;
+}
+
+.scroll-container.horizontal {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.scroll-container.vertical {
+  display: block;
+}
+
+/* Add transition styles for smooth animation */
+body.horizontal-scroll-active {
+  overflow-x: hidden;
+}
+
+/* Scroll indicator for horizontal scrolling */
+.scroll-indicator {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+body.horizontal-scroll-active .scroll-indicator {
+  display: flex;
+  animation: fadeIn 0.5s ease forwards 0.5s;
+}
+
+.scroll-indicator-text {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.scroll-indicator-arrows {
+  display: flex;
+}
+
+.scroll-arrow {
+  width: 20px;
+  height: 20px;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  margin: 0 5px;
+}
+
+.scroll-arrow.left {
+  transform: rotate(-135deg);
+}
+
+.scroll-arrow.right {
+  transform: rotate(45deg);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 0.8; }
+}

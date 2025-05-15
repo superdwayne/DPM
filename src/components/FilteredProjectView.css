@@ -1,0 +1,429 @@
+.filtered-project-view {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Filter header with tabs and view toggle */
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* Filter tabs */
+.filter-tabs {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: nowrap;
+  position: relative;
+}
+
+.filter-tab {
+  background: none;
+  border: none;
+  font-family: 'Avenir Black', 'Avenir', Helvetica, Arial, sans-serif;
+  font-size: 0.9rem;
+  color: #777;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.filter-tab:hover {
+  color: #000;
+}
+
+.filter-tab.active {
+  color: #000;
+  position: relative;
+}
+
+.filter-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+
+/* View toggle */
+.view-toggle {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.view-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem;
+  color: #777;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.view-toggle-btn:hover {
+  color: #000;
+  background-color: #f1f1f1;
+}
+
+.view-toggle-btn.active {
+  color: #000;
+  background-color: #f1f1f1;
+}
+
+/* Project count container */
+.project-count-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 2rem;
+}
+
+.project-count {
+  font-size: 0.9rem;
+}
+
+/* List View Styles */
+.project-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #eee;
+  text-decoration: none;
+  color: #000;
+  transition: background-color 0.3s ease;
+}
+
+.project-list-item:hover {
+  background-color: #f8f8f8;
+}
+
+.project-title {
+  font-family: 'Avenir Black', 'Avenir', Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.project-thumbnail {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.project-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: high-quality;
+}
+
+/* Grid View Styles */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  transition: opacity 0.3s ease;
+}
+
+/* Animation for category changes */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.project-grid .project-link {
+  text-decoration: none;
+  color: inherit;
+  display: contents;
+}
+
+.project-grid .project {
+  position: relative;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f8f8f8;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.project-grid .project-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.project-grid .project img {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+  image-rendering: high-quality;
+}
+
+.project-grid .project h2 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #000;
+  font-size: 1.5rem;
+  font-family: 'Avenir Black', 'Avenir', Helvetica, Arial, sans-serif;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-grid .project:hover .project-inner {
+  width: 70%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}
+
+.project-grid .project:hover h2 {
+  opacity: 1;
+}
+
+.project-grid .project:hover img {
+  image-rendering: high-quality;
+  transform-origin: center;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+/* Project specific background colors */
+.project-grid .project.ar-shopping {
+  background-color: #c86b6b;
+}
+
+.project-grid .project.three-shells {
+  background-color: #000;
+}
+
+.project-grid .project.three-shells h2 {
+  color: #fff;
+}
+
+.project-grid .project.gucci {
+  background-color: #1a8754;
+}
+
+.project-grid .project.kids {
+  background-color: #9370db;
+}
+
+/* Mobile filter container and button */
+.mobile-filter-container {
+  position: relative;
+  width: 100%;
+  max-width: 200px;
+  display: none;
+}
+
+.mobile-filter-button {
+  display: none;
+  background: #f5f5f5;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  font-family: 'Avenir Black', 'Avenir', Helvetica, Arial, sans-serif;
+  font-size: 0.9rem;
+  color: #333;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.mobile-filter-button:hover {
+  background-color: #eeeeee;
+}
+
+.mobile-filter-button.active {
+  background-color: #e5e5e5;
+}
+
+.mobile-filter-button svg {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.mobile-filter-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 100%;
+  max-width: 200px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.mobile-filter-dropdown.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.mobile-filter-option {
+  padding: 0.8rem 1rem;
+  text-align: left;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+  color: #777;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.mobile-filter-option:last-child {
+  border-bottom: none;
+}
+
+.mobile-filter-option:hover {
+  background-color: #f8f8f8;
+}
+
+.mobile-filter-option.active {
+  color: #000;
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .filtered-project-view {
+    padding: 1rem;
+  }
+  
+  .filter-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    position: relative;
+  }
+  
+  .filter-tabs {
+    overflow-x: auto;
+    width: 100%;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+    gap: 1rem;
+  }
+  
+  /* Hide scrollbar in WebKit browsers */
+  .filter-tabs::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .filter-tab {
+    font-size: 0.85rem;
+    padding: 0.3rem 0;
+  }
+  
+  .view-toggle {
+    align-self: flex-end;
+    margin-top: 0.5rem;
+  }
+  
+  .project-count-container {
+    padding: 0.8rem 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .project-title {
+    font-size: 1.5rem;
+  }
+  
+  .project-thumbnail {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  /* Improved list view for mobile */
+  .project-list-item {
+    padding: 1.2rem 0;
+  }
+}
+
+/* Very small screens - show dropdown filter instead of tabs */
+@media (max-width: 480px) {
+  .mobile-filter-container {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  
+  .mobile-filter-button {
+    display: flex;
+  }
+  
+  .mobile-filter-dropdown {
+    display: flex;
+  }
+  
+  .filter-tabs {
+    display: none;
+  }
+  
+  .filter-header {
+    margin-bottom: 1rem;
+  }
+  
+  .project-list-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .project-title {
+    font-size: 1.3rem;
+  }
+} 
