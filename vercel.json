@@ -4,5 +4,14 @@
         "runtime": "nodejs20.x"
       }
     },
-    "installCommand": "yarn install --ignore-engines"
+    "installCommand": "yarn install --ignore-engines",
+    "builds": [
+      {
+        "src": "package.json",
+        "use": "@vercel/node",
+        "config": {
+          "nodeVersion": "20.x"
+        }
+      }
+    ]
   }
