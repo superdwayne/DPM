@@ -1,41 +1,58 @@
 // copy-videos.js
-const fs = require('fs');
-const path = require('path');
+import { promises as fs } from 'fs';
+import { fileURLToPath } from 'url';
+import path from 'path';
+import { dirname } from 'path';
+
+// Get current directory
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 // Create videos directory in dist
 const sourceDir = path.join(__dirname, 'public', 'videos');
 const targetDir = path.join(__dirname, 'dist', 'videos');
 
-// Create the target directory if it doesn't exist
-if (!fs.existsSync(targetDir)) {
-  fs.mkdirSync(targetDir, { recursive: true });
-  console.log(`Created directory: ${targetDir}`);
-}
-
-// Copy all files from public/videos to dist/videos
-fs.readdir(sourceDir, (err, files) => {
-  if (err) {
-    console.error(`Error reading source directory: ${err.message}`);
-    process.exit(1);
-  }
-
-  let copyCount = 0;
-  files.forEach(file => {
-    const sourcePath = path.join(sourceDir, file);
-    const targetPath = path.join(targetDir, file);
-
-    // Check if it's a file
-    const stats = fs.statSync(sourcePath);
-    if (stats.isFile()) {
-      try {
-        fs.copyFileSync(sourcePath, targetPath);
-        copyCount++;
-        console.log(`Copied: ${file}`);
-      } catch (error) {
-        console.error(`Error copying ${file}: ${error.message}`);
+async function copyVideos() {
+  try {
+    // Create the target directory if it doesn't exist
+    try {
+      await fs.mkdir(targetDir, { recursive: true });
+      console.log(`Created directory: ${targetDir}`);
+    } catch (err) {
+      if (err.code !== 'EEXIST') {
+        throw err;
       }
     }
-  });
 
-  console.log(`Successfully copied ${copyCount} video files to dist/videos`);
-}); 
+    // Read source directory
+    const files = await fs.readdir(sourceDir);
+    
+    let copyCount = 0;
+    
+    // Copy each file
+    for (const file of files) {
+      const sourcePath = path.join(sourceDir, file);
+      const targetPath = path.join(targetDir, file);
+
+      // Check if it's a file
+      const stats = await fs.stat(sourcePath);
+      if (stats.isFile()) {
+        try {
+          await fs.copyFile(sourcePath, targetPath);
+          copyCount++;
+          console.log(`Copied: ${file}`);
+        } catch (error) {
+          console.error(`Error copying ${file}: ${error.message}`);
+        }
+      }
+    }
+
+    console.log(`Successfully copied ${copyCount} video files to dist/videos`);
+  } catch (err) {
+    console.error(`Error in copy process: ${err.message}`);
+    process.exit(1);
+  }
+}
+
+// Execute the copy
+copyVideos(); 
