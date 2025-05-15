@@ -1,0 +1,1299 @@
+/* Image Section Styles */
+.image-section {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+
+.image-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+}
+
+.image-container.fullBleed {
+  margin: 0 -2rem;  /* Negative margin to break out of container */
+  width: calc(90% + 4rem);  /* Compensate for negative margins */
+  background: transparent;
+}
+
+.content-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  background: transparent;
+}
+
+.image-caption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* Image Grid Styles */
+.image-grid-section {
+  width: 100%;
+  margin: 2rem 0;
+  background: transparent;
+}
+
+.image-grid {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+  background: transparent;
+}
+
+.image-grid.\32 x2 {
+  grid-template-columns: repeat(2, 1fr);
+  background: transparent;
+}
+
+.grid-image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: transparent;
+}
+
+.grid-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: transparent;
+}
+
+.grid-image-caption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .image-container.fullBleed {
+    margin: 0 -1rem;
+    width: calc(100% + 2rem);
+  }
+
+  .image-grid.\32 x2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- LEGO Hero Full Width Slideshow --- */
+.lego-hero {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  left: 50%;
+  right: 50%;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.lego-hero-content {
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lego-hero .media-slideshow,
+.lego-hero .media-slideshow .slideshow-image,
+.lego-hero .media-slideshow img,
+.lego-hero .media-slideshow video {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  height: 60vh;
+  max-height: 80vh;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  background: #000;
+}
+
+@media (max-width: 900px) {
+  .lego-hero .media-slideshow,
+  .lego-hero .media-slideshow .slideshow-image,
+  .lego-hero .media-slideshow img,
+  .lego-hero .media-slideshow video {
+    height: 40vh;
+    max-height: 50vh;
+  }
+}
+
+/* --- AR Product Hero Full Width --- */
+.ar-product-hero {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  left: 50%;
+  right: 50%;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #333333;
+  background-size: cover;
+  background-position: center;
+}
+
+.ar-product-hero-content {
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 120px 0;
+}
+
+.ar-product-hero video,
+.ar-product-hero img {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  height: 65vh;
+  max-height: 85vh;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .ar-product-hero video,
+  .ar-product-hero img {
+    height: 40vh;
+    max-height: 50vh;
+  }
+}
+
+/* --- NDSM Street Art Hero --- */
+.nsdm-hero {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  left: 50%;
+  right: 50%;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #333333;
+  background-size: cover;
+  background-position: center;
+}
+
+.nsdm-hero-content {
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 120px 0;
+}
+
+.nsdm-hero img,
+.nsdm-hero video {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  height: 65vh;
+  max-height: 85vh;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .nsdm-hero img,
+  .nsdm-hero video {
+    height: 40vh;
+    max-height: 50vh;
+  }
+}
+
+/* --- SOLAYA Snap Lens Hero --- */
+.solaya-hero {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  left: 50%;
+  right: 50%;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #000000;
+  background-size: cover;
+  background-position: center;
+}
+
+.solaya-hero-content {
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 120px 0;
+}
+
+.solaya-hero img,
+.solaya-hero video {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  height: 65vh;
+  max-height: 85vh;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  filter: brightness(1.05) contrast(1.1);
+}
+
+@media (max-width: 900px) {
+  .solaya-hero img,
+  .solaya-hero video {
+    height: 40vh;
+    max-height: 50vh;
+  }
+}
+
+/* --- Farfetch Metaverse Hero --- */
+.farfetch-metaverse-hero {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  left: 50%;
+  right: 50%;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #9370db;
+  background-size: cover;
+  background-position: center;
+}
+
+.farfetch-metaverse-hero-content {
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 120px 0;
+}
+
+.farfetch-metaverse-hero img,
+.farfetch-metaverse-hero video {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  height: 65vh;
+  max-height: 85vh;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  filter: saturate(1.2);
+}
+
+@media (max-width: 900px) {
+  .farfetch-metaverse-hero img,
+  .farfetch-metaverse-hero video {
+    height: 40vh;
+    max-height: 50vh;
+  }
+}
+
+.media-grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: #f8f8f8;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.media-grid-item img,
+.media-grid-item .clickable-video-container {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.media-grid-video {
+  width: 100%;
+  height: auto;
+  object-fit: unset !important;
+  border-radius: 8px;
+  background: #000;
+  display: block;
+  max-height: none !important;
+  max-width: none !important;
+}
+
+/* Override any hero-specific or object-fit styling for media grid videos */
+.media-grid-item .clickable-video-container {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+.media-grid-item .media-grid-video {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 900px) {
+  .media-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+/* Styling for Farfetch Metaverse project */
+body[data-project="farfetch-metaverse"] .sticky-sidebar {
+  background-color: #f8f8ff; /* Light lavender background */
+  border-right: 1px solid rgba(147, 112, 219, 0.2); /* Light purple border */
+}
+
+body[data-project="farfetch-metaverse"] .project-title {
+  color: #7851a9; /* Deep purple color */
+  letter-spacing: -0.5px;
+  font-weight: 600;
+}
+
+body[data-project="farfetch-metaverse"] .category-tag {
+  background-color: rgba(147, 112, 219, 0.1); /* Light purple background */
+  color: #7851a9; /* Purple text */
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+body[data-project="farfetch-metaverse"] .secondary-tag {
+  background-color: #f1f1fa;
+  color: #5a3f87; /* Darker purple */
+  border-radius: 6px;
+}
+
+body[data-project="farfetch-metaverse"] .content-section-title {
+  color: #7851a9; /* Purple */
+  font-weight: 600;
+}
+
+body[data-project="farfetch-metaverse"] .content-quote {
+  background-color: rgba(147, 112, 219, 0.05);
+  border-left: 3px solid #9370db;
+}
+
+/* Animation for Farfetch Metaverse content */
+body[data-project="farfetch-metaverse"] .content-section,
+body[data-project="farfetch-metaverse"] .scrollable-section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: farfetchFadeIn 0.8s ease-out forwards;
+}
+
+@keyframes farfetchFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger animations */
+body[data-project="farfetch-metaverse"] .content-section:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+body[data-project="farfetch-metaverse"] .content-section:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+body[data-project="farfetch-metaverse"] .content-section:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+/* Hero video styles - respect natural aspect ratio */
+.project-hero video,
+.project-hero .clickable-video {
+  width: 100%;
+  height: auto;
+  max-height: 85vh;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+  opacity: 1 !important; /* Ensure videos are not hidden */
+  visibility: visible !important; /* Ensure videos are visible */
+}
+
+/* Project-specific hero video styles */
+.lego-hero video,
+.touchdesigner-hero video,
+.ar-product-hero video,
+.nsdm-hero video,
+.solaya-hero video,
+.farfetch-metaverse-hero video {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 85vh;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+/* Override forced width/height for hero videos */
+.lego-hero .media-slideshow video,
+.lego-hero .media-slideshow .slideshow-image,
+.lego-hero .media-slideshow img {
+  width: auto !important;
+  max-width: 100vw !important;
+  height: auto !important;
+  max-height: 80vh !important;
+  object-fit: contain !important;
+}
+
+.ar-product-hero video,
+.ar-product-hero img,
+.nsdm-hero video,
+.nsdm-hero img,
+.solaya-hero video,
+.solaya-hero img,
+.farfetch-metaverse-hero video,
+.farfetch-metaverse-hero img {
+  width: auto !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: 85vh !important;
+  object-fit: contain !important;
+}
+
+/* Video Aspect Ratio Classes */
+.clickable-video-container.wide-video {
+  width: 95%;
+  max-width: 1600px;
+  aspect-ratio: 16/9;
+  margin: 0 auto;
+}
+
+.clickable-video-container.wide-video .clickable-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.clickable-video-container.vertical-video {
+  width: auto;
+  height: 85vh;
+  max-height: 85vh;
+  margin: 0 auto;
+  aspect-ratio: 9/16;
+}
+
+.clickable-video-container.vertical-video .clickable-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.clickable-video-container.standard-video {
+  width: 100%;
+  max-width: 1200px;
+  aspect-ratio: 4/3;
+  margin: 0 auto;
+}
+
+.clickable-video-container.standard-video .clickable-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Media grid adjustments for different aspect ratios */
+.media-grid-item .clickable-video-container.wide-video {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.media-grid-item .clickable-video-container.vertical-video {
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.media-grid-item .clickable-video-container.standard-video {
+  width: 100%;
+  aspect-ratio: 4/3;
+}
+
+/* Original media-grid-item styling starts here - remove duplicates */
+.media-grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: #f8f8f8;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.media-grid-item img,
+.media-grid-item .clickable-video-container {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Video section styles */
+.video-section {
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.video-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.video-container.fullBleed {
+  width: 100%;
+  max-width: 100%;
+}
+
+.video-container.centered {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.video-container.small {
+  width: 60%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Target the clickable-video-container directly */
+.video-container > .clickable-video-container {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+/* Control video sizes based on layout */
+.video-container.fullBleed > .clickable-video-container {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.video-container.centered > .clickable-video-container {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.video-container.small > .clickable-video-container {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+/* Style the video element itself */
+.video-container .clickable-video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Add hover effect */
+.video-container .clickable-video-container:hover {
+  transform: scale(1.005);
+  transition: transform 0.2s ease;
+}
+
+/* Force video to maintain consistent size regardless of content */
+.clickable-video-container.content-video {
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* Add an overlay style to make videos more visible */
+.video-container .clickable-video-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.video-container .clickable-video-container:hover::after {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .video-container.centered,
+  .video-container.small {
+    width: 100%;
+  }
+}
+
+/* Target specific video classes */
+.video-container.video-fullBleed {
+  max-width: 100%;
+}
+
+.video-container.video-centered {
+  width: 80%;
+  max-width: 900px;
+}
+
+.video-container.video-small {
+  width: 50%;
+  max-width: 600px;
+}
+
+/* Target specific video content classes */
+.content-video-fullBleed {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.content-video-centered {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.content-video-small {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+/* Direct styling for video elements */
+.video-container .clickable-video {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  object-fit: cover;
+}
+
+/* Mobile improvements for videos */
+@media (max-width: 768px) {
+  /* Make videos more visible and fix display issues */
+  .project-hero video,
+  .project-hero .clickable-video,
+  video.clickable-video {
+    max-width: 100% !important;
+    width: 100% !important;
+    min-height: 50vh !important;
+    height: auto !important;
+    background-color: #111 !important;
+    object-position: center center !important;
+  }
+  
+  /* Improve play button visibility */
+  .hero-play-button {
+    width: 70px !important;
+    height: 70px !important;
+    background: rgba(0, 0, 0, 0.6) !important;
+    border: 3px solid rgba(255, 255, 255, 0.9) !important;
+    z-index: 5 !important;
+  }
+  
+  .hero-play-button svg {
+    width: 26px !important;
+    height: 26px !important;
+  }
+  
+  .hero-play-text {
+    font-size: 18px !important;
+    margin-top: 12px !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+    font-weight: 600 !important;
+  }
+  
+  /* Ensure video background is visible */
+  .video-background {
+    opacity: 1 !important;
+  }
+  
+  /* Fix video container to ensure videos are visible */
+  .clickable-video-container {
+    min-height: 50vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #111 !important;
+  }
+  
+  /* Fix TouchDesigner MCP project video specifically */
+  .touchdesigner-hero-content .clickable-video-container,
+  .touchdesigner-hero video,
+  .touchdesigner-hero .clickable-video {
+    min-height: 50vh !important;
+    height: auto !important;
+    display: block !important;
+    width: 100% !important;
+    background-color: #111 !important;
+  }
+  
+  /* Content section video improvements */
+  .video-section {
+    margin: 1.5rem 0;
+  }
+  
+  .video-container {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .video-container.centered,
+  .video-container.small,
+  .video-container.video-centered,
+  .video-container.video-small {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Ensure all video containers maintain aspect ratio */
+  .video-container > .clickable-video-container {
+    width: 100% !important;
+    aspect-ratio: 16/9;
+    border-radius: 0;
+  }
+  
+  /* Fix vertical videos on mobile */
+  .clickable-video-container.vertical-video {
+    width: 70% !important;
+    max-width: 70% !important;
+    height: auto !important;
+    aspect-ratio: 9/16 !important;
+    margin: 0 auto;
+  }
+  
+  /* Improve video modal for mobile */
+  .video-modal-content {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+  
+  .video-modal-player {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 90vh !important;
+  }
+  
+  .video-modal-close {
+    top: 15px !important;
+    right: 15px !important;
+    width: 40px !important;
+    height: 40px !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    border-radius: 50% !important;
+  }
+}
+
+/* Project specific mobile video improvements */
+@media (max-width: 768px) {
+  /* NSDM Project */
+  .nsdm-hero-content {
+    padding: 0 !important;
+  }
+  
+  .nsdm-hero video {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+  }
+  
+  /* SOLAYA Project */
+  .solaya-hero-content {
+    padding: 0 !important;
+  }
+  
+  .solaya-hero video {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+  }
+  
+  /* Farfetch Metaverse Project */
+  .farfetch-metaverse-hero-content {
+    padding: 0 !important;
+  }
+  
+  .farfetch-metaverse-hero video {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+  }
+  
+  /* LEGO Project */
+  .lego-hero-content {
+    padding: 0 !important;
+  }
+  
+  .lego-hero video,
+  .lego-hero .media-slideshow video {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+  }
+  
+  /* AR Product Project */
+  .ar-product-hero-content {
+    padding: 0 !important;
+  }
+  
+  .ar-product-hero video {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+  }
+}
+
+/* Video play button and controls */
+.hero-play-button-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  z-index: 2; /* Above the video but not hiding it */
+  pointer-events: none; /* Allow clicks to pass through to the container */
+}
+
+.hero-play-button {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.hero-play-button svg {
+  width: 30px;
+  height: 30px;
+  margin-left: 5px; /* Adjust for the play triangle's visual center */
+}
+
+.hero-play-text {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero-play-button-overlay:hover .hero-play-button {
+  transform: scale(1.05);
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Video pause indicator */
+.video-pause-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.clickable-video-container:hover .video-pause-indicator {
+  opacity: 1;
+}
+
+/* Mute toggle button */
+.video-mute-toggle {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  z-index: 2;
+}
+
+.video-mute-toggle:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.video-mute-toggle.muted {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Video Modal Styles */
+.video-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.video-modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.video-modal-player {
+  width: 100%;
+  display: block;
+}
+
+.video-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  z-index: 1001;
+}
+
+.video-modal-close:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Mobile improvements for Lego slideshow - matching About page slideshow */
+@media (max-width: 768px) {
+  /* Match the About page slideshow style for Lego project */
+  .lego-hero .media-slideshow,
+  .lego-hero .slideshow-image {
+    height: 80vh !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .lego-hero .media-slideshow img,
+  .lego-hero .media-slideshow video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+  
+  /* Match similar styling for all other hero content types */
+  .project-hero img,
+  .project-hero video,
+  .project-hero .clickable-video,
+  .hero-content video,
+  .project-hero .clickable-video-container {
+    width: 100% !important;
+    height: 80vh !important;
+    max-height: none !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+
+  /* Specific improvements for project hero sections */
+  .touchdesigner-hero-content,
+  .ar-product-hero-content,
+  .nsdm-hero-content,
+  .solaya-hero-content,
+  .farfetch-metaverse-hero-content,
+  .lego-hero-content {
+    padding: 0 !important;
+    height: 80vh !important;
+  }
+  
+  /* Make hero content fill the screen better */
+  .hero-content,
+  .project-hero {
+    height: 80vh !important;
+    padding: 0 !important;
+  }
+  
+  /* Specifically target TouchDesigner MCP hero */
+  #touchdesignermcp .project-hero video,
+  .touchdesigner-hero video,
+  .touchdesigner-hero .clickable-video,
+  .touchdesigner-hero .clickable-video-container {
+    height: 80vh !important;
+    width: 100% !important;
+  }
+  
+  /* Slideshow navigation improvements for mobile */
+  .lego-hero .swiper-button-next,
+  .lego-hero .swiper-button-prev {
+    width: 35px !important;
+    height: 35px !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    border-radius: 50% !important;
+  }
+  
+  .lego-hero .swiper-button-next::after,
+  .lego-hero .swiper-button-prev::after {
+    font-size: 16px !important;
+    color: white !important;
+  }
+  
+  /* Improve pagination for mobile */
+  .lego-hero .swiper-pagination-bullet {
+    width: 8px !important;
+    height: 8px !important;
+    background: white !important;
+    opacity: 0.7 !important;
+  }
+  
+  .lego-hero .swiper-pagination-bullet-active {
+    opacity: 1 !important;
+  }
+}
+
+/* Increase touch target size for video controls */
+.video-mute-toggle {
+  width: 40px !important;
+  height: 40px !important;
+  padding: 10px !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  right: 10px !important;
+  bottom: 10px !important;
+}
+
+/* Align mobile toggle button with project title */
+.project-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.mobile-toggle {
+  font-size: 24px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Ensure consistent mobile-toggle positioning on all screen sizes */
+@media (max-width: 768px) {
+  .project-intro {
+    padding-right: 40px;
+  }
+  
+  .mobile-toggle {
+    right: 10px;
+  }
+  
+  .project-title {
+    margin-right: 40px;
+  }
+}
+
+/* Fix video visibility issues */
+.clickable-video-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.1);
+  min-height: 200px;
+  overflow: hidden;
+}
+
+.clickable-video {
+  position: relative;
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: 1;
+}
+
+/* Fix specific project video display issues */
+.touchdesigner-hero video,
+.touchdesigner-hero .clickable-video,
+.ar-product-hero video,
+.ar-product-hero .clickable-video,
+.nsdm-hero video,
+.nsdm-hero .clickable-video,
+.solaya-hero video,
+.solaya-hero .clickable-video,
+.farfetch-metaverse-hero video,
+.farfetch-metaverse-hero .clickable-video,
+.lego-hero video,
+.lego-hero .clickable-video {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
+/* QR Code in sidebar */
+.project-qrcode {
+  padding: 1rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 0.5rem;
+}
+
+.qrcode-title {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #666;
+  text-align: center;
+}
+
+.qrcode-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Target the image directly with higher specificity */
+.sticky-sidebar .project-qrcode .qrcode-container img.qrcode-image,
+img.qrcode-image,
+.qrcode-image {
+  width: 50% !important;
+  padding: 4px !important;
+  background-color: white !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+  transition: transform 0.2s ease !important;
+
+}
+
+.qrcode-image:hover {
+  transform: scale(1.05);
+}
+
+/* Mobile styling for QR code */
+@media (max-width: 768px) {
+  .project-qrcode {
+    padding: 0.75rem 0;
+    margin-top: 0.25rem;
+  }
+  
+  .qrcode-title {
+    font-size: 0.75rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  /* Higher specificity for mobile */
+  .sticky-sidebar .project-qrcode .qrcode-container img.qrcode-image,
+  img.qrcode-image,
+  .qrcode-image {
+    width: 70px !important;
+    height: 70px !important;
+    padding: 3px !important;
+    max-width: 70px !important;
+    max-height: 70px !important;
+  }
+  
+  /* Make QR code visible even when sidebar is collapsed on mobile */
+  .sticky-sidebar.collapsed .project-qrcode {
+    display: none;
+  }
+} 
+

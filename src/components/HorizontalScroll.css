@@ -1,0 +1,210 @@
+/* Main gallery container */
+.gallery-component {
+  width: 100%;
+  padding: 0;
+}
+
+/* Gallery title */
+.gallery-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #333;
+}
+
+/* Vertical images section - stacked */
+.vertical-images {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.vertical-item {
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.vertical-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Horizontal scrolling section */
+.horizontal-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.horizontal-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.horizontal-track {
+  display: flex;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  will-change: transform;
+}
+
+.horizontal-item {
+  width: 100vw;
+  height: 100%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0 5vw;
+}
+
+.horizontal-image {
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+/* Scroll indicators */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.indicator-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.indicator-dot.active {
+  background-color: white;
+  transform: scale(1.3);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .gallery-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .vertical-item {
+    margin-bottom: 15px;
+  }
+  
+  .horizontal-wrapper {
+    height: 70vh;
+  }
+  
+  .horizontal-image {
+    max-height: 60vh;
+  }
+  
+  .indicator-dot {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+/* Overall Gallery Container */
+.gallery-container {
+  width: 100%;
+  overflow-x: hidden; /* Prevent accidental horizontal scrollbars on the body */
+}
+
+/* Vertically Stacked Images */
+.vertical-image-item {
+  width: 100%;
+  margin-bottom: 20px; /* Spacing between vertical images */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vertical-image-content {
+  max-width: 100%; /* Ensure image doesn't overflow container */
+  width: 100%;     /* Make image take full width of its container */
+  height: auto;
+  object-fit: cover; /* Cover the area, might crop */
+}
+
+/* Horizontally Scrolling Section */
+.horizontal-scroll-section {
+  width: 100%;
+  height: 100vh; /* Full viewport height for the pinned section */
+  position: relative; /* Needed for pinning context */
+  overflow: hidden; /* Crucial: hide the overflowing track */
+}
+
+.horizontal-scroll-track {
+  display: flex;
+  height: 100%;
+  position: relative; /* GSAP will animate its 'x' position */
+  /* Width is set dynamically in JS (e.g., numImages * 100vw) */
+}
+
+.horizontal-image-item {
+  width: 100vw; /* Each item takes full viewport width */
+  height: 100%;
+  flex-shrink: 0; /* Prevent items from shrinking */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensure images don't spill out of their 100vw item */
+  padding: 0; /* No padding on the item itself */
+  box-sizing: border-box;
+}
+
+.horizontal-image-content {
+  width: 100%; /* Image takes full width of its 100vw item */
+  height: 100%; /* Image takes full height of its 100vh item */
+  object-fit: cover; /* Cover the area, will crop if aspect ratios differ */
+}
+
+/* Optional: Add some padding if you want to see edges of images */
+/*
+.horizontal-image-item {
+  padding: 0 2vw; 
+}
+.horizontal-image-content {
+  max-width: calc(100% - 4vw); 
+  max-height: 90vh; 
+  object-fit: contain;
+  border-radius: 8px; 
+}
+*/
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .vertical-image-item {
+    margin-bottom: 15px;
+  }
+  .horizontal-scroll-section {
+    /* You might want a different height on mobile */
+    /* height: 80vh; */
+  }
+} 
