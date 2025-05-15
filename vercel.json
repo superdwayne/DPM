@@ -1,9 +1,4 @@
 {
-    "functions": {
-      "api/**/*": {
-        "runtime": "nodejs20.x"
-      }
-    },
     "installCommand": "yarn install --ignore-engines",
     "builds": [
       {
