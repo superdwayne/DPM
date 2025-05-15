@@ -1,17 +1,9 @@
-  {
-    "framework": "vite",
-    "installCommand": "yarn install --ignore-engines",
-    "routes": [
-      { "handle": "filesystem" },
-      { "src": "/(.*)", "dest": "/index.html" }
-    ],
-    "builds": [
-        {
-          "src": "package.json",
-          "use": "@vercel/node",
-          "config": {
-            "nodeVersion": "20.x"
-          }
-        }
-      ] 
-  }
+{
+  "version": 2,
+  "framework": "vite",
+  "public": true,
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ]
+}
