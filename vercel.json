@@ -1,4 +1,14 @@
 {
+
+  "framework": "vite",
+  "buildCommand": "yarn build",
+  "installCommand": "yarn install --ignore-engines",
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}
+
     "installCommand": "yarn install --ignore-engines",
     "builds": [
       {
@@ -14,3 +24,4 @@
       { "src": "/(.*)", "dest": "/index.html" }
     ]
   }
+

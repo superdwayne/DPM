@@ -1,5 +1,9 @@
 import { useState } from 'react'
+
+import { BrowserRouter as Router, Routes, Route, createBrowserRouter, RouterProvider } from 'react-router-dom'
+
 import { createBrowserRouter, RouterProvider, Navigate, Outlet, useParams } from 'react-router-dom'
+
 import './App.css'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -9,6 +13,10 @@ import EnhancedProjectDetail from './components/EnhancedProjectDetail'
 import About from './components/About'
 import Showreel from './components/Showreel'
 import { getProjectById, projects } from './data/projects'
+
+
+// Wrapper component to determine which project detail component to render
+const ProjectDetailWrapper = () => {
 
 // Layout component
 const Layout = () => {
@@ -23,6 +31,7 @@ const Layout = () => {
 
 // Project detail loader
 const ProjectDetailComponent = () => {
+
   const { projectId } = useParams();
   console.log(`Looking up project with ID: ${projectId}`);
   
@@ -53,6 +62,98 @@ const ProjectDetailComponent = () => {
     <ProjectDetail key={projectId} />
   );
 };
+
+
+function App() {
+  // Define the routes
+  const routes = [
+    {
+      path: "/",
+      element: (
+        <div className="container">
+          <Navbar />
+          <Hero />
+          <FilteredProjectView />
+        </div>
+      ),
+    },
+    {
+      path: "/projects",
+      element: (
+        <div className="container">
+          <Navbar />
+          <Hero />
+          <FilteredProjectView />
+        </div>
+      ),
+    },
+    {
+      path: "/project/:projectId",
+      element: (
+        <div className="container">
+          <ProjectDetailWrapper />
+        </div>
+      ),
+    },
+    {
+      path: "/about",
+      element: (
+        <div className="container">
+          <About />
+        </div>
+      ),
+    },
+    {
+      path: "/contact",
+      element: (
+        <div className="container">
+          <About />
+        </div>
+      ),
+    },
+    {
+      path: "/showreel",
+      element: (
+        <div className="container">
+          <Showreel />
+        </div>
+      ),
+    },
+    {
+      path: "*",
+      element: <Navigate to="/" replace />,
+    }
+  ];
+
+  // For React Router v7, use the BrowserRouter approach
+  return (
+    <Router basename="/">
+      <div className="container">
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Navbar />
+              <Hero />
+              <FilteredProjectView />
+            </>
+          } />
+          <Route path="/projects" element={
+            <>
+              <Navbar />
+              <Hero />
+              <FilteredProjectView />
+            </>
+          } />
+          <Route path="/project/:projectId" element={
+            <ProjectDetailWrapper />
+          } />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<About />} />
+          <Route path="/showreel" element={<Showreel />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </div>
+    </Router>
 
 const router = createBrowserRouter([
   {
@@ -96,6 +197,7 @@ function App() {
     <div className="container">
       <RouterProvider router={router} />
     </div>
+
   )
 }
 
