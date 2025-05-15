@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider, Navigate, Outlet, useParams } from 'react-router-dom'
 import './App.css'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -9,42 +9,20 @@ import EnhancedProjectDetail from './components/EnhancedProjectDetail'
 import About from './components/About'
 import Showreel from './components/Showreel'
 import { getProjectById, projects } from './data/projects'
-import { useParams, Navigate } from 'react-router-dom'
 
-function App() {
+// Layout component
+const Layout = () => {
   return (
-    <Router>
-      <div className="container">
-        <Routes>
-          <Route path="/" element={
-            <>
-              <Navbar />
-              <Hero />
-              <FilteredProjectView />
-            </>
-          } />
-          <Route path="/projects" element={
-            <>
-              <Navbar />
-              <Hero />
-              <FilteredProjectView />
-            </>
-          } />
-          <Route path="/project/:projectId" element={
-            <ProjectDetailWrapper />
-          } />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<About />} />
-          <Route path="/showreel" element={<Showreel />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </div>
-    </Router>
+    <>
+      <Navbar />
+      <Hero />
+      <Outlet />
+    </>
   )
 }
 
-// Wrapper component to determine which project detail component to render
-const ProjectDetailWrapper = () => {
+// Project detail loader
+const ProjectDetailComponent = () => {
   const { projectId } = useParams();
   console.log(`Looking up project with ID: ${projectId}`);
   
@@ -75,5 +53,50 @@ const ProjectDetailWrapper = () => {
     <ProjectDetail key={projectId} />
   );
 };
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        index: true,
+        element: <FilteredProjectView />
+      },
+      {
+        path: "projects",
+        element: <FilteredProjectView />
+      }
+    ]
+  },
+  {
+    path: "/project/:projectId",
+    element: <ProjectDetailComponent />
+  },
+  {
+    path: "/about",
+    element: <About />
+  },
+  {
+    path: "/contact",
+    element: <About />
+  },
+  {
+    path: "/showreel",
+    element: <Showreel />
+  },
+  {
+    path: "*",
+    element: <Navigate to="/" replace />
+  }
+]);
+
+function App() {
+  return (
+    <div className="container">
+      <RouterProvider router={router} />
+    </div>
+  )
+}
 
 export default App
