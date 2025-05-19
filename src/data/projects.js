@@ -219,8 +219,8 @@ Synth immediately begins working across multiple layers:`,
       {
         type: 'text',
         title: 'The Concept',
-        content: `Farfetch into the Metaverse was a project decicated to exploring how Luxury fashion would play a massive role in the metaverse.
-        We explored creating a Farfetch metaverse alogside creating a uniqie avatar for the brand. `
+        content: `Farfetch into the Metaverse was a project dedicated to exploring how Luxury fashion would play a massive role in the metaverse.
+        We explored creating a Farfetch metaverse alongside creating a unique avatar for the brand. `
       },
 
       {
@@ -240,7 +240,7 @@ Synth immediately begins working across multiple layers:`,
       {
         type: 'text',
         title: 'UCO Digital avatar',
-        content: `UCO was created to embody mutiple personalities, each one represening different personalties traits of a 1001 PFP.
+        content: `UCO was created to embody multiple personalities, each one representing different personality traits of a 1001 PFP.
         `
       },
 
