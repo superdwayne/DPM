@@ -1848,6 +1848,151 @@ const ProjectDetail = () => {
       );
     }
     
+    // Special layout for LoRA project
+    else if (projectId === 'lora') {
+      const [sidebarCollapsed, setSidebarCollapsed] = useState(() => {
+        // Check if on mobile and default to collapsed if true
+        return window.innerWidth <= 768;
+      });
+      
+      // Add effect to track window resize and update state
+      useEffect(() => {
+        const handleResize = () => {
+          if (window.innerWidth <= 768) {
+            setSidebarCollapsed(true);
+          }
+        };
+        
+        // Set initial value on mount
+        handleResize();
+        
+        // Add event listener
+        window.addEventListener('resize', handleResize);
+        
+        // Clean up
+        return () => {
+          window.removeEventListener('resize', handleResize);
+        };
+      }, []);
+      
+      const toggleSidebar = () => {
+        setSidebarCollapsed(!sidebarCollapsed);
+      };
+      
+      // Add mobile detection for QR code
+      const isMobileView = useMobileDetection();
+      
+      // Create category tags for the sidebar
+      const categoryTags = ['AI', 'LoRA', 'Machine Learning', 'Flux Dev'];
+      
+      return (
+        <div className="touchdesigner-layout">
+          {/* Left sidebar with project overview */}
+          <div className={`sticky-sidebar ${sidebarCollapsed ? 'collapsed' : ''}`}>
+            <section className="project-intro">
+              <h1 className="project-title">{projectData.title}</h1>
+              <button className="mobile-toggle" onClick={toggleSidebar}>
+                {sidebarCollapsed ? '+' : '−'}
+              </button>
+            </section>
+            
+            {/* Category Tags */}
+            <div className="category-tags">
+              {categoryTags.map((tag, index) => (
+                <span key={index} className="category-tag">{tag}</span>
+              ))}
+            </div>
+            
+            {/* Secondary Tags */}
+            <div className="secondary-tags">
+              
+            </div>
+            
+            {/* Brief description at bottom of sidebar */}
+            <section className="project-overview">
+              <p className="overview-text">
+                {projectData.description || "Building a local AI image generation pipeline using custom LoRA training on Flux Dev, demonstrating the power of personalized model fine-tuning for specialized image synthesis."}
+              </p>
+            </section>
+
+            {/* Add QR code if available */}
+            {projectData.qrCodeImage && (
+              <section className="project-qrcode">
+                <h3 className="qrcode-title">{projectData.qrCodeLabel || ""}</h3>
+                <div className="qrcode-container">
+                  <img 
+                    src={projectData.qrCodeImage} 
+                    alt={projectData.qrCodeLabel || "QR Code"} 
+                    className="qrcode-image"
+                    style={{ 
+                      width: isMobileView ? '70px' : '90px', 
+                      height: isMobileView ? '70px' : '90px', 
+                      maxWidth: isMobileView ? '70px' : '90px', 
+                      maxHeight: isMobileView ? '70px' : '90px',
+                      objectFit: 'contain',
+                      border: '1px solid rgba(0, 0, 0, 0.1)',
+                      borderRadius: '6px',
+                      padding: isMobileView ? '3px' : '4px',
+                      backgroundColor: 'white'
+                    }}
+                  />
+                </div>
+              </section>
+            )}
+          </div>
+          
+          {/* Right content area with detailed sections and media */}
+          <div className="scrollable-content">
+            {/* Use contentSections if available, otherwise fall back to the old structure */}
+            {projectData.contentSections ? (
+              renderContentSections(projectData.contentSections, addToRefs)
+            ) : (
+              <>
+                {/* Concept Section */}
+                {projectData.concept && (
+                  <section className="content-section">
+                    <h2 className="content-section-title">Concept</h2>
+                    <p className="content-section-text">{projectData.concept}</p>
+                  </section>
+                )}
+                
+                {/* Project Images */}
+                {projectData.projectImages && projectData.projectImages.length > 0 && (
+                  <HorizontalScroll 
+                    images={projectData.projectImages}
+                    verticalLimit={2}
+                  />
+                )}
+                
+                {/* Narrative Section */}
+                {projectData.narrative && (
+                  <section className="content-section">
+                    <h2 className="content-section-title">Narrative</h2>
+                    <p className="content-section-text">{projectData.narrative}</p>
+                  </section>
+                )}
+                
+                {/* Quote Section */}
+                {projectData.quote && (
+                  <section className="content-quote">
+                    <blockquote>{projectData.quote}</blockquote>
+                  </section>
+                )}
+                
+                {/* Tech Section */}
+                {projectData.tech && (
+                  <section className="content-section">
+                    <h2 className="content-section-title">Tech</h2>
+                    <p className="content-section-text">{projectData.tech}</p>
+                  </section>
+                )}
+              </>
+            )}
+          </div>
+        </div>
+      );
+    }
+    
     // Special layout for Farfetch Metaverse project
     else if (projectId === 'farfetch-metaverse') {
       const [sidebarCollapsed, setSidebarCollapsed] = useState(() => {
@@ -2139,8 +2284,8 @@ const ProjectDetail = () => {
     <>
       <Navbar />
       <div className="project-detail-container">
-        <div className={`project-hero${projectId === 'lego' ? ' lego-hero' : ''}${projectId === 'touchdesignermcp' ? ' touchdesigner-hero' : ''}${projectId === 'arproduct-recommendations' ? ' ar-product-hero' : ''}${projectId === 'nsdm' ? ' nsdm-hero' : ''}${projectId === 'guido' ? ' guido-hero' : ''}${projectId === 'solaya' ? ' solaya-hero' : ''}${projectId === 'farfetch-metaverse' ? ' farfetch-metaverse-hero' : ''}`} style={{ backgroundColor: projectData.heroBg }}>
-          <div className={`hero-content${projectId === 'lego' ? ' lego-hero-content' : ''}${projectId === 'touchdesignermcp' ? ' touchdesigner-hero-content' : ''}${projectId === 'arproduct-recommendations' ? ' ar-product-hero-content' : ''}${projectId === 'nsdm' ? ' nsdm-hero-content' : ''}${projectId === 'guido' ? ' guido-hero-content' : ''}${projectId === 'solaya' ? ' solaya-hero-content' : ''}${projectId === 'farfetch-metaverse' ? ' farfetch-metaverse-hero-content' : ''}`}>
+        <div className={`project-hero${projectId === 'lego' ? ' lego-hero' : ''}${projectId === 'touchdesignermcp' ? ' touchdesigner-hero' : ''}${projectId === 'arproduct-recommendations' ? ' ar-product-hero' : ''}${projectId === 'nsdm' ? ' nsdm-hero' : ''}${projectId === 'guido' ? ' guido-hero' : ''}${projectId === 'solaya' ? ' solaya-hero' : ''}${projectId === 'farfetch-metaverse' ? ' farfetch-metaverse-hero' : ''}${projectId === 'lora' ? ' lora-hero' : ''}`} style={{ backgroundColor: projectData.heroBg }}>
+          <div className={`hero-content${projectId === 'lego' ? ' lego-hero-content' : ''}${projectId === 'touchdesignermcp' ? ' touchdesigner-hero-content' : ''}${projectId === 'arproduct-recommendations' ? ' ar-product-hero-content' : ''}${projectId === 'nsdm' ? ' nsdm-hero-content' : ''}${projectId === 'guido' ? ' guido-hero-content' : ''}${projectId === 'solaya' ? ' solaya-hero-content' : ''}${projectId === 'farfetch-metaverse' ? ' farfetch-metaverse-hero-content' : ''}${projectId === 'lora' ? ' lora-hero-content' : ''}`}>
             {projectId === 'lego' ? (
               <MediaSlideshow 
                 mediaItems={[

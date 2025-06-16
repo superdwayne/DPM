@@ -12,7 +12,8 @@ export const projectCategories = [
   "Comfy ui",
   "Machine learning",
   "Projection Mapping",
-  "ios"
+  "ios",
+  "LoRA"
 
 ];
 
@@ -20,6 +21,119 @@ export const projectCategories = [
 
 // Project data with categories
 export const projects = [
+
+  {
+    id: 'lora',
+    title: 'Custom LoRA Training with Flux Dev',
+    image: '/images/lora/flux_dev_oddtopersonmark2_5004.png',
+    categoryId: ['AI', 'LoRA', 'Machine learning'],
+    description: 'Building a local AI image generation pipeline using custom LoRA training on Flux Dev, demonstrating the power of personalized model fine-tuning for specialized image synthesis.',
+    brandLogo: '',
+    heroImage: '/images/lora/flux_dev_oddtopersonmark2_5004.png',
+    heroPoster: '/images/lora/flux_dev_oddtopersonmark2_5004.png',
+    heroBg: '#684364',
+    brandLogo: '/images/lora/flux-logo.png',
+    logoSize: 'large',
+  
+    projectImages: [
+      { url: '/images/lora/flux_dev_oddtopersonmark2_500.png', layout: 'fullBleed' },
+      { url: '/images/lora/flux_dev_oddtopersonmark2_5002.png', layout: '2x2' }
+    ],
+    
+    concept: `A comprehensive exploration of custom LoRA (Low-Rank Adaptation) training using Flux Dev, showcasing how specialized datasets can be used to fine-tune large image generation models for specific visual styles, subjects, or artistic approaches while maintaining the foundational capabilities of the base model.`,
+    
+    narrative: `In the rapidly evolving landscape of AI image generation, the ability to customize models for specific needs represents a significant breakthrough. This project demonstrates the complete pipeline from data preparation to model deployment, showing how creators can train personalized AI models that understand their unique visual language and requirements. By implementing a local instance of Flux Dev and training custom LoRA adapters, we're exploring the democratization of AI model customization—moving beyond generic outputs to truly personalized AI assistance.`,
+    
+    quote: '"The future of AI isn\'t just about using pre-trained models—it\'s about teaching them to see the world through our unique creative lens."',
+    
+    tech: `This project leverages Flux Dev as the base diffusion model, implementing LoRA (Low-Rank Adaptation) techniques to efficiently fine-tune the model on custom datasets. The technical pipeline includes dataset curation and preprocessing, LoRA training configuration with optimized hyperparameters, and local model deployment for inference. The implementation demonstrates efficient training techniques that require significantly less computational resources than full model fine-tuning while achieving comparable results for specialized use cases.`,
+    
+    contentSections: [
+      {
+        type: 'text',
+        title: 'The Challenge',
+        content: `While large-scale AI image models are incredibly powerful, they often struggle with specific styles, subjects, or artistic approaches that aren't well-represented in their training data. How can we customize these models to understand and generate images that align with our specific creative vision?`
+      },
+      {
+        type: 'image',
+        layout: 'fullBleed',
+        src: '/images/lora/flux_dev_oddtopersonmark2_500.png',
+        alt: 'LoRA Training Results - Generated Image Example',
+      },
+      {
+        type: 'text',
+        title: 'The Approach',
+        content: `Using LoRA (Low-Rank Adaptation) training techniques, we fine-tuned Flux Dev on a curated dataset of specific images. This approach allows us to maintain the model's general capabilities while teaching it to understand and generate new visual concepts with remarkable fidelity.`
+      },
+      {
+        type: 'text',
+        title: 'Dataset Preparation',
+        content: `The first step involved carefully curating and preprocessing a dataset of training images. Each image was resized, normalized, and tagged with descriptive captions to provide the model with clear learning signals about the desired visual style and content.`
+      },
+      {
+        type: 'image',
+        layout: 'fullBleed',
+        src: '/images/lora/flux_dev_oddtopersonmark2_5002.png',
+        alt: 'Custom LoRA Generation Results - Style Transfer Example',
+      },
+      {
+        type: 'text',
+        title: 'Technical Implementation',
+        content: `The project involved setting up a local instance of Flux Dev, configuring the training environment with appropriate GPU acceleration, and implementing the LoRA training pipeline. Key considerations included learning rate scheduling, batch size optimization, and checkpoint management to ensure stable and effective training.`
+      },
+      {
+        type: 'text',
+        title: 'Training Process',
+        content: `The LoRA adapter was trained over multiple epochs, with careful monitoring of loss metrics and generated sample quality. The training process required balancing between learning the new concepts while avoiding overfitting that could degrade the model's general capabilities.`
+      },
+
+      {
+        type: 'imageGrid',
+        layout: '2x2',
+        images: [
+         
+          {
+            src: '/images/lora/flux_dev_oddtopersonmark2_999.png',
+            alt: 'LoRA Training Process Visualization'
+          },
+          {
+            src: '/images/lora/flux_dev_oddtopersonmark2_777.png',
+            alt: 'Before and After Training Comparison'
+          }
+        ]
+      },
+
+      {
+        type: 'text',
+        title: 'Results and Applications',
+        content: `The trained LoRA adapter successfully learned the specific visual characteristics from the training data, enabling the generation of images that maintain consistency with the learned style while allowing for creative variations and new compositions. This demonstrates the potential for personalized AI models in creative workflows.`
+      },
+      {
+        type: 'imageGrid',
+        layout: '2x2',
+        images: [
+          {
+            src: '/images/lora/flux_dev_oddtopersonmark2_7777.png',
+            alt: 'LoRA Training Process Visualization'
+          },
+          {
+            src: '/images/lora/flux_dev_oddtopersonmark2_9996.png',
+            alt: 'Before and After Training Comparison'
+          },
+         
+        ]
+      },
+      
+      {
+        type: 'text',
+        title: 'Local Deployment',
+        content: `Running Flux Dev locally provides complete control over the generation process, data privacy, and model customization. This approach eliminates dependencies on cloud services and enables rapid iteration during the development and fine-tuning process.`
+      },
+     
+     
+    ]
+  },
+
 
   {
     id: 'touchdesignermcp',
@@ -510,6 +624,7 @@ Synth immediately begins working across multiple layers:`,
     logoPosition: 'center',
     logoAspectRatio: 'wide',
    
+
     concept: `A real-time WhatsApp message translation agent powered by n8n and Google Gemini that enables non-native speakers to participate naturally in group conversations by automatically translating incoming messages. This solution bridges language barriers in community group chats by seamlessly integrating messaging platforms with AI language capabilities.`,
     narrative: `For anyone living in a foreign country or learning a new language, community group chats can be both essential and intimidating. Missing cultural context or struggling with language barriers can leave you feeling isolated even when you're technically "included."
 Consider David, who recently moved to Amsterdam for work. His neighborhood has an active WhatsApp group that shares important local updates, community events, and neighborly assistance. While David is taking Dutch classes, he can't yet follow rapid, colloquial conversations, causing him to miss community events and opportunities to connect.
@@ -582,27 +697,27 @@ With our n8n-Gemini translation agent, David no longer needs to copy and paste e
     ]
   },
 
-  {
-    id: 'comfyui-machinelearning',
-    title: 'Comfy ui X Machine Learning',
-    image: 'https://media.licdn.com/dms/image/v2/D4E22AQE6iLdGTCwvMg/feedshare-shrink_1280/feedshare-shrink_1280/0/1726129826738?e=1747872000&v=beta&t=wfxfCnPZq6pBk0730rWROBnp5zFJwJObS8XxClUA3AY',
-    categoryId: ['Comfy ui', 'ai', 'Machine learning'],
-    description: 'This project represents a profound technological innovation in how AI can be embedded in public contexts, moving beyond screen-based interactions to become part of the urban fabric. By developing systems that can interpret and extend the visual languages of street art while responding to community engagement, we\'re establishing new paradigms for AI as a co-creative force in public art. The technical architecture preserves the spontaneity and cultural authenticity central to street art while introducing computational elements that allow for dynamic evolution beyond what either medium could achieve independently.',
-    heroImage: '  https://media.licdn.com/dms/image/v2/D4E22AQFl8wgcbnGxHw/feedshare-shrink_2048_1536/B4EZPGy.EIHAAo-/0/1734207071550?e=1747872000&v=beta&t=VSzsBEeilwvRNL4DqAM7fbfKfmAIKL__UF4fv6x6dd4',
-    heroBg: '#829bc4', // Green background
-    logoSize: 'xlarge',
-    logoPosition: 'center',
-    logoAspectRatio: 'wide',
-    projectImages: [
-      'https://media.licdn.com/dms/image/v2/D4E22AQE6iLdGTCwvMg/feedshare-shrink_800/feedshare-shrink_800/0/1726129826736?e=1747872000&v=beta&t=i7JdiqnDLvJIkybBpCN0WuEPs6_I40d-hFxDHtGbNLA',
-      'https://media.licdn.com/dms/image/v2/D4E22AQFl8wgcbnGxHw/feedshare-shrink_2048_1536/B4EZPGy.EIHAAo-/0/1734207071550?e=1747872000&v=beta&t=VSzsBEeilwvRNL4DqAM7fbfKfmAIKL__UF4fv6x6dd4',
+  // {
+  //   id: 'comfyui-machinelearning',
+  //   title: 'Comfy ui X Machine Learning',
+  //   image: 'https://media.licdn.com/dms/image/v2/D4E22AQE6iLdGTCwvMg/feedshare-shrink_1280/feedshare-shrink_1280/0/1726129826738?e=1747872000&v=beta&t=wfxfCnPZq6pBk0730rWROBnp5zFJwJObS8XxClUA3AY',
+  //   categoryId: ['Comfy ui', 'ai', 'Machine learning'],
+  //   description: 'This project represents a profound technological innovation in how AI can be embedded in public contexts, moving beyond screen-based interactions to become part of the urban fabric. By developing systems that can interpret and extend the visual languages of street art while responding to community engagement, we\'re establishing new paradigms for AI as a co-creative force in public art. The technical architecture preserves the spontaneity and cultural authenticity central to street art while introducing computational elements that allow for dynamic evolution beyond what either medium could achieve independently.',
+  //   heroImage: '  https://media.licdn.com/dms/image/v2/D4E22AQFl8wgcbnGxHw/feedshare-shrink_2048_1536/B4EZPGy.EIHAAo-/0/1734207071550?e=1747872000&v=beta&t=VSzsBEeilwvRNL4DqAM7fbfKfmAIKL__UF4fv6x6dd4',
+  //   heroBg: '#829bc4', // Green background
+  //   logoSize: 'xlarge',
+  //   logoPosition: 'center',
+  //   logoAspectRatio: 'wide',
+  //   projectImages: [
+  //     'https://media.licdn.com/dms/image/v2/D4E22AQE6iLdGTCwvMg/feedshare-shrink_800/feedshare-shrink_800/0/1726129826736?e=1747872000&v=beta&t=i7JdiqnDLvJIkybBpCN0WuEPs6_I40d-hFxDHtGbNLA',
+  //     'https://media.licdn.com/dms/image/v2/D4E22AQFl8wgcbnGxHw/feedshare-shrink_2048_1536/B4EZPGy.EIHAAo-/0/1734207071550?e=1747872000&v=beta&t=VSzsBEeilwvRNL4DqAM7fbfKfmAIKL__UF4fv6x6dd4',
 
-    ],
-    concept: `Introducing intelligent visual recognition for ComfyUI - a breakthrough that fundamentally transforms image manipulation. This integration brings advanced computer vision directly into the creative workflow, enabling the automatic identification and precise isolation of any element within your images. By instantly generating accurate masks around recognized objects, this technology eliminates the need for manual selection while providing unprecedented control over individual components in your scenes. The system seamlessly enhances ComfyUI's capabilities, allowing creators to selectively modify, enhance, replace, or animate specific objects while preserving the integrity of surrounding elements. Designed for accessibility without sacrificing power, this feature bridges the gap between technical machine learning capabilities and intuitive creative tools.`,
-    narrative: `Every creator knows the frustration of wanting to modify just one element in an image. What if you could instantly identify and isolate any object with a single click? ComfyUI's new object detection transforms the creative process from tedious manual masking to intelligent, automated recognition. Digital artists can now focus on imagination rather than selection tools. Designers can rapidly iterate on specific components while preserving composition. Content creators can achieve precision that once required hours of painstaking work. This technology democratizes advanced editing capabilities, putting professional-grade tools in everyone's hands regardless of technical background or experience level.`,
-    quote: '"The walls of our cities have always been the original social networks – carrying messages, reflecting identities, and challenging power. By weaving AI into this ancient conversation, we\'re not replacing the human hand but extending its reach, creating a new kind of urban nervous system where technology, art, and community pulse together in harmonious rebellion against both sterile tech and static spaces. — Inspired by Banksy and Ian Goodfellow"',
-    tech: `Our implementation leverages the Florence machine learning model directly within the familiar ComfyUI environment, requiring minimal setup and computing resources. The technology works by analyzing visual information across multiple dimensions, identifying objects with remarkable accuracy even in complex scenes. The system generates precise masks that preserve fine details at the edges, enabling clean selections for downstream tasks like inpainting, style transfer, or targeted enhancements. We've optimized the workflow to integrate seamlessly with existing ComfyUI components, allowing creators to simply drop in their images, run the detection process, and immediately apply creative transformations to specific objects. The entire pipeline runs efficiently even on consumer hardware, maintaining creative flow without lengthy processing delays.`,
-  },
+  //   ],
+  //   concept: `Introducing intelligent visual recognition for ComfyUI - a breakthrough that fundamentally transforms image manipulation. This integration brings advanced computer vision directly into the creative workflow, enabling the automatic identification and precise isolation of any element within your images. By instantly generating accurate masks around recognized objects, this technology eliminates the need for manual selection while providing unprecedented control over individual components in your scenes. The system seamlessly enhances ComfyUI's capabilities, allowing creators to selectively modify, enhance, replace, or animate specific objects while preserving the integrity of surrounding elements. Designed for accessibility without sacrificing power, this feature bridges the gap between technical machine learning capabilities and intuitive creative tools.`,
+  //   narrative: `Every creator knows the frustration of wanting to modify just one element in an image. What if you could instantly identify and isolate any object with a single click? ComfyUI's new object detection transforms the creative process from tedious manual masking to intelligent, automated recognition. Digital artists can now focus on imagination rather than selection tools. Designers can rapidly iterate on specific components while preserving composition. Content creators can achieve precision that once required hours of painstaking work. This technology democratizes advanced editing capabilities, putting professional-grade tools in everyone's hands regardless of technical background or experience level.`,
+  //   quote: '"The walls of our cities have always been the original social networks – carrying messages, reflecting identities, and challenging power. By weaving AI into this ancient conversation, we\'re not replacing the human hand but extending its reach, creating a new kind of urban nervous system where technology, art, and community pulse together in harmonious rebellion against both sterile tech and static spaces. — Inspired by Banksy and Ian Goodfellow"',
+  //   tech: `Our implementation leverages the Florence machine learning model directly within the familiar ComfyUI environment, requiring minimal setup and computing resources. The technology works by analyzing visual information across multiple dimensions, identifying objects with remarkable accuracy even in complex scenes. The system generates precise masks that preserve fine details at the edges, enabling clean selections for downstream tasks like inpainting, style transfer, or targeted enhancements. We've optimized the workflow to integrate seamlessly with existing ComfyUI components, allowing creators to simply drop in their images, run the detection process, and immediately apply creative transformations to specific objects. The entire pipeline runs efficiently even on consumer hardware, maintaining creative flow without lengthy processing delays.`,
+  // },
  
   
   {
@@ -619,7 +734,7 @@ With our n8n-Gemini translation agent, David no longer needs to copy and paste e
     logoSize: 'xlarge',
     logoPosition: 'center',
     logoAspectRatio: 'wide',
-    qrCodeImage: 'https://media.licdn.com/dms/image/v2/D4E2CAQFpb9Lx_czHjQ/comment-image-shrink_8192_1280/comment-image-shrink_8192_1280/0/1734618752228?e=1747767600&v=beta&t=GG_VW3iXSMFKnni3WDn1t4QoK0UvqX2jv6ZHMjMlGR4',
+    qrCodeImage: '/images/QR-sap.png',
    
     
     contentSections: [
