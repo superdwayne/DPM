@@ -3,6 +3,7 @@ export const projectCategories = [
   "All",
   "MCP",
   "AR",
+  "Street Art",
   "AI",
   "Branding",
   "Fashion",
@@ -21,6 +22,92 @@ export const projectCategories = [
 
 // Project data with categories
 export const projects = [
+
+  {
+    id: 'eighthwall-mcp-prototype',
+    title: '8th Wall MCP Prototype',
+    image: 'https://cdn.8thwall.com/web/accounts/icons/2m7wkgtdfu0tpln9ygs7llifrwvq0566lb8m9cmt5gyyuvomx81hpgky-400x400',
+    categoryId: ['MCP', 'AR', 'AI'],
+    description: 'A Claude-powered workflow that spins up playable 8th Wall prototypes from natural language, letting creative technologists iterate on spatial ideas without touching the editor.',
+    heroImage: 'https://us1.discourse-cdn.com/flex019/uploads/x8thwall/original/1X/dcd5461dec11482967cf33f9a72841f45e34297a.png',
+    heroBg: '#6A35FF',
+    brandLogo: 'https://www.8thwall.com/static/asset/8b1802af-8th-Wall-Horizontal-Logo-Purple.svg',
+    heroVideo: '/videos/ContentStudio_video.mp4',
+    heroPoster: 'https://us1.discourse-cdn.com/flex019/uploads/x8thwall/original/1X/dcd5461dec11482967cf33f9a72841f45e34297a.png',
+    logoSize: 'large',
+    concept: `Prompt-to-world authoring for WebAR. Creators describe the scene - "Put a giant Pikachu on the floor" - and the MCP stack deploys assets, anchors, and interactions inside 8th Wall Desktop within seconds.`,
+    narrative: `This prototype bridges creative ideation and viable AR builds. By letting Claude negotiate directly with 8th Wall's editor, teams can validate spatial beats in minutes, then hand the session to developers for polish. It keeps experimentation inside the ideation window instead of waiting for engineering bandwidth.`,
+    quote: '"When Claude can speak 8th Wall fluently, imagination becomes the only production budget."',
+    tech: `The workflow chains an MCP server, Anthropic Claude, and 8th Wall Desktop. The server exposes project scaffolding, asset importers, and scene graph controls as callable tools. Claude parses natural language prompts, assembles asset manifests, and issues editor commands through secure WebSocket channels. Versioning hooks ensure every AI-authored session can be forked, audited, or rolled back before publishing.`,
+    contentSections: [
+      {
+        type: 'text',
+        title: 'Workflow',
+        content: `Prompts route through Claude's tool-use stack, which orchestrates scene setup, asset placement, and behaviour scripting. Builders stay inside conversational UI while watching the 8th Wall editor respond in real time.`
+      },
+      {
+        type: 'text',
+        title: 'Why It Matters',
+        content: `Creative teams can test volumetric storytelling beats, lighting studies, or interaction logic on demand - compressing pre-production timelines for AR activations.`
+      }
+    ]
+  },
+
+  {
+    id: 'hemaxkpn-back-to-school',
+    title: 'HEMA x KPN - Back to School Lens',
+    image: 'https://app.snapchat.com/web/deeplink/snapcode?data=2cb7e8432fd64008ad1b287f0808614f&version=1&type=svg',
+    categoryId: ['AR', 'Branding'],
+    description: "An AR lens that introduces Dutch teens to KPN's Teens Sim while showcasing HEMA back-to-school essentials through an interactive Snapchat experience.",
+    heroImage: 'https://app.snapchat.com/web/deeplink/snapcode?data=2cb7e8432fd64008ad1b287f0808614f&version=1&type=svg',
+    heroBg: '#f7d200',
+    qrCodeImage: 'https://app.snapchat.com/web/deeplink/snapcode?data=2cb7e8432fd64008ad1b287f0808614f&version=1&type=svg',
+    concept: `The lens extends KPN's Smart 2 School programme by pairing Teens Sim benefits with HEMA's school-ready accessories in a playful AR locker scene that parents and students can explore together.`,
+    narrative: `Families scan the Snapcode to open an animated back-to-school kit that highlights safe connectivity, spending controls, and bundled gear before the new academic year. The experience reinforces KPN's promise of worry-free mobile plans while surfacing HEMA offers that keep teens organised.`,
+    quote: '"Bring the Smart 2 School checklist to life by letting teens preview their first phone plan and school staples inside an AR moment."',
+    tech: `Developed in Lens Studio, the experience blends world-locked props, animated brand callouts, and deep links to KPN's Smart 2 School hub. Interaction metrics flow back into the broader Teens Sim campaign to measure lens-driven engagement and conversions.`,
+    contentSections: [
+      {
+        type: 'text',
+        title: 'Campaign Context',
+        content: `The lens supports the Smart 2 School initiative that positions KPN's Teens Sim as a safe, budget-friendly starter plan while promoting HEMA's school inventory.`
+      },
+      {
+        type: 'text',
+        title: 'Experience Highlights',
+        content: `Users browse a virtual locker, unlock animated school items, and tap call-to-action cards that route to KPN's Smart 2 School resources for parents and teens.`
+      }
+    ]
+  },
+
+  {
+    id: 'ndsm-archive',
+    title: 'NDSM Archive',
+    image: 'https://aesthetic-crumble-63e27e.netlify.app/ndsm-ar.png',
+    categoryId: ['AR', 'Street Art', 'Concept'],
+    description: 'A creator-led initiative that preserves Amsterdam street art by scanning walls before and after new pieces, creating a living digital depot of ephemeral work.',
+    heroImage: 'https://aesthetic-crumble-63e27e.netlify.app/ndsm-ar.png',
+    heroVideo: '/videos/video.mp4',
+    heroPoster: 'https://aesthetic-crumble-63e27e.netlify.app/ndsm-ar.png',
+    heroBg: '#111827',
+    brandLogo: 'https://aesthetic-crumble-63e27e.netlify.app/ndsm-ar.png',
+    concept: `Street art at NDSM exists in layers; every new mural paints over another. The archive project captures each stratum so artists and fans can navigate the site's evolving creative history.`,
+    narrative: `Artists scan the wall before priming and once their piece is complete. The pipeline stores the captures in a shared depot, letting future visitors explore what existed before the latest coat of paint. This practice turns a constantly changing warehouse exterior into a longitudinal study of community expression.`,
+    quote: '"Scan before you paint. Scan when you finish. That’s it. The archive grows one layer at a time."',
+    tech: `The workflow pairs 3D scanning and photogrammetry with a lightweight web viewer so artists can contribute from mobile rigs. Processed captures are versioned and tagged, making it easy to compare past and present murals or trace the evolution of a single wall.`,
+    contentSections: [
+      {
+        type: 'text',
+        title: 'Why We Archive',
+        content: `Each new masterpiece erases another. By scanning twice—before paint and after—the collective memory of the yard becomes searchable, shareable, and open for education.`
+      },
+      {
+        type: 'text',
+        title: 'Workflow',
+        content: `Artists capture the wall with Lidar or high-res photogrammetry, upload the scans, and the system stitches them into an annotated timeline of the yard.`
+      }
+    ]
+  },
 
   {
     id: 'lora',
@@ -167,6 +254,36 @@ Synth immediately begins working across multiple layers:`,
       
     ],
   
+  },
+
+  {
+    id: 'street-art-map-amsterdam',
+    title: 'Street Art Map Amsterdam',
+    image: 'https://www.streetartmapamsterdam.nl/images/NORTH.jpg',
+    categoryId: ['AR', 'Street Art', 'Concept'],
+    description: "A living atlas that documents Amsterdam's ever-changing mural culture, layering artist stories, wayfinding, and mixed-media archives into an explorable street art companion.",
+    heroImage: 'https://www.streetartmapamsterdam.nl/images/NORTH.jpg',
+    heroBg: '#0f1d2b',
+    projectImages: [
+      { url: 'https://www.streetartmapamsterdam.nl/wp-content/uploads/2024/01/street-art-map-amsterdam-mobile.jpg', layout: 'fullBleed' },
+      { url: 'https://www.streetartmapamsterdam.nl/wp-content/uploads/2024/01/street-art-map-amsterdam-route.jpg', layout: '2x2' }
+    ],
+    concept: `Street Art Map Amsterdam extends STRAAT museum's mission beyond the warehouse, transforming the city into a distributed gallery where every mural gains context through geolocated storytelling, audio, and archival media.`,
+    narrative: `The map welcomes visitors, locals, and art hunters into Amsterdam's creative underground. Each pin unlocks artist narratives, behind-the-scenes footage, and production notes that reveal how industrial surfaces become cultural landmarks. For creative technologists, the experience doubles as a spatial research layer that tracks how street art evolves over time while offering accessible, self-guided routes that respect the communities who host the work.`,
+    quote: '"Every pin on the map is a new conversation between artist, neighborhood, and explorer."',
+    tech: `The platform fuses a headless WordPress CMS with Mapbox GL for real-time mapping, layering Supabase analytics for route insights and uptime monitoring. WebGL shaders and custom tile sets highlight active murals, while edge-cached media ensures responsive playback for on-site visitors scanning QR markers.`,
+    contentSections: [
+      {
+        type: 'text',
+        title: 'The Challenge',
+        content: `Amsterdam's street art is in constant flux - new murals surface as others are buffed overnight. The team needed a system that could capture this momentum, honour artists, and guide visitors without overwhelming them with data.`
+      },
+      {
+        type: 'text',
+        title: 'The Outcome',
+        content: `The result is a responsive cartographic interface that pairs editorial storytelling with precise wayfinding. Visitors can build custom routes, autoplay multimedia context on location, and submit updates that feed moderation-ready queues for curators.`
+      }
+    ]
   },
 
   {
