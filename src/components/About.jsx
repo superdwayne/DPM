@@ -62,7 +62,7 @@ const About = () => {
         <section className="about-heading reveal" ref={addToRefs}>
           <h1 className="about-subtitle">THOUGHT LEADER</h1>
           <h2 className="about-subtitle">FOUNDER OF THE CREATIVE TECHNOLOGY COLLECTIVE</h2>
-          <h1 className="about-subtitle">SENIOR CREATIVE TECHNOLOGIST</h1>
+          <h1 className="about-subtitle">LEAD CREATIVE TECHNOLOGIST</h1>
         </section>
         
         <section className="about-sections reveal" ref={addToRefs}>
