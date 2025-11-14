@@ -3,6 +3,35 @@ import { Link } from 'react-router-dom';
 import './FilteredProjectView.css';
 import { projectCategories, getProjectsByCategory } from '../data/projects';
 
+// Helper function to check if a color is dark
+const isDarkColor = (color) => {
+  if (!color) return false;
+  
+  // Remove # if present and trim whitespace
+  let hex = color.replace('#', '').trim();
+  
+  // Handle 3-character hex codes (e.g., #fff -> #ffffff)
+  if (hex.length === 3) {
+    hex = hex.split('').map(char => char + char).join('');
+  }
+  
+  // Validate hex code
+  if (hex.length !== 6 || !/^[0-9A-Fa-f]{6}$/.test(hex)) {
+    return false;
+  }
+  
+  // Convert to RGB
+  const r = parseInt(hex.substr(0, 2), 16);
+  const g = parseInt(hex.substr(2, 2), 16);
+  const b = parseInt(hex.substr(4, 2), 16);
+  
+  // Calculate luminance
+  const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+  
+  // Return true if luminance is less than 0.5 (dark)
+  return luminance < 0.5;
+};
+
 const FilteredProjectView = () => {
   const [activeFilter, setActiveFilter] = useState("All");
   const [viewMode, setViewMode] = useState("grid"); // "list" or "grid"
@@ -184,24 +213,30 @@ const FilteredProjectView = () => {
       ) : (
         // Grid view
         <div className="project-grid">
-          {filteredProjects.map((project) => (
-            <Link 
-              key={project.id} 
-              to={`/project/${formatProjectId(project.id)}`} 
-              className="project-link"
-              onClick={() => console.log(`Clicked project: ${project.title}, navigating to: /project/${formatProjectId(project.id)}`)}
-            >
-              <div 
-                className={`project ${project.id}`} 
-                style={{ backgroundColor: project.heroBg || '#f8f8f8' }}
+          {filteredProjects.map((project) => {
+            const bgColor = project.heroBg || '#f8f8f8';
+            const isDarkBg = isDarkColor(bgColor);
+            const titleStyle = isDarkBg ? { color: '#ffffff' } : {};
+            
+            return (
+              <Link 
+                key={project.id} 
+                to={`/project/${formatProjectId(project.id)}`} 
+                className="project-link"
+                onClick={() => console.log(`Clicked project: ${project.title}, navigating to: /project/${formatProjectId(project.id)}`)}
               >
-                <div className="project-inner">
-                  <img src={project.image} alt={project.title} />
+                <div 
+                  className={`project ${project.id}`} 
+                  style={{ backgroundColor: bgColor }}
+                >
+                  <div className="project-inner">
+                    <img src={project.image} alt={project.title} />
+                  </div>
+                  <h2 style={titleStyle}>{project.title}</h2>
                 </div>
-                <h2>{project.title}</h2>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            );
+          })}
         </div>
       )}
     </div>

@@ -24,6 +24,49 @@ export const projectCategories = [
 export const projects = [
 
   {
+    id: 'textese-compressor',
+    title: 'Textese Compressor',
+    image: '/images/text.png',
+    categoryId: ['AI', 'Concept'],
+    description: 'Transform text into textese abbreviations to reduce token usage in AI prompts. A nostalgic return to SMS-era compression techniques, reimagined for the age of LLMs and token-based pricing.',
+    heroImage: '/images/text.png',
+    heroBg: '#1a1a2e',
+    brandLogo: '/images/text.png',
+    logoSize: 'large',
+    concept: `What if we brought back textese—for LLMs? Remember SMS days? 160 characters max, and we all became masters of creative abbreviations, acronyms, and "shortened words." That's textese. Fast forward to today: LLMs consume tokens based on text length. More text = more tokens = higher cost. This project reintroduces textese for AI—shorten words, abbreviate smartly, keep meaning, reduce token consumption. Efficiency meets nostalgia.`,
+    narrative: `In the era of token-based AI pricing, every character counts. But what if we could compress our prompts without losing meaning? Textese Compressor draws inspiration from the SMS era, when 160-character limits forced us to become creative with language. By applying similar compression techniques to AI prompts, we can significantly reduce token usage while maintaining readability and context. This isn't just about cost savings—it's about reimagining how we communicate with AI systems, finding efficiency in the spaces between words. The project includes a public API, modern React interface, and serverless architecture, making textese compression accessible to developers and AI practitioners worldwide.`,
+    quote: '"Remember SMS days? 160 characters max, and we all became masters of creative abbreviations. Fast forward to today: LLMs consume tokens based on text length. What if we brought back textese... for LLMs?"',
+    tech: `Textese Compressor is built as a serverless application on Vercel, featuring a React frontend with a shadcn-inspired UI and a Node.js API endpoint. The compression engine uses pattern matching and dictionary-based abbreviation to transform standard text into textese format—converting "great" to "gr8", "you" to "u", "today" to "2day", and so on. The system maintains readability while achieving significant token reduction. The API endpoint at /api/compress accepts POST requests with text payloads and returns compressed versions with reduction statistics. The architecture is designed for scalability, with no authentication required, making it accessible for developers integrating token optimization into their AI workflows.`,
+    contentSections: [
+      {
+        type: 'text',
+        title: 'The Challenge',
+        content: `As AI adoption grows, token costs become a significant factor in application budgets. Long prompts, context windows, and conversation histories all contribute to escalating costs. How can we reduce token consumption without sacrificing meaning or readability?`
+      },
+      {
+        type: 'text',
+        title: 'The Solution',
+        content: `Textese Compressor applies SMS-era compression techniques to modern AI communication. By intelligently abbreviating words and phrases while preserving context, we can achieve 20-30% token reduction on average. The system includes a public API for easy integration and a web interface for testing and experimentation.`
+      },
+      {
+        type: 'text',
+        title: 'Use Cases',
+        content: `Perfect for AI prompt optimization, batch processing of long-form content, cost-sensitive applications, and character-limited scenarios. Developers can integrate the API into their workflows to automatically compress prompts before sending to LLM APIs, achieving significant cost savings at scale.`
+      },
+      {
+        type: 'text',
+        title: 'Technical Implementation',
+        content: `The compression engine uses a comprehensive dictionary of textese abbreviations, prioritizing longer phrases first to avoid conflicts. The system processes text word-by-word, applying transformations while preserving punctuation and structure. The API returns both the compressed text and reduction statistics, allowing developers to track optimization effectiveness.`
+      }
+    ],
+    links: {
+      github: 'https://github.com/superdwayne/text-converter',
+      demo: 'https://sms-six-mocha.vercel.app',
+      api: 'https://sms-six-mocha.vercel.app/api/compress'
+    }
+  },
+
+  {
     id: 'eighthwall-mcp-prototype',
     title: '8th Wall MCP Prototype',
     image: 'https://cdn.8thwall.com/web/accounts/icons/2m7wkgtdfu0tpln9ygs7llifrwvq0566lb8m9cmt5gyyuvomx81hpgky-400x400',

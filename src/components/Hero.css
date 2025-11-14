@@ -310,17 +310,6 @@ body.video-expanded {
 
 /* Media queries for mobile devices */
 @media (max-width: 768px) {
-  .hero-logo-badge {
-    top: 12px;
-    left: 12px;
-    padding: 10px;
-  }
-
-  .hero-logo-badge img {
-    width: 44px;
-    height: 44px;
-  }
-
   .hero-title {
     font-size: 2.5rem;
   }
