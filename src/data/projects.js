@@ -9,6 +9,7 @@ export const projectCategories = [
   "Fashion",
   "Unity",
   "Concept",
+  "Productivity",
   "Three.js",
   "Comfy ui",
   "Machine learning",
@@ -22,6 +23,42 @@ export const projectCategories = [
 
 // Project data with categories
 export const projects = [
+
+  {
+    id: 'spreed-speed-reader',
+    title: 'Spreed — Rapid Reading Trainer',
+    image: 'https://image.thum.io/get/width/1200/https://spreed-sigma.vercel.app',
+    categoryId: ['Productivity', 'AI'],
+    description: 'A minimalist rapid-reading interface that lets you paste or upload long-form content and experience it at adjustable words-per-minute speeds, perfect for skimming research or rehearsing presentations.',
+    heroImage: 'https://image.thum.io/get/width/1200/https://spreed-sigma.vercel.app',
+    heroBg: '#0f172a',
+    brandLogo: '',
+    logoSize: 'medium',
+    concept: `Spreed reframes speed reading as an approachable habit builder. Paste any article, set a pace between 200 and 1,500 WPM, and the app pulses each word through a focused viewport so you can train comprehension at velocity.`,
+    narrative: `Most reading apps overwhelm users with dashboards and streaks. Spreed leans into flow. A single call-to-action invites you to paste text, set a speed, and press play. The stripped-down canvas reduces cognitive load, making it ideal for neurodiverse readers, time-boxed founders, or anyone preparing for information-heavy meetings.`,
+    quote: '"The fastest way to digest dense information is to practice in a space that removes everything except the words that matter."',
+    tech: `The reader uses a word-timer loop that converts WPM settings into frame-precise intervals, keeping playback smooth even at 1,500 words per minute. The UI relies on lightweight, component-scoped styling so the experience loads instantly on Vercel edge nodes and never interrupts the reading flow with layout shifts.`,
+    contentSections: [
+      {
+        type: 'text',
+        title: 'Why It Matters',
+        content: `Deck reviews, research sprints, and interview prep all demand rapid content intake. Spreed offers a low-friction space to rehearse speed reading so teams can align on dense material without sacrificing comprehension.`
+      },
+      {
+        type: 'text',
+        title: 'Reader Experience',
+        content: `Use the quick presets at 200, 300, 400, 500, 600, 800, 1,000, and 1,500 WPM or drag to any custom pace. Keyboard controls let you pause, rewind, or nudge speed mid-session without breaking focus.`
+      },
+      {
+        type: 'text',
+        title: 'Next Iterations',
+        content: `On the roadmap: session analytics, Supabase-backed storage for saved articles, and an MCP skill so voice agents can push long context blocks directly into Spreed for hands-free rehearsals.`
+      }
+    ],
+    links: {
+      demo: 'https://spreed-sigma.vercel.app'
+    }
+  },
 
   {
     id: 'textese-compressor',
