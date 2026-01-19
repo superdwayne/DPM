@@ -25,6 +25,44 @@ export const projectCategories = [
 export const projects = [
 
   {
+    id: 'localhost-gallery',
+    title: 'Localhost Gallery',
+    image: 'https://images.unsplash.com/photo-1578301978018-3005759f48f7?w=1920&q=90',
+    categoryId: ['Productivity', 'Concept'],
+    heroClass: 'object-cover',
+    description: 'Transform your messy terminal localhosts into a visual Art Gallery. Kill processes with a single click and manage your dev environment with elegance.',
+    heroImage: 'https://images.unsplash.com/photo-1578301978018-3005759f48f7?w=1920&q=90',
+    heroVideo: '/videos/localhost.mov',
+    heroBg: '#050505',
+    brandLogo: '',
+    logoSize: 'medium',
+    concept: `Managing multiple dev servers shouldn't feel like a chore. Localhost Gallery turns active ports into a curated visual experience, allowing you to see exactly what's running at a glance.`,
+    narrative: `The terminal is powerful but often opaque. When you have five different projects running on various ports, finding the right PID to kill is a waste of mental energy. Localhost Gallery provides a "museum-style" interface for your active dev servers. Each port is presented as a beautiful card, and termination is just a click away. It's about bringing aesthetic intentionality to the most utilitarian part of our workflow.`,
+    quote: '"Localhost management doesn\'t have to be ugly. Turn your terminal chaos into a visual gallery."',
+    tech: `Built with a modern stack to interface with system-level process management. The application scans active ports, identifies project types, and maps them to a visual dashboard using React. It leverages lightweight system commands to provide real-time updates on server status and process termination.`,
+    contentSections: [
+      {
+        type: 'text',
+        title: 'The Messy Reality',
+        content: `Every developer knows the struggle of "zombie" processes hanging onto ports. Terminal commands like lsof -i :3000 and kill -9 are effective but clunky. We spend too much time in the weeds of process management.`
+      },
+      {
+        type: 'text',
+        title: 'A Visual Solution',
+        content: `Localhost Gallery represents every active server as a distinct card. You can see the port, the status, and often the project type immediately. It removes the cognitive load of mapping port numbers to projects.`
+      },
+      {
+        type: 'text',
+        title: 'Kill with Ease',
+        content: `The primary interaction is as simple as it gets: See a server you don't need? Click "Kill". The app handles the PID hunting and process termination in the background, leaving your workspace clean and your focus intact.`
+      }
+    ],
+    links: {
+      demo: 'https://localhost-ten-tau.vercel.app/'
+    }
+  },
+
+  {
     id: 'spreed-speed-reader',
     title: 'Spreed — Rapid Reading Trainer',
     image: 'https://image.thum.io/get/width/1200/https://spreed-sigma.vercel.app',

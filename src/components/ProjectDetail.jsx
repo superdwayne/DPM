@@ -2284,8 +2284,8 @@ const ProjectDetail = () => {
     <>
       <Navbar />
       <div className="project-detail-container">
-        <div className={`project-hero${projectId === 'lego' ? ' lego-hero' : ''}${projectId === 'touchdesignermcp' ? ' touchdesigner-hero' : ''}${projectId === 'arproduct-recommendations' ? ' ar-product-hero' : ''}${projectId === 'nsdm' ? ' nsdm-hero' : ''}${projectId === 'guido' ? ' guido-hero' : ''}${projectId === 'solaya' ? ' solaya-hero' : ''}${projectId === 'farfetch-metaverse' ? ' farfetch-metaverse-hero' : ''}${projectId === 'lora' ? ' lora-hero' : ''}`} style={{ backgroundColor: projectData.heroBg }}>
-          <div className={`hero-content${projectId === 'lego' ? ' lego-hero-content' : ''}${projectId === 'touchdesignermcp' ? ' touchdesigner-hero-content' : ''}${projectId === 'arproduct-recommendations' ? ' ar-product-hero-content' : ''}${projectId === 'nsdm' ? ' nsdm-hero-content' : ''}${projectId === 'guido' ? ' guido-hero-content' : ''}${projectId === 'solaya' ? ' solaya-hero-content' : ''}${projectId === 'farfetch-metaverse' ? ' farfetch-metaverse-hero-content' : ''}${projectId === 'lora' ? ' lora-hero-content' : ''}`}>
+        <div className={`project-hero${projectId === 'lego' ? ' lego-hero' : ''}${projectId === 'touchdesignermcp' ? ' touchdesigner-hero' : ''}${projectId === 'arproduct-recommendations' ? ' ar-product-hero' : ''}${projectId === 'nsdm' ? ' nsdm-hero' : ''}${projectId === 'guido' ? ' guido-hero' : ''}${projectId === 'solaya' ? ' solaya-hero' : ''}${projectId === 'farfetch-metaverse' ? ' farfetch-metaverse-hero' : ''}${projectId === 'lora' ? ' lora-hero' : ''}${projectId === 'localhost-gallery' ? ' localhost-gallery-hero' : ''}`} style={{ backgroundColor: projectData.heroBg }}>
+          <div className={`hero-content${projectId === 'lego' ? ' lego-hero-content' : ''}${projectId === 'touchdesignermcp' ? ' touchdesigner-hero-content' : ''}${projectId === 'arproduct-recommendations' ? ' ar-product-hero-content' : ''}${projectId === 'nsdm' ? ' nsdm-hero-content' : ''}${projectId === 'guido' ? ' guido-hero-content' : ''}${projectId === 'solaya' ? ' solaya-hero-content' : ''}${projectId === 'farfetch-metaverse' ? ' farfetch-metaverse-hero-content' : ''}${projectId === 'lora' ? ' lora-hero-content' : ''}${projectId === 'localhost-gallery' ? ' localhost-gallery-hero-content' : ''}`}>
             {projectId === 'lego' ? (
               <MediaSlideshow 
                 mediaItems={[
@@ -2303,10 +2303,11 @@ const ProjectDetail = () => {
                 showControls={false}
                 autoPlay={false}
                 isHero={true}
+                className={projectData.heroClass || ''}
                 poster={projectData.heroPoster || projectData.heroImage} // Use heroImage as fallback for poster
               />
             ) : (
-              <img src={projectData.heroImage} alt={projectData.title} />
+              <img src={projectData.heroImage} alt={projectData.title} className={projectData.heroClass || ''} />
             )}
             
             {/* Add logo overlay on hero if specified */}

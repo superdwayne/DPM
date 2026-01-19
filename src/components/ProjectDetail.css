@@ -1509,6 +1509,33 @@ body[data-project="lego"] .scrollable-image-container {
   }
 }
 
+/* Localhost Gallery Hero Styling */
+.localhost-gallery-hero {
+  height: 100vh !important;
+  background-color: #050505 !important;
+  overflow: hidden;
+}
+
+.localhost-gallery-hero-content {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  backdrop-filter: none !important;
+  background: transparent !important;
+}
+
+.localhost-gallery-hero-content .clickable-video-container {
+  height: 100% !important;
+  margin-bottom: 0 !important;
+}
+
+.localhost-gallery-hero-content .clickable-video {
+  object-fit: cover !important;
+}
+
 /* Fix any scrollbar issues */
 .sticky-sidebar::-webkit-scrollbar {
   display: none;
