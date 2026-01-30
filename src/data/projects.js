@@ -15,7 +15,8 @@ export const projectCategories = [
   "Machine learning",
   "Projection Mapping",
   "ios",
-  "LoRA"
+  "LoRA",
+  "Figma"
 
 ];
 
@@ -23,6 +24,49 @@ export const projectCategories = [
 
 // Project data with categories
 export const projects = [
+
+  {
+    id: 'figify',
+    title: 'Figify — Screenshot to Figma Plugin',
+    image: '/images/figify.png',
+    categoryId: ['AI', 'Figma', 'Productivity'],
+    description: 'Drop in a screenshot → AI identifies every component → Figma generates the design. Real frames. Real text layers. Fully editable. Not a flattened image.',
+    heroVideo: '/videos/figify.mp4',
+    heroImage: '/images/figify.png',
+    heroPoster: '/images/figify.png',
+    heroBg: '#1e1e1e',
+    brandLogo: '/images/figify.png',
+    logoSize: 'medium',
+    concept: `Recreating UIs in Figma is tedious and time-consuming. Figify eliminates that friction entirely. Simply drop in a screenshot, and AI-powered vision identifies every component—buttons, inputs, cards, text, icons—then generates a fully structured Figma design with real, editable layers.`,
+    narrative: `Every designer and developer has been there: staring at a reference UI, manually recreating it element by element in Figma. Hours lost to pixel-pushing that could be spent on actual creative work. Figify was born from that frustration. The plugin leverages advanced computer vision to parse screenshots, identify UI components with semantic understanding, and translate them into native Figma frames. The result isn't a flattened image overlay—it's a proper design file with text layers you can edit, frames you can resize, and components you can iterate on. It's the bridge between inspiration and implementation.`,
+    quote: '"I\'ve spent hours recreating UIs in Figma. So I built a plugin to fix it."',
+    tech: `Figify combines Figma's Plugin API with AI-powered image analysis. When a screenshot is dropped into the plugin, it's processed through a vision model that segments the UI into components—identifying buttons, text fields, navigation elements, cards, and more. Each detected component is mapped to appropriate Figma primitives with accurate positioning, sizing, and styling. Text is extracted via OCR and placed as editable text layers. The plugin handles complex nested layouts, preserving hierarchy and spatial relationships. All processing happens efficiently to deliver results in seconds, not minutes.`,
+    contentSections: [
+      {
+        type: 'text',
+        title: 'The Problem',
+        content: `Designers frequently need to recreate existing UIs—whether for inspiration, competitive analysis, or client requests. The traditional approach involves hours of manual work: measuring distances, matching colors, recreating typography. It's a creative dead-end that consumes time better spent on original design work.`
+      },
+      {
+        type: 'text',
+        title: 'How It Works',
+        content: `Drop any screenshot into Figify. The AI vision system analyzes the image, detecting and classifying every UI element. It understands the difference between a primary button and a text link, between a card container and a modal. Within seconds, you have a fully structured Figma file with proper layers, accurate text content, and editable components.`
+      },
+      {
+        type: 'text',
+        title: 'Real Layers, Real Editing',
+        content: `Unlike screen-to-design tools that produce flattened images or auto-traced vectors, Figify generates semantic Figma primitives. Text is text—you can change the copy, adjust font sizes, swap typefaces. Frames are frames—resize them, reorder them, nest them differently. It's a starting point for iteration, not a dead end.`
+      },
+      {
+        type: 'text',
+        title: 'Use Cases',
+        content: `Competitive UI analysis becomes instant. Client requests like "make it look like this app" take minutes instead of hours. Developers can quickly mock up reference designs for implementation specs. Design system audits can reverse-engineer existing products into structured components. The applications are endless.`
+      }
+    ],
+    links: {
+      linkedin: 'https://www.linkedin.com/posts/ddpmarshall_figma-creativetechnology-innovation-activity-7422579952677523456-2XyI'
+    }
+  },
 
   {
     id: 'localhost-gallery',
