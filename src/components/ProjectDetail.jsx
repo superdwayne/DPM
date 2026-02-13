@@ -90,10 +90,6 @@ const ClickableVideo = ({ videoSrc, showControls = true, autoPlay = false, isHer
       if (videoRef.current.paused) {
         console.log("Video is paused, attempting to play");
         
-        // Ensure the video is muted for better autoplay success
-        videoRef.current.muted = true;
-        setMuted(true);
-        
         const playPromise = videoRef.current.play();
         if (playPromise !== undefined) {
           playPromise.then(() => {
