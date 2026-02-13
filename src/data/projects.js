@@ -26,6 +26,52 @@ export const projectCategories = [
 export const projects = [
 
   {
+    id: 'speakeasy',
+    title: 'SpeakEasy — Voice-Tracking Teleprompter',
+    image: '/images/icon_source.svg',
+    categoryId: ['ios', 'AI', 'Productivity'],
+    description: 'A teleprompter that sits right next to your MacBook camera and automatically scrolls your script by listening to your voice. No clicking. No foot pedals. It just follows.',
+    heroVideo: '/videos/SpeakEasy.mov',
+    heroImage: '/images/icon_source.svg',
+    heroPoster: '/images/icon_source.svg',
+    heroBg: '#0a0a0a',
+    brandLogo: '/images/icon_source.svg',
+    logoSize: 'medium',
+    concept: `Every creator recording to camera knows the pain. You either memorize your script, use a teleprompter that scrolls at a fixed speed (and pray you keep up), or tape notes around your monitor like it's 2004. SpeakEasy is a teleprompter that actually listens.`,
+    narrative: `SpeakEasy sits in the notch area of your MacBook, right next to the camera. As you speak, it uses real-time speech recognition to track your voice and automatically scrolls the script to match what you're saying. Fuzzy word matching handles mispronunciations, skipped words, and ad-libs without losing your place. The result is a natural, conversational delivery where you can focus on performance instead of pacing. No more racing to keep up with fixed-speed scrolling. No more foot pedals or remote controls. Just talk, and the script follows.`,
+    quote: '"I wanted a teleprompter that actually listens. So I built one."',
+    tech: `SpeakEasy is a native macOS app built with SwiftUI. It leverages Apple's Speech framework for real-time voice recognition with automatic session management to handle interruptions gracefully. The core of the tracking system uses Levenshtein distance-based word matching with a sliding window algorithm—allowing the app to find your position in the script even when you mispronounce words, skip ahead, or improvise. The floating window system keeps the prompter near your camera using macOS window management APIs. The app lives in the menu bar with zero dock clutter, staying out of your way until you need it.`,
+    contentSections: [
+      {
+        type: 'text',
+        title: 'The Problem',
+        content: `Traditional teleprompters scroll at a fixed speed. If you pause to think, the script keeps going. If you speed up, you lose your place. The cognitive load of matching your speech to a mechanical scroll breaks the natural flow that makes on-camera delivery compelling.`
+      },
+      {
+        type: 'text',
+        title: 'Voice-Driven Scrolling',
+        content: `SpeakEasy flips the paradigm. Instead of you matching the teleprompter, the teleprompter matches you. Real-time speech recognition captures your words and a fuzzy matching algorithm locates your position in the script. The scroll follows your pace—pause, and it waits; speed up, and it catches up.`
+      },
+      {
+        type: 'text',
+        title: 'Fuzzy Matching',
+        content: `Perfect transcription isn't the goal—positioning is. Using Levenshtein distance with a sliding window, SpeakEasy tolerates mispronunciations, filler words, and improvised tangents. Say "um" or rephrase a sentence on the fly, and the script stays locked to your approximate position.`
+      },
+      {
+        type: 'text',
+        title: 'Camera-Aligned Placement',
+        content: `SpeakEasy's floating window positions itself in the notch area of MacBook displays, as close to the camera as possible. This minimizes eye movement so you maintain natural eye contact with your audience while reading. It's the closest thing to an actual broadcast teleprompter you can get on a laptop.`
+      },
+      {
+        type: 'text',
+        title: 'Menu Bar Living',
+        content: `The app lives in the menu bar with zero dock presence. Start a session, paste your script, and go. When you're done recording, it vanishes back into the background. No window management gymnastics required.`
+      }
+    ],
+    links: {}
+  },
+
+  {
     id: 'figify',
     title: 'Figify — Screenshot to Figma Plugin',
     image: '/images/figify.png',
