@@ -13,9 +13,8 @@ const About = () => {
     { type: 'image', src: '/images/beyondstudio.png', alt: 'Dwayne Paisley-Marshall' },
     { type: 'image', src: '/images/aidpm.png', alt: 'Dwayne Paisley-Marshall' },
     { type: 'video', src: '/videos/studiodpm.mp4', poster: '/images/image.jpg' },
-    
-    // Add more images or videos like this:
-    // { type: 'video', src: '/videos/sample.mp4', poster: '/images/poster.jpg' },
+    { type: 'image', src: '/images/251010_uni_verse_adnight_Angelina_Nikolayeva_hr-012.jpeg', alt: 'Dwayne Paisley-Marshall' },
+    { type: 'image', src: '/images/np.png', alt: 'Dwayne Paisley-Marshall' },
   ];
   
   // Create refs for each section
