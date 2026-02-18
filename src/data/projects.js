@@ -481,35 +481,6 @@ export const projects = [
 
 
 
-  {
-    id: 'street-art-map-amsterdam',
-    title: 'Street Art Map Amsterdam',
-    image: 'https://www.streetartmapamsterdam.nl/images/NORTH.jpg',
-    categoryId: ['AR', 'Street Art', 'Concept'],
-    description: "A living atlas that documents Amsterdam's ever-changing mural culture, layering artist stories, wayfinding, and mixed-media archives into an explorable street art companion.",
-    heroImage: 'https://www.streetartmapamsterdam.nl/images/NORTH.jpg',
-    heroBg: '#0f1d2b',
-    projectImages: [
-      { url: 'https://www.streetartmapamsterdam.nl/wp-content/uploads/2024/01/street-art-map-amsterdam-mobile.jpg', layout: 'fullBleed' },
-      { url: 'https://www.streetartmapamsterdam.nl/wp-content/uploads/2024/01/street-art-map-amsterdam-route.jpg', layout: '2x2' }
-    ],
-    concept: `Street Art Map Amsterdam extends STRAAT museum's mission beyond the warehouse, transforming the city into a distributed gallery where every mural gains context through geolocated storytelling, audio, and archival media.`,
-    narrative: `The map welcomes visitors, locals, and art hunters into Amsterdam's creative underground. Each pin unlocks artist narratives, behind-the-scenes footage, and production notes that reveal how industrial surfaces become cultural landmarks. For creative technologists, the experience doubles as a spatial research layer that tracks how street art evolves over time while offering accessible, self-guided routes that respect the communities who host the work.`,
-    quote: '"Every pin on the map is a new conversation between artist, neighborhood, and explorer."',
-    tech: `The platform fuses a headless WordPress CMS with Mapbox GL for real-time mapping, layering Supabase analytics for route insights and uptime monitoring. WebGL shaders and custom tile sets highlight active murals, while edge-cached media ensures responsive playback for on-site visitors scanning QR markers.`,
-    contentSections: [
-      {
-        type: 'text',
-        title: 'The Challenge',
-        content: `Amsterdam's street art is in constant flux - new murals surface as others are buffed overnight. The team needed a system that could capture this momentum, honour artists, and guide visitors without overwhelming them with data.`
-      },
-      {
-        type: 'text',
-        title: 'The Outcome',
-        content: `The result is a responsive cartographic interface that pairs editorial storytelling with precise wayfinding. Visitors can build custom routes, autoplay multimedia context on location, and submit updates that feed moderation-ready queues for curators.`
-      }
-    ]
-  },
 
   {
     id: 'lego',
