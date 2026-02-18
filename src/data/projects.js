@@ -26,6 +26,56 @@ export const projectCategories = [
 export const projects = [
 
   {
+    id: 'touchdesignermcp',
+    title: 'TouchDesigner MCP — AI-Controlled Live Sessions',
+    image: 'https://patchstorage.com/wp-content/uploads/2021/02/TouchDesigner_logo.png',
+    categoryId: ['AI', 'MCP'],
+    description: 'An MCP server that gives AI agents direct access to control a live TouchDesigner session — not generating code snippets, but actually reaching in and operating the software in real time.',
+    brandLogo: 'https://patchstorage.com/wp-content/uploads/2021/02/TouchDesigner_logo.png',
+    heroImage: '/images/np.png',
+    heroBg: '#0a0a0a',
+    heroVideo: '/videos/TD-MCP.mov',
+    heroPoster: '/images/np.png',
+    logoSize: 'medium',
+    concept: `Want to level up your AI agents? Give them direct access to TouchDesigner. I built a TouchDesigner MCP server that lets your AI agent control a live TD session — not generate code snippets, but actually reach in and operate the software. The instruction was simple: "Create a webcam experience with hand tracking so I can do sign language."`,
+    narrative: `This project redefines the relationship between AI and creative tools. Rather than treating AI as a code generator that outputs snippets for a human to paste, the TouchDesigner MCP server establishes a live bidirectional link. The AI agent becomes a direct operator — creating nodes, wiring connections, adjusting parameters, and executing logic inside a running TouchDesigner session. The demo speaks for itself: a single natural language instruction — "Create a webcam experience with hand tracking so I can do sign language" — and the agent builds the entire pipeline autonomously. Webcam input, hand tracking, sign language detection, all wired up and running in real time. No copy-paste. No manual intervention. The agent drives.`,
+    quote: '"Give your AI agent direct access to TouchDesigner. Not code snippets — actual control."',
+    tech: `The architecture is a Python-based MCP server that runs as a TouchDesigner extension, exposing TD's full functionality as MCP tools. AI agents connect via standard MCP client libraries and gain access to TouchDesigner's complete object model — creating operators, modifying parameters, establishing connections, managing layouts, and executing arbitrary Python within the TD environment. WebSocket handles real-time bidirectional communication, so the agent receives live feedback on network state, performance metrics, and operator outputs. The hand tracking demo chains webcam input through MediaPipe-based hand detection, landmark extraction, and gesture classification — all assembled and wired by the agent without human intervention.`,
+    contentSections: [
+      {
+        type: 'text',
+        title: 'The Problem',
+        content: `AI tools for creative software typically stop at code generation. They produce snippets, scripts, or configuration files that still require a human to manually apply. For node-based environments like TouchDesigner, this gap is even wider — the visual patching paradigm doesn't translate cleanly to generated text. Creators end up context-switching between their AI assistant and their canvas.`
+      },
+      {
+        type: 'text',
+        title: 'Direct Control, Not Code Snippets',
+        content: `The MCP server eliminates the middleman. AI agents don't suggest what to build — they build it. They create operators, set parameters, wire connections, and trigger execution directly inside the live TouchDesigner session. The creative can describe intent in natural language and watch the network assemble itself in real time.`
+      },
+      {
+        type: 'text',
+        title: 'The Demo',
+        content: `A single prompt — "Create a webcam experience with hand tracking so I can do sign language" — and the agent goes to work. It creates a Video Device In TOP for the webcam feed, sets up MediaPipe hand tracking, extracts landmarks, classifies gestures for sign language recognition, and wires the entire pipeline together. The result is a fully functional, real-time hand tracking experience built entirely by an AI agent.`
+      },
+      {
+        type: 'text',
+        title: 'Why MCP',
+        content: `The Model Context Protocol provides a standardised way for AI agents to interact with external tools. By implementing TouchDesigner as an MCP server, any MCP-compatible agent — Claude, custom agents, multi-agent systems — can immediately operate TD without custom integration work. It's a universal plug-in point for AI-driven creative production.`
+      }
+    ],
+    imageSections: [
+      {
+        layout: '2x2',
+        position: 'intro',
+        images: [
+          '/images/np.png',
+        ]
+      },
+    ],
+    links: {}
+  },
+
+  {
     id: 'speakeasy',
     title: 'SpeakEasy — Voice-Tracking Teleprompter',
     image: '/images/icon_source.svg',
@@ -430,39 +480,6 @@ export const projects = [
   },
 
 
-  {
-    id: 'touchdesignermcp',
-    title: 'TouchDesigner MCP ',
-    image: 'https://pub-4271c874f759418fbdcd18b0e5cbe024.r2.dev/Claude/claude-logo.png',
-    categoryId: ['Ai', 'MCP'],
-    description: 'Leveraging the power of MCP servers we created a touchdesigner extension that allows for AI agents to control Touchdesigner. ',
-    brandLogo: 'https://patchstorage.com/wp-content/uploads/2021/02/TouchDesigner_logo.png',
-    heroImage: '/images/lego/playverse.jpeg',
-    heroBg: '#707e51',
-    heroVideo: '/videos/TD.mp4',
-    heroPoster: 'https://pub-4271c874f759418fbdcd18b0e5cbe024.r2.dev/Claude/claude-logo.png',
-    narrative: `Imagine Sarah, an interactive artist preparing for a major museum installation. She opens TouchDesigner, but this time she's not alone. Her AI collaborator, "Synth," awakens—not as a rigid tool, but as a creative partner who understands both her vision and TouchDesigner's intricate node-based ecosystem.
-"I want to create an installation that responds to heartbeats and translates them into dynamic particle systems," Sarah describes in natural language.
-Synth immediately begins working across multiple layers:`,
-    concept: `How might we enable access for AI agents to aid in the creation of immersive experiences via touch designer`,
-    quote: '"Where imagination builds worlds without boundaries."',
-    tech: `The technical architecture integrates TouchDesigner with AI agents through a sophisticated Python-based MCP server running as a TouchDesigner extension. This server exposes TouchDesigner's functionality as MCP tools, allowing AI agents to programmatically create operators, modify parameters, establish connections, and execute Python scripts within the TD environment. The implementation uses WebSocket for real-time bidirectional communication, enabling AI agents to not only send commands but also receive live feedback about network state changes, performance metrics, and user interactions. On the AI side, agents connect to this MCP server using standard MCP client libraries, gaining access to TouchDesigner's complete object model through a structured API.`,
-    imageSections: [
-     
-      {
-        layout: '2x2',
-       
-        position: 'intro',  // Display after the narrative section
-        images: [
-          'https://media.licdn.com/dms/image/v2/D4E22AQGlgdTwiP2_Tg/feedshare-shrink_2048_1536/B4EZaa54o3GYAs-/0/1746355588277?e=1749686400&v=beta&t=6OeDr-w_UBLKespL6IU-XWjkAo1xFOJyFLO_BYap0cA',
-
-          
-        ]
-      },
-      
-    ],
-  
-  },
 
   {
     id: 'street-art-map-amsterdam',
